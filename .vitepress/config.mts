@@ -15,7 +15,9 @@ export default defineConfig({
         text: 'Programming [P]',
         items: [
           { text: '[P] General', link: '/programming/' },
-          { text: '[P] Algo: Sequence -> Single', link: '/programming/single.md' }
+          { text: '[P] Algo: Seq -> Single', link: '/programming/single.md' },
+          { text: '[P] Algo: Seq -> Seq', link: '/programming/sequence.md' },
+          { text: '[P] Practical examples', link: '/programming/poa-examples.md' }
         ]
       }
     ],

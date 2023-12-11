@@ -1,7 +1,8 @@
 ---
 title: Algorithms
 ---
-# PoA: sequence -> single value (reduction)
+# Patterns of algorithms:
+# sequence -> single value (reduction)
 
 ## Counting
 Used to count a number of elements in a collection, or to count the number of times a certain condition is satisfied.
@@ -178,4 +179,55 @@ while (ind < 0 && i < X.Length){
   i++;
 }
 ```
-In case of using a variation of search postcondition has to reflect that.
+In case of using a variation of search - postcondition has to reflect that.
+
+## Sequence calculation
+Sequence calculation has multiple variations and can result in a single value or a collection of values. Here we review Sequence calculation as a PoA used to calculate a single value from a collection.
+
+Examples: sum, product, concatenation of all the elements of a collection.
+
+#### Input
+$$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+$$ F: \mathbb{S} \rightarrow \mathbb{S}\text{ // transformation function that returns value $\in\mathbb{S}$}$$
+
+#### Postcondition
+$$sc = F(X[1]..X[length(X)])\text{ // where $sc$ - sequence calculation result}$$
+
+### Specific example: Sum
+#### Postcondition
+$$sc = \sum_{i=1}^{length(X)}X[i]$$
+
+#### Implementation
+```c#
+int sc = 0;
+for (int i = 0; i < X.Length; i++){
+  sc += X[i];
+}
+```
+### Specific example: Product
+#### Postcondition
+$$sc = \prod_{i=1}^{length(X)}X[i]$$
+
+#### Implementation
+```c#
+int sc = 1;
+for (int i = 0; i < X.Length; i++){
+  sc *= X[i];
+}
+```
+
+### Specific example: Concatenation
+#### Postcondition
+$$sc = X[1]..X[length(X)]$$
+
+#### Implementation
+```c#
+string sc = "";
+for (int i = 0; i < X.Length; i++){
+  sc += X[i];
+}
+```
+<!-- TODO: add link to Sequence -> Sequence section -->
+#### Note
+Overview of Sequence calculation that results in a collection of values can be found in [Sequence -> Sequence]() section.
+
