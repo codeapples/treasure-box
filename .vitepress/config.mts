@@ -13,6 +13,7 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Programming [P]',
+        collapsed: false,
         items: [
           { text: '[P] General', link: '/programming/' },
           { text: '[P] Algo: Seq -> Single', link: '/programming/single.md' },

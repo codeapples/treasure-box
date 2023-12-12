@@ -187,3 +187,130 @@ while (i < X.Length && j < Y.Length){
   cnt++;
 }
 ```
+
+## Set transformation
+Used to transform a sequence into a set.
+E.g. remove duplicates from a sequence.
+
+#### Input
+$$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+
+#### Postcondition
+$$cnt = \sum_{i=1}^{length(X)} \\
+    \begin{cases}
+      1 & \text{if $X[i] \notin Y$}\\
+      0 & \text{otherwise}
+    \end{cases}$$
+$$Y[1..cnt] = \{\ X[i]\ |\ X[i] \notin Y\ \}_{i=1}^{length(X)}$$
+
+#### Implementation
+```c#
+int cnt = 0;
+for (int i = 0; i < X.Length; i++){
+  // F(Y[..cnt], X[i]) is a function that implements decision PoA
+  // it returns true if X[i] is not in Y[..cnt]
+  // Y[..cnt] contains elements that were already processed up to this point
+  if (F(Y[..cnt], X[i])){
+    Y[cnt] = X[i];
+    cnt++;
+  }
+}
+```
+#### Note
+Set transformation is a special case of MIS, where the condition is based on whether an item has been put in the resulting set yet (determined by Decision PoA).
+
+## Multiset transformation
+Used to transform a sequence into a multiset. Multiset stores several attributes of the original sequence. E.g. value and count of each value or other.
+
+### First example
+Get names of students and count how many students have the same name.
+#### Input
+$$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+
+#### Postcondition
+$$cnt = \sum_{i=1}^{length(X)} \\
+    \begin{cases}
+      1 & \text{if $X[i] \notin Y$}\\
+      0 & \text{otherwise}
+    \end{cases}$$
+$$Y[1..cnt] = \{\ X[i]\ |\ X[i] \notin Y\ \}_{i=1}^{length(X)}$$
+$$Z[1..cnt] = \{\ \sum_{i=1}^{length(X)} \\
+    \begin{cases}
+      1 & \text{if $X[i] = Y[j]$}\\
+      0 & \text{otherwise}
+    \end{cases}\ \}_{j=1}^{cnt}$$
+
+Where Y contains unique names and Z contains count of each name.
+
+#### Implementation
+```c#
+int cnt = 0;
+for (int i = 0; i < X.Length; i++){
+  int j = 0;
+  // iterate through Y (resulting collection)
+  // if X[i] is already in Y, then j will be the index of X[i] in Y
+  while (j < cnt && X[i] != Y[j]){
+    j++;
+  }
+
+  // if j reached the end of Y, then X[i] is not in Y
+  if (j == cnt){
+    // add X[i] to Y
+    Y[cnt] = X[i];
+    // set count of X[i] to 1
+    Z[cnt] = 1;
+    cnt++;
+  // otherwise X[i] is in Y
+  } else {
+    // then only increment count of X[i]
+    Z[j]++;
+  }
+}
+```
+### Second example
+We're given a list of payouts and we need to calculate the total amount earned for each employee.
+#### Input
+$$ T_{employee} = \{\ name\ \times\ amount\ \}$$
+$$ X[1..] \in T_{employee}^n$$
+#### Postcondition
+$$cnt = \sum_{i=1}^{length(X)} \\
+    \begin{cases}
+      1 & \text{if\ $\ \nexists R[j]\ (1 \le j \le cnt): X[i].name = R[j].name$}\\
+      0 & \text{otherwise}
+    \end{cases}$$
+Where R is resulting collection of structures of employees.
+$$R[1..cnt].name = \{\ X[i].name\ |\ \nexists R[j]: X[i].name = R[j].name\ \}_{i=1}^{length(X)}$$
+if R exists sum amounts R.amount = R.amount + X[i].amount
+$$R[1..cnt].amount = \Biggl\{
+  \begin{cases}
+    X[i].amount & \text{if\ $\ \nexists R[j]\ (1 \le j \le cnt)$} \rangle \\
+    &\text{$: X[i].name = R[j].name$} \\
+    &\text{} \\
+    \sum_{j=1}^{length(X)} X[j].amount & \text{otherwise}
+  \end{cases}\ \Biggr\}_{i=1}^{length(X)}$$
+
+#### Implementation
+```c#
+int cnt = 0;
+for (int i = 0; i < X.Length; i++){
+  int j = 0;
+  // iterate through R (resulting collection)
+  // if X[i].name is already in R, then j will be the index of X[i].name in R
+  while (j < cnt && X[i].name != R[j].name){
+    j++;
+  }
+
+  // if j reached the end of R, then X[i].name is not in R
+  if (j == cnt){
+    // add X[i].name to R
+    R[cnt].name = X[i].name;
+    // set amount of X[i].name to X[i].amount
+    R[cnt].amount = X[i].amount;
+    cnt++;
+  // otherwise X[i].name is in R
+  } else {
+    // then only increment amount of X[i].name
+    R[j].amount += X[i].amount;
+  }
+}
+```
