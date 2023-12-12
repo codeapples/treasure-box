@@ -8,6 +8,9 @@ devDependencies:
   markdown-it-mathjax3:
     specifier: ^4.3.2
     version: 4.3.2
+  prettier:
+    specifier: ^3.1.1
+    version: 3.1.1
   vitepress:
     specifier: 1.0.0-rc.31
     version: 1.0.0-rc.31(@algolia/client-search@4.21.0)(markdown-it-mathjax3@4.3.2)(search-insights@2.13.0)
@@ -1213,6 +1216,12 @@ packages:
 
   /preact@10.19.3:
     resolution: {integrity: sha512-nHHTeFVBTHRGxJXKkKu5hT8C/YWBkPso4/Gad6xuj5dbptt9iF9NZr9pHbPhBrnT2klheu7mHTxTZ/LjwJiEiQ==}
+    dev: true
+
+  /prettier@3.1.1:
+    resolution: {integrity: sha512-22UbSzg8luF4UuZtzgiUOfcGM8s4tjBv6dJRT7j275NXsy2jb4aJa4NNveul5x4eqlF1wuhuR2RElK71RvmVaw==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /property-information@6.4.0:

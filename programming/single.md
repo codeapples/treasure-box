@@ -182,7 +182,7 @@ while (ind < 0 && i < X.Length){
 In case of using a variation of search - postcondition has to reflect that.
 
 ## Sequence calculation
-Sequence calculation has multiple variations and can result in a single value or a collection of values. Here we review Sequence calculation as a PoA used to calculate a single value from a collection.
+Used to calculate a single value from a collection of values using a transformation function.
 
 Examples: sum, product, concatenation of all the elements of a collection.
 
@@ -193,7 +193,7 @@ $$ F: \mathbb{S} \rightarrow \mathbb{S}\text{ // transformation function that re
 #### Postcondition
 $$sc = F(X[1]..X[length(X)])\text{ // where $sc$ - sequence calculation result}$$
 
-### Specific example: Sum
+### Specific example: Summation
 #### Postcondition
 $$sc = \sum_{i=1}^{length(X)}X[i]$$
 
@@ -227,7 +227,5 @@ for (int i = 0; i < X.Length; i++){
   sc += X[i];
 }
 ```
-<!-- TODO: add link to Sequence -> Sequence section -->
-#### Note
-Overview of Sequence calculation that results in a collection of values can be found in [Sequence -> Sequence]() section.
+
 

@@ -18,6 +18,3 @@ Patterns of Algorithms that transform a sequence of values into another sequence
 - [Partitioning](/programming/sequence.md#partitioning)
 - [Intersection](/programming/sequence.md#intersection)
 - [Union](/programming/sequence.md#union)
-- [Sequence calculation](/programming/sequence.md#sequence-calculation)
-
-

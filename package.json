@@ -1,18 +1,20 @@
 {
   "name": "treasure-box",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "markdown-it-mathjax3": "^4.3.2",
+    "prettier": "^3.1.1",
     "vitepress": "1.0.0-rc.31"
   }
 }
