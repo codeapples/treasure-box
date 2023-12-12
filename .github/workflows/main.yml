@@ -34,4 +34,4 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           source: "dist/*"
-          target: "/public-html"
+          target: "./public-html"
