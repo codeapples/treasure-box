@@ -198,7 +198,7 @@ $$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
 #### Postcondition
 $$cnt = \sum_{i=1}^{length(X)} \\
     \begin{cases}
-      1 & \text{if $X[i] \notin Y$}\\
+      1 & \text{if\ $\ \nexists j\ (1 \le j \lt i): X[i] = X[j]$}\\
       0 & \text{otherwise}
     \end{cases}$$
 $$Y[1..cnt] = \{\ X[i]\ |\ X[i] \notin Y\ \}_{i=1}^{length(X)}$$
@@ -230,7 +230,7 @@ $$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
 #### Postcondition
 $$cnt = \sum_{i=1}^{length(X)} \\
     \begin{cases}
-      1 & \text{if $X[i] \notin Y$}\\
+      1 & \text{if\ $\ \nexists j\ (1 \le j \lt i): X[i] = X[j]$}\\
       0 & \text{otherwise}
     \end{cases}$$
 $$Y[1..cnt] = \{\ X[i]\ |\ X[i] \notin Y\ \}_{i=1}^{length(X)}$$
@@ -275,20 +275,14 @@ $$ X[1..] \in T_{employee}^n$$
 #### Postcondition
 $$cnt = \sum_{i=1}^{length(X)} \\
     \begin{cases}
-      1 & \text{if\ $\ \nexists R[j]\ (1 \le j \le cnt): X[i].name = R[j].name$}\\
+      1 & \text{if\ $\ \nexists j\ (1 \le j \lt i): X[i].name = X[j].name$}\\
       0 & \text{otherwise}
     \end{cases}$$
+$$ U[1..cnt] = \{\ X[i].name\ |\ X[i].name \notin U\ \}_{i=1}^{length(X)}$$
+Where U is a set of unique employee names. *After Set transformation PoA*
+$$ R[1..cnt].name = U[1..cnt]$$
+$$ R[1..cnt].amount = \{\ \sum_{j=1}^{length(X)} X[j].amount\ |\ X[j].name = U[i].name\ \}_{i=1}^{length(U)}$$
 Where R is resulting collection of structures of employees.
-$$R[1..cnt].name = \{\ X[i].name\ |\ \nexists R[j]: X[i].name = R[j].name\ \}_{i=1}^{length(X)}$$
-if R exists sum amounts R.amount = R.amount + X[i].amount
-$$R[1..cnt].amount = \Biggl\{
-  \begin{cases}
-    X[i].amount & \text{if\ $\ \nexists R[j]\ (1 \le j \le cnt)$} \rangle \\
-    &\text{$: X[i].name = R[j].name$} \\
-    &\text{} \\
-    \sum_{j=1}^{length(X)} X[j].amount & \text{otherwise}
-  \end{cases}\ \Biggr\}_{i=1}^{length(X)}$$
-
 #### Implementation
 ```c#
 int cnt = 0;
