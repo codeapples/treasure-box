@@ -62,5 +62,92 @@ $$ n \in \mathbb{N}^+ $$
 $$ friends[1..n] \in T_{friend}^n$$
 
 #### Postcondition
+$$cnt = \sum_{i=1}^{length(friends)} \\
+    \begin{cases}
+      1 & \text{if\ $\ \nexists j\ (1 \le j \lt i): friends[i].birthyear = friends[j].birthyear$}\\
+      0 & \text{otherwise}
+    \end{cases}$$
+$$ U[1..cnt] = \bigcup_{i=1}^{length(friends)} \{\ friends[i].birthyear\ |\ friends[i].birthyear \notin U\ \}$$
+Where U is a set of unique birth years. *After Set transformation PoA*
+$$ R[1..cnt].birthyear = U[1..cnt]$$
+$$ R[1..cnt].count = \bigcup_{i=1}^{length(friends)} \{\ \sum_{j=1}^{length(friends)} \\
+    \begin{cases}
+      1 & \text{if $friends[j].birthyear = R[i].birthyear$}\\
+      0 & \text{otherwise}
+    \end{cases}\ \}$$
 
+#### Implementation
+```c#
+int cnt = 0;
+for (int i = 0; i < friends.Length; i++){
+  int j = 0;
+  while (j < cnt && friends[i].birthyear != R[j].birthyear){
+    j++;
+  }
+
+  if (j == cnt){
+    R[cnt].birthyear = friends[i].birthyear;
+    R[cnt].count = 1;
+    cnt++;
+  } else {
+    R[j].count++;
+  }
+}
+```
+
+## Task 3
+The water temperature was measured at N locations of Lake Balaton for M days. List the days with the
+highest temperatures that mostly deviate from the average for the whole period.
+
+::: tip
+1. Calculate the average temperature for the period. *Sequence calculation PoA*
+2. Transform the sequence into deviations from the average. *Copy PoA*
+3. Select maximum deviation. *Maximum selection PoA*
+4. Select days with maximum deviation. *Multiple item selection PoA*
+:::
+
+#### Input
+$$ T_{measurement} = (loc \times day \times temp) $$
+$$ measurements[1..] \in T_{measurement}^{n}$$
+
+#### Postcondition
+$$avg = \frac{\sum_{i=1}^{length(measurements)} measurements[i].temp}{length(measurements)}$$
+$$\forall i\ (1 \le i \le length(measurements)): deviations[i] = measurements[i].temp - avg$$
+$$maxDev = \max_{i=1}^{length(deviations)} deviations[i]$$
+$$cnt = \sum_{i=1}^{length(deviations)} \\
+    \begin{cases}
+      1 & \text{if $deviations[i] = maxDev$}\\
+      0 & \text{otherwise}
+    \end{cases}$$
+$$days[1..cnt] = \bigcup_{i=1}^{length(deviations)} \{\ measurements[i].day\ |\ deviations[i] = maxDev\ \}$$
+
+
+#### Implementation
+```c#
+double avg = 0;
+for (int i = 0; i < measurements.Length; i++){
+  avg += measurements[i].temp;
+}
+avg /= measurements.Length;
+
+double[] deviations = new double[measurements.Length];
+for (int i = 0; i < measurements.Length; i++){
+  deviations[i] = measurements[i].temp - avg;
+}
+
+double maxDev = deviations[0];
+for (int i = 1; i < deviations.Length; i++){
+  if (deviations[i] > maxDev){
+    maxDev = deviations[i];
+  }
+}
+
+int cnt = 0;
+for (int i = 0; i < deviations.Length; i++){
+  if (deviations[i] == maxDev){
+    days[cnt] = measurements[i].day;
+    cnt++;
+  }
+}
+```
 

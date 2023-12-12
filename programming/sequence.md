@@ -46,7 +46,7 @@ $$cnt = \sum_{i=1}^{length(X)} \\
       1 & \text{if $F(X[i])$ // if condition is met}\\
       0 & \text{otherwise}
     \end{cases}$$
-$$Y[1..cnt] = \{\ X[i]\ |\ F(X[i])\ \}_{i=1}^{length(X)}$$
+$$Y[1..cnt] = \bigcup_{i=1}^{length(X)}\{\ X[i]\ |\ F(X[i])\ \}$$
 
 #### Implementation
 ```c#
@@ -75,8 +75,8 @@ $$cnt = \sum_{i=1}^{length(X)} \\
       1 & \text{if $F(X[i])$ // if condition is met}\\
       0 & \text{otherwise}
     \end{cases}$$
-$$Y[1..cnt] = \{\ X[i]\ |\ F(X[i])\ \}_{i=1}^{length(X)}$$
-$$Z[1..length(X) - cnt] = \{\ X[i]\ |\ \neg F(X[i])\ \}_{i=1}^{length(X)}$$
+$$Y[1..cnt] = \bigcup_{i=1}^{length(X)} \{\ X[i]\ |\ F(X[i])\ \}$$
+$$Z[1..length(X) - cnt] = \bigcup_{i=1}^{length(X)} \{\ X[i]\ |\ \neg F(X[i])\ \}$$
 
 #### Implementation
 ```c#
@@ -109,7 +109,7 @@ $$cnt = \sum_{i=1}^{length(X)} \\
       1 & \text{if $F(X[i], Y[j])$ // if condition is met}\\
       0 & \text{otherwise}
     \end{cases}$$
-$$Z[1..cnt] = \{\ X[i]\ |\ \exists Y[j] \text{ such that } F(X[i], Y[j])\ \}_{i=1}^{length(X)}$$
+$$Z[1..cnt] = \bigcup_{i=1}^{length(X)} \{\ X[i]\ |\ \exists j\ (1 \le j \le length(Y)) : F(X[i], Y[j])\ \}$$
 
 #### Implementation
 ```c#
@@ -140,7 +140,7 @@ $$cnt = \sum_{i=1}^{length(X)} \\
       1 & \text{if $X[i] \notin Y$}\\
       0 & \text{otherwise}
     \end{cases}$$
-$$Z[1..length(X) + length(Y) - cnt] = \{\ X[i]\ |\ X[i] \notin Y\ \}_{i=1}^{length(X)} \cup Y$$
+$$Z[1..length(X) + length(Y) - cnt] = \{ \bigcup_{i=1}^{length(X)} \{\ X[i]\ |\ X[i] \notin Y\ \}\} \cup Y$$
 
 #### Implementation
 ```c#
@@ -201,7 +201,7 @@ $$cnt = \sum_{i=1}^{length(X)} \\
       1 & \text{if\ $\ \nexists j\ (1 \le j \lt i): X[i] = X[j]$}\\
       0 & \text{otherwise}
     \end{cases}$$
-$$Y[1..cnt] = \{\ X[i]\ |\ X[i] \notin Y\ \}_{i=1}^{length(X)}$$
+$$Y[1..cnt] = \bigcup_{i=1}^{length(X)} \{\ X[i]\ |\ X[i] \notin Y\ \}$$
 
 #### Implementation
 ```c#
@@ -233,12 +233,12 @@ $$cnt = \sum_{i=1}^{length(X)} \\
       1 & \text{if\ $\ \nexists j\ (1 \le j \lt i): X[i] = X[j]$}\\
       0 & \text{otherwise}
     \end{cases}$$
-$$Y[1..cnt] = \{\ X[i]\ |\ X[i] \notin Y\ \}_{i=1}^{length(X)}$$
-$$Z[1..cnt] = \{\ \sum_{i=1}^{length(X)} \\
+$$Y[1..cnt] = \bigcup_{i=1}^{length(X)} \{\ X[i]\ |\ X[i] \notin Y\ \}$$
+$$Z[1..cnt] = \bigcup_{i=1}^{length(X)} \{\ \sum_{j=1}^{length(X)} \\
     \begin{cases}
-      1 & \text{if $X[i] = Y[j]$}\\
+      1 & \text{if $X[j] = Y[i]$}\\
       0 & \text{otherwise}
-    \end{cases}\ \}_{j=1}^{cnt}$$
+    \end{cases}\ \}$$
 
 Where Y contains unique names and Z contains count of each name.
 
@@ -278,10 +278,10 @@ $$cnt = \sum_{i=1}^{length(X)} \\
       1 & \text{if\ $\ \nexists j\ (1 \le j \lt i): X[i].name = X[j].name$}\\
       0 & \text{otherwise}
     \end{cases}$$
-$$ U[1..cnt] = \{\ X[i].name\ |\ X[i].name \notin U\ \}_{i=1}^{length(X)}$$
+$$ U[1..cnt] = \bigcup_{i=1}^{length(X)} \{\ X[i].name\ |\ X[i].name \notin U\ \}$$
 Where U is a set of unique employee names. *After Set transformation PoA*
 $$ R[1..cnt].name = U[1..cnt]$$
-$$ R[1..cnt].amount = \{\ \sum_{j=1}^{length(X)} X[j].amount\ |\ X[j].name = U[i].name\ \}_{i=1}^{length(U)}$$
+$$ R[1..cnt].amount =\bigcup_{i=1}^{length(X)} \{\ \sum_{j=1}^{length(X)} X[j].amount\ |\ X[j].name = U[i].name\ \}$$
 Where R is resulting collection of structures of employees.
 #### Implementation
 ```c#
