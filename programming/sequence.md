@@ -17,7 +17,7 @@ $$ X[1..] \in \mathbb{S}_{1}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
 $$ F: \mathbb{S}_{1} \rightarrow \mathbb{S}_{2}\text{ // transformation function}$$
 
 #### Postcondition
-$$Y[1..length(X)] = \{\ F(X[i])\ \}_{i=1}^{length(X)}$$
+$$\forall i\ (1 \le i \le length(X)):Y[i] = F(X[i])$$
 
 #### Implementation
 ```c#
