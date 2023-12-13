@@ -38,6 +38,10 @@ $$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
 #### Postcondition
 $$maxInd, maxVal = \max_{i=1}^{length(X)} X[i]$$
 
+*Short notation:*
+$$ (maxInd) = \text{MAXIND}_{i=1}^{length(X)} (i)$$
+$$ (maxVal) = \text{MAXVAL}_{i=1}^{length(X)} (X[i])$$
+
 #### Implementation
 ```c#
 int maxInd = 0;
@@ -78,7 +82,8 @@ $$ F: \mathbb{S} \rightarrow \mathbb{L}\text{ // logical function or expression}
 #### Postcondition
 $$ind = i:F(X[i])\ and$$
 $$val = X[ind]$$
-
+*Short notation:*
+$$ (ind, val) = \text{SELECT}_{i=1}^{length(X)} (X[i]\ |\ F(X[i]))$$
 #### Implementation
 ```c#
 int ind = 0;
@@ -148,6 +153,8 @@ $$exists = \exists_{i=1}^{length(X)}F(X[i])$$
 $$\text{if $exists$}\rightarrow ind = i:F(X[i])\ and$$
 $$val = X[ind]$$
 
+*Short notation:*
+$$ (exists, ind, val) = \text{SEARCH}_{i=1}^{length(X)} (X[i]\ |\ F(X[i]))$$
 #### Implementation
 ```c#
 bool exists = false;

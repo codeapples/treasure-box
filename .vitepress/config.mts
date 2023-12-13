@@ -22,7 +22,7 @@ export default defineConfig({
           { text: '[P] General', link: '/programming/' },
           { text: '[P] Algo: Seq -> Single', link: '/programming/single.md' },
           { text: '[P] Algo: Seq -> Seq', link: '/programming/sequence.md' },
-          /* { text: '[P] Algo: Combinations', link: '/programming/combinations.md' }, */
+          { text: '[P] Algo: Sort and other', link: '/programming/sort.md' },
           { text: '[P] Practical examples', link: '/programming/poa-examples.md' }
         ]
       }

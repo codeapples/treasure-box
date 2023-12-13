@@ -48,6 +48,9 @@ $$cnt = \sum_{i=1}^{length(X)} \\
     \end{cases}$$
 $$Y[1..cnt] = \bigcup_{i=1}^{length(X)}\{\ X[i]\ |\ F(X[i])\ \}$$
 
+*Short notation:*
+$$ (cnt, Y[1..cnt]) = \text{MULTISELECT}_{i=1}^{length(X)} (X[i] | F(X[i]))$$
+
 #### Implementation
 ```c#
 int cnt = 0;
@@ -78,6 +81,8 @@ $$cnt = \sum_{i=1}^{length(X)} \\
 $$Y[1..cnt] = \bigcup_{i=1}^{length(X)} \{\ X[i]\ |\ F(X[i])\ \}$$
 $$Z[1..length(X) - cnt] = \bigcup_{i=1}^{length(X)} \{\ X[i]\ |\ \neg F(X[i])\ \}$$
 
+*Short notation:*
+$$ (cnt, Y, Z) = \text{PARTITION}_{i=1}^{length(X)} (X[i] | F(X[i]))$$
 #### Implementation
 ```c#
 int cnt = 0;
