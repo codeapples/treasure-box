@@ -1,5 +1,5 @@
 ---
-title: \[BM\] Eigen
+title: \[BM\] Eigenvalues & eigenvectors
 ---
 
 # Eigenvalues and eigenvectors
@@ -126,9 +126,12 @@ $$ \begin{cases}
     x - y - z = 0 \\
     0 = 0 \\
     0 = 0
-\end{cases} $$
-$$ x = y + z $$
+\end{cases}\ \rightarrow\ x = y + z $$
 $$ v_{1} = \begin{bmatrix}
+    x \\
+    y \\
+    z
+\end{bmatrix} = \begin{bmatrix}
     y + z \\
     y \\
     z
@@ -170,10 +173,15 @@ $$ \begin{cases}
     x + z = 0 \\
     0 = 0 \\
     y + 3z = 0
-\end{cases} $$
-$$ x = -z $$
-$$ y = -3z $$
+\end{cases}\ \rightarrow\ \begin{cases}
+    x = -z \\
+    y = -3z
+\end{cases}$$
 $$ v_{2} = \begin{bmatrix}
+    x \\
+    y \\
+    z
+\end{bmatrix} = \begin{bmatrix}
     -z \\
     -3z \\
     z

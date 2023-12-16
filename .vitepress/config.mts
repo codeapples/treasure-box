@@ -37,8 +37,12 @@ export default defineConfig({
             items: [
               { text: '[BM] General', link: '/basicmath/' },
               { text: '[BM] Inverse matrices', link: '/basicmath/inverse-mx.md' },
-              { text: '[BM] Inverse matrices G-J', link: '/basicmath/inverse-mx-gj.md' },
-              { text: '[BM] Eigen{values,vectors}', link: '/basicmath/eigen.md' },
+              { text: '[BM] Inverse matrices Gauss-Jordan method', link: '/basicmath/inverse-mx-gj.md' },
+              { text: '[BM] Eigenvalues and eigenvectors', link: '/basicmath/eigen.md' },
+              { text: '[BM] Diagonalization', link: '/basicmath/diagonalization.md' },
+              { text: '[BM] Orthogonal and orthonormal basis', link: '/basicmath/ortho.md' },
+              { text: '[BM] Inverse functions', link: '/basicmath/inverse-fn.md' },
+              { text: '[BM] Proving limits', link: '/basicmath/limits.md' },
             ]
           }
         ],

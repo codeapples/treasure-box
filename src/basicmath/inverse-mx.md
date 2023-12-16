@@ -9,6 +9,11 @@ Square matrices
 $$ A \in \mathbb{K}^{n \times n} $$
 are invertible **if and only if** their determinant is **not zero**.
 $$\det(A) \neq 0 \Leftrightarrow A^{-1} \text{ exists}$$
+
+Matrices that are not invertible are called **singular** or *degenerate*.
+
+Matrices that are invertible are called **regular** or *non-singular*.
+
 The inverse of a matrix is a matrix that when multiplied with the original matrix produces the identity matrix.
 $$ I = A \cdot A^{-1} = A^{-1} \cdot A $$
 Inverse matrix can be calculated using sub determinant matrixes.
@@ -36,7 +41,7 @@ where
 $A_{ij}$
 is the sub determinant matrix of A, which is calculated by removing the i-th row and the j-th column from A.
 
-### Sub determinant matrixes
+### Sub determinant matrices
 The sub determinant matrixes are calculated by removing the i-th row and the j-th column from the original matrix.
 
 ### Cofactor matrix
@@ -98,7 +103,7 @@ $$= 3 \cdot 16 - 1 \cdot 10 - 4 \cdot 3 = 48 - 22 = 26$$
 
 Determinant of A is 26. Since the determinant is not zero, the inverse matrix exists.
 
-### Sub determinant matrixes
+### Sub determinant matrices
 
 $A_{11} = \begin{bmatrix}
     5 & 6 \\

@@ -11,3 +11,7 @@ The materials intent to cover complicated math topics that you are expected to k
 ## Math topics for Test #3
 - [Inverse of matrices using Gauss-Jordan elimination](/basicmath/inverse-mx-gj.md)
 - [Eigenvalues and eigenvectors](/basicmath/eigen.md)
+- [Diagonalization of matrices](/basicmath/diagonalization.md)
+- [Orthogonal and orthonormal basis](/basicmath/ortho.md)
+- [Inverse functions](/basicmath/inverse-fn.md)
+- [Proving limits by definition](/basicmath/limits.md)
