@@ -84,9 +84,9 @@ The characteristic polynomial of A is:
 $$ \lambda \cdot (\lambda - 1)^{2} = 0 $$
 ### Roots of the characteristic polynomial
 The roots of the characteristic polynomial are:
-$$ \lambda_{1} = 1,\ \lambda_{2} = 0,\ \lambda_{3} = 0 $$
+$$ \lambda_{1} = 1,\ \lambda_{2} = 1,\ \lambda_{3} = 0 $$
 You can also say that the **eigenvalues** of A are:
-$$ \lambda_{1} = 1,\ \lambda_{2} = 0,\ \lambda_{3} = 0 $$
+$$ \lambda_{1} = 1,\ \lambda_{2} = 1,\ \lambda_{3} = 0 $$
 
 ### Eigenvectors
 The eigenvectors are calculated using the following formula:
@@ -169,10 +169,15 @@ $$ v_{1} = \begin{bmatrix}
     1
 \end{bmatrix} $$
 
+There is no need to calculate for
+$\lambda_{2}$,
+because characteristic polynomial has a double root, which means that
+$\lambda_{1}$
+has a multiplicity of 2.
 
 Second, calculate for
-$\lambda_{2} = 0$:
-$$ (A - \lambda_{2} I) \cdot v_{2} = 0 $$
+$\lambda_{3} = 0$:
+$$ (A - \lambda_{3} I) \cdot v_{2} = 0 $$
 $$ (A - 0 \cdot I) \cdot v_{2} = 0 $$
 $$ \begin{bmatrix}
     2 & -1 & -1 \\
@@ -201,26 +206,26 @@ $$ \begin{cases}
     y = -3z
 \end{cases}$$
 Now we can determine the **eigenspace** of
-$\lambda_{2} = 0$:
-$$ E_{\lambda_{2}} = \left( \begin{bmatrix}
+$\lambda_{3} = 0$:
+$$ E_{\lambda_{3}} = \left( \begin{bmatrix}
     x \\
     y \\
     z
 \end{bmatrix}  |\ x, y, z \in \mathbb{K} \right)$$
 Substitute
 $x = -z$ and $y = -3z$:
-$$ E_{\lambda_{2}} = \left( \begin{bmatrix}
+$$ E_{\lambda_{3}} = \left( \begin{bmatrix}
     -z \\
     -3z \\
     z
 \end{bmatrix}  |\ z \in \mathbb{K} \right)$$
-$$ E_{\lambda_{2}} = \left( z \cdot \begin{bmatrix}
+$$ E_{\lambda_{3}} = \left( z \cdot \begin{bmatrix}
     -1 \\
     -3 \\
     1
 \end{bmatrix} |\ z \in \mathbb{K} \right)$$
-$$ \dim(E_{\lambda_{2}}) = 1 $$
-$$ E_{\lambda_{2}} = \text{Span} \left( \begin{bmatrix}
+$$ \dim(E_{\lambda_{3}}) = 1 $$
+$$ E_{\lambda_{3}} = \text{Span} \left( \begin{bmatrix}
     -1 \\
     -3 \\
     1
@@ -232,11 +237,6 @@ $$ v_{3} = \begin{bmatrix}
     1
 \end{bmatrix} $$
 
-There is no need to calculate for
-$\lambda_{3}$,
-because characteristic polynomial has a double root, which means that
-$\lambda_{2}$
-has a multiplicity of 2.
 
 ## Eigenbasis
 Eigenbasis is a basis consisting of eigenvectors of a matrix.
