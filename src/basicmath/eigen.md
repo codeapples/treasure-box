@@ -17,7 +17,6 @@ be a square matrix. The eigenvalues and eigenvectors of A are calculated using t
 1. Calculate the characteristic polynomial
 2. Calculate the roots of the characteristic polynomial
 3. Calculate the eigenvectors
-4. Check the result
 
 ### Characteristic polynomial
 The characteristic polynomial of a matrix is calculated using the following formula:

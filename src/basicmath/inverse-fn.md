@@ -1,4 +1,4 @@
 ---
-title: Inverse Functions
+title: \[BM\] Inverse Functions
 ---
 # Coming soon™
