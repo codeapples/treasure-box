@@ -254,11 +254,11 @@ $$ e_{2} = \frac{b_{2}}{\|b_{2}\|} = \frac{\begin{bmatrix}
     \frac{2}{3} \\
     \frac{4}{3} \\
     -1
-\end{bmatrix}}{\sqrt{\frac{22}{9}}} = \begin{bmatrix}
-    \frac{2}{\sqrt{22}} \\
-    \frac{2}{\sqrt{22}} \\
-    \frac{4}{\sqrt{22}} \\
-    -\frac{1}{\sqrt{22}}
+\end{bmatrix}}{\sqrt{\frac{33}{9}}} = \begin{bmatrix}
+    \frac{2}{\sqrt{33}} \\
+    \frac{2}{\sqrt{33}} \\
+    \frac{4}{\sqrt{33}} \\
+    -\frac{1}{\sqrt{33}}
 \end{bmatrix} $$
 $$ e_{3} = \frac{b_{3}}{\|b_{3}\|} = \frac{\begin{bmatrix}
     1 \\
@@ -293,5 +293,148 @@ $$ B_{on} = \left\{ \begin{bmatrix}
     \frac{1}{\sqrt{6}} \\
     \frac{2}{\sqrt{6}}
 \end{bmatrix} \right\} $$
+
+## Vector decomposition
+Given a vector space $V$ and a vector $v \in V$, we can decompose $v$ into a parallel component $v_{\parallel}$ and a perpendicular(orthogonal) component $v_{\perp}$.
+
+In order to do that we need to know the orthogonal basis $B_{o}$ of $V$.
+
+After that we can project $v$ onto each vector in $B_{o}$ and sum the projections to get $v_{\parallel}$.
+
+$$ v_{\parallel} = \sum_{i=1}^{n} \frac{\langle v, b_{i} \rangle}{\langle b_{i}, b_{i} \rangle} \cdot b_{i} $$
+where
+$b_{i}$
+is the $i$-th vector in $B_{o}$.
+
+Then we can calculate $v_{\perp}$:
+$$ v_{\perp} = v - v_{\parallel} $$
+
+### Example
+Let
+$$ W = subspace \in \mathbb{R}^{4} $$
+With orthogonal basis:
+$$ B_{o} = \left\{ \begin{bmatrix}
+    1 \\
+    1 \\
+    -1 \\
+    0
+\end{bmatrix}, \begin{bmatrix}
+    \frac{2}{3} \\
+    \frac{2}{3} \\
+    \frac{4}{3} \\
+    -1
+\end{bmatrix}, \begin{bmatrix}
+    1 \\
+    0 \\
+    1 \\
+    2
+\end{bmatrix} \right\} $$
+And arbitrary vector $v$ in $W$:
+$$ v = \begin{bmatrix}
+    4 \\
+    3 \\
+    2 \\
+    0
+\end{bmatrix} $$
+
+Let's decompose $v$ into a parallel component $v_{\parallel}$ and a perpendicular(orthogonal) component $v_{\perp}$.
+
+$$ v_{\parallel} = \sum_{i=1}^{n} \frac{\langle v, b_{i} \rangle}{\langle b_{i}, b_{i} \rangle} \cdot b_{i} = \frac{\langle v, b_{1} \rangle}{\langle b_{1}, b_{1} \rangle} \cdot b_{1} + \frac{\langle v, b_{2} \rangle}{\langle b_{2}, b_{2} \rangle} \cdot b_{2} + \frac{\langle v, b_{3} \rangle}{\langle b_{3}, b_{3} \rangle} \cdot b_{3}$$
+$$ \frac{\langle v, b_{1} \rangle}{\langle b_{1}, b_{1} \rangle} \cdot b_{1} = \frac{4 \cdot 1 + 3 \cdot 1 + 2 \cdot (-1) + 0 \cdot 0}{1 \cdot 1 + 1 \cdot 1 + (-1) \cdot (-1) + 0 \cdot 0} \cdot \begin{bmatrix}
+    1 \\
+    1 \\
+    -1 \\
+    0
+\end{bmatrix} = \frac{5}{3} \cdot \begin{bmatrix}
+    1 \\
+    1 \\
+    -1 \\
+    0
+\end{bmatrix} = \begin{bmatrix}
+    \frac{5}{3} \\
+    \frac{5}{3} \\
+    -\frac{5}{3} \\
+    0
+\end{bmatrix} $$
+
+$$ \frac{\langle v, b_{2} \rangle}{\langle b_{2}, b_{2} \rangle} \cdot b_{2} = \frac{4 \cdot \frac{2}{3} + 3 \cdot \frac{2}{3} + 2 \cdot \frac{4}{3} + 0 \cdot (-1)}{\frac{2}{3} \cdot \frac{2}{3} + \frac{2}{3} \cdot \frac{2}{3} + \frac{4}{3} \cdot \frac{4}{3} + (-1) \cdot (-1)} \cdot \begin{bmatrix}
+    \frac{2}{3} \\
+    \frac{2}{3} \\
+    \frac{4}{3} \\
+    -1
+\end{bmatrix} = 2 \cdot \begin{bmatrix}
+    \frac{2}{3} \\
+    \frac{2}{3} \\
+    \frac{4}{3} \\
+    -1
+\end{bmatrix} = \begin{bmatrix}
+    \frac{4}{3} \\
+    \frac{4}{3} \\
+    \frac{8}{3} \\
+    -2
+\end{bmatrix} $$
+$$ \frac{\langle v, b_{3} \rangle}{\langle b_{3}, b_{3} \rangle} \cdot b_{3} = \frac{4 \cdot 1 + 3 \cdot 0 + 2 \cdot 1 + 0 \cdot 2}{1 \cdot 1 + 0 \cdot 0 + 1 \cdot 1 + 2 \cdot 2} \cdot \begin{bmatrix}
+    1 \\
+    0 \\
+    1 \\
+    2
+\end{bmatrix} = 1 \cdot \begin{bmatrix}
+    1 \\
+    0 \\
+    1 \\
+    2
+\end{bmatrix} = \begin{bmatrix}
+    1 \\
+    0 \\
+    1 \\
+    2
+\end{bmatrix} $$
+$$ v_{\parallel} = \begin{bmatrix}
+    \frac{5}{3} \\
+    \frac{5}{3} \\
+    -\frac{5}{3} \\
+    0
+\end{bmatrix} + \begin{bmatrix}
+    \frac{4}{3} \\
+    \frac{4}{3} \\
+    \frac{8}{3} \\
+    -2
+\end{bmatrix} + \begin{bmatrix}
+    1 \\
+    0 \\
+    1 \\
+    2
+\end{bmatrix} = \begin{bmatrix}
+    \frac{5}{3} + \frac{4}{3} + 1 \\
+    \frac{5}{3} + \frac{4}{3} + 0 \\
+    -\frac{5}{3} + \frac{8}{3} + 1 \\
+    0 - 2 + 2
+\end{bmatrix} = \begin{bmatrix}
+    \frac{12}{3} \\
+    \frac{9}{3} \\
+    \frac{6}{3} \\
+    0
+\end{bmatrix} = \begin{bmatrix}
+    4 \\
+    3 \\
+    2 \\
+    0
+\end{bmatrix} $$
+$$ v_{\perp} = v - v_{\parallel} = \begin{bmatrix}
+    4 \\
+    3 \\
+    2 \\
+    0
+\end{bmatrix} - \begin{bmatrix}
+    4 \\
+    3 \\
+    2 \\
+    0
+\end{bmatrix} = \begin{bmatrix}
+    0 \\
+    0 \\
+    0 \\
+    0
+\end{bmatrix} $$
 
 
