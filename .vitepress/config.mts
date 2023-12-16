@@ -1,13 +1,10 @@
 import { defineConfig } from 'vitepress'
+import 'dotenv/config'
+
+const gID = process.env.GA_ID || 'XXXXXXXXXX'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Treasure box",
-  description: "A collection of useful student materials.",
-
-  srcDir: "src",
-  outDir: "dist",
-
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -53,12 +50,38 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/codeapples/treasure-box' }
     ]
   },
+
   markdown: {
     // TODO: figure out how to use latex macros in mathjax
     math: {}
   },
+
   vite: {
     // https://vitejs.dev/config/
     // TODO: configure js and css minification & chunk size
-  }
+  },
+
+  title: "Treasure box",
+  description: "A collection of useful student materials.",
+
+  srcDir: "src",
+  outDir: "dist",
+
+  /* cleanUrls: true, */
+
+  head: [
+    [
+      'script',
+      { async: '', src: `https://www.googletagmanager.com/gtag/js?id=G-${gID}` }
+    ],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-${gID}');`
+    ],
+  ],
+
 })
