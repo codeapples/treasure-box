@@ -1,8 +1,7 @@
 ---
-title: Algorithms
+title: \[P\] Algorithms
 ---
-# Patterns of algorithms:
-# sequence -> single value (reduction)
+# Patterns of algorithms:<br>sequence -> single value (reduction)
 
 ## Counting
 Used to count a number of elements in a collection, or to count the number of times a certain condition is satisfied.

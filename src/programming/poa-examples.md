@@ -1,3 +1,6 @@
+---
+title: \[P\] Examples
+---
 # Practical examples
 
 ## Task 1

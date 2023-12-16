@@ -1,10 +1,8 @@
 ---
-title: Algorithms
+title: \[P\] Algorithms
 ---
 
-# Patterns of algorithms:
-
-# sequence -> sequence
+# Patterns of algorithms:<br>sequence -> sequence
 
 ## Copy
 

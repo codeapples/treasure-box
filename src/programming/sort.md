@@ -1,5 +1,7 @@
-# Patterns of algorithms
-# sort & other
+---
+title: \[P\] Algorithms
+---
+# Patterns of algorithms<br>sort & other
 
 ## Bubble sort
 Used to sort a collection of elements with simple exchange method.

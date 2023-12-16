@@ -1,5 +1,5 @@
 ---
-title: Programming
+title: \[P\] General
 ---
 # Basic patterns of algorithms
 

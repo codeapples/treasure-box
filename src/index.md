@@ -19,8 +19,9 @@ features:
   - title: Programming [P]
     details: Materials for programming course (1st Semester)
     link: /programming/
-  #- title: Feature B
-  #  details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Basic Mathematics [BM]
+    details: Materials for basic mathematics course (1st Semester)
+    link: /basicmath/
   #- title: Feature C
   #  details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
