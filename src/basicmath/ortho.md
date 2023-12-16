@@ -258,7 +258,7 @@ $$ e_{2} = \frac{b_{2}}{\|b_{2}\|} = \frac{\begin{bmatrix}
     \frac{2}{\sqrt{33}} \\
     \frac{2}{\sqrt{33}} \\
     \frac{4}{\sqrt{33}} \\
-    -\frac{1}{\sqrt{33}}
+    -\frac{3}{\sqrt{33}}
 \end{bmatrix} $$
 $$ e_{3} = \frac{b_{3}}{\|b_{3}\|} = \frac{\begin{bmatrix}
     1 \\
@@ -295,9 +295,9 @@ $$ B_{on} = \left\{ \begin{bmatrix}
 \end{bmatrix} \right\} $$
 
 ## Vector decomposition
-Given a vector space $V$ and a vector $v \in V$, we can decompose $v$ into a parallel component $v_{\parallel}$ and a perpendicular(orthogonal) component $v_{\perp}$.
+Given a vector space $W$ and a vector $v \in W$, we can decompose $v$ into a parallel component $v_{\parallel}$ and a perpendicular(orthogonal) component $v_{\perp}$.
 
-In order to do that we need to know the orthogonal basis $B_{o}$ of $V$.
+In order to do that we need to know the orthogonal basis $B_{o}$ of $W$.
 
 After that we can project $v$ onto each vector in $B_{o}$ and sum the projections to get $v_{\parallel}$.
 
