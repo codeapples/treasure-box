@@ -66,7 +66,7 @@ $$ A = \begin{bmatrix}
     3 & 1 & -2 \\
     2 & -3 & -4
 \end{bmatrix} $$
-be a square matrix. The inverse of A is calculated using the following steps:
+be a square matrix. Let's calculate the inverse of A.
 
 ### Augmented matrix
 The augmented matrix is created by appending the identity matrix to the right of the original matrix.
@@ -76,7 +76,7 @@ $$ \begin{bmatrix}
     2 & -3 & -4 & 0 & 0 & 1
 \end{bmatrix} $$
 ### Reduced row echelon form
-Getting row echelon form using Gauss-Jordan elimination method step-by-step:
+Getting reduced row echelon form using Gauss-Jordan elimination method step-by-step:
 $$ \begin{bmatrix}
     5 & 2 & -3 & 1 & 0 & 0 \\
     3 & 1 & -2 & 0 & 1 & 0 \\
@@ -100,7 +100,7 @@ $$ \begin{bmatrix}
     0 & 0 & 1 & 11 & -19 & 1 \\
     0 & 1 & 0 & -8 & 14 & -1 \\
     1 & 0 & 0 & 10 & -17 & 1
-\end{bmatrix} \xrightarrow[R_1 \leftrightarrow R_3]{R_2 \leftrightarrow R_3} \begin{bmatrix}
+\end{bmatrix} \xrightarrow{R_1 \leftrightarrow R_3} \begin{bmatrix}
     1 & 0 & 0 & 10 & -17 & 1 \\
     0 & 1 & 0 & -8 & 14 & -1 \\
     0 & 0 & 1 & 11 & -19 & 1
