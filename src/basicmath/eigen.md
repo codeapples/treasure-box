@@ -97,9 +97,8 @@ is the eigenvector of A.
 
 So we put eigenvalues one-by-one into the formula:
 
-Calculate
-${v_{1}}$
-:
+First, calculate for
+$\lambda_{1} = 1$:
 $$ (A - \lambda_{1} I) \cdot v_{1} = 0 $$
 $$ (A - 1 \cdot I) \cdot v_{1} = 0 $$
 $$ \begin{bmatrix}
@@ -126,16 +125,21 @@ $$ \begin{cases}
     0 = 0 \\
     0 = 0
 \end{cases}\ \rightarrow\ x = y + z $$
-$$ v_{1} = \begin{bmatrix}
+Now we can determine the **eigenspace** of
+$\lambda_{1} = 1$:
+$$ E_{\lambda_{1}} = \left( \begin{bmatrix}
     x \\
     y \\
     z
-\end{bmatrix} = \begin{bmatrix}
+\end{bmatrix}  |\ x, y, z \in \mathbb{K} \right)$$
+Substitute
+$x = y + z$:
+$$ E_{\lambda_{1}} = \left( \begin{bmatrix}
     y + z \\
     y \\
     z
-\end{bmatrix} : y,z \in \mathbb{K} $$
-$$ v_{1} = y \cdot \begin{bmatrix}
+\end{bmatrix}  |\ y, z \in \mathbb{K} \right)$$
+$$ E_{\lambda_{1}} = \left( y \cdot \begin{bmatrix}
     1 \\
     1 \\
     0
@@ -143,11 +147,31 @@ $$ v_{1} = y \cdot \begin{bmatrix}
     1 \\
     0 \\
     1
-\end{bmatrix} : y, z \in \mathbb{K}$$
+\end{bmatrix} |\ y, z \in \mathbb{K} \right)$$
+$$ \dim(E_{\lambda_{1}}) = 2 $$
+$$ E_{\lambda_{1}} = \text{Span} \left( \begin{bmatrix}
+    1 \\
+    1 \\
+    0
+\end{bmatrix}, \begin{bmatrix}
+    1 \\
+    0 \\
+    1
+\end{bmatrix} \right) $$
+Therefore
+$$ v_{1} = \begin{bmatrix}
+    1 \\
+    1 \\
+    0
+\end{bmatrix},\ v_{2} = \begin{bmatrix}
+    1 \\
+    0 \\
+    1
+\end{bmatrix} $$
 
-Calculate
-${v_{2}}$
-:
+
+Second, calculate for
+$\lambda_{2} = 0$:
 $$ (A - \lambda_{2} I) \cdot v_{2} = 0 $$
 $$ (A - 0 \cdot I) \cdot v_{2} = 0 $$
 $$ \begin{bmatrix}
@@ -176,54 +200,20 @@ $$ \begin{cases}
     x = -z \\
     y = -3z
 \end{cases}$$
-$$ v_{2} = \begin{bmatrix}
+Now we can determine the **eigenspace** of
+$\lambda_{2} = 0$:
+$$ E_{\lambda_{2}} = \left( \begin{bmatrix}
     x \\
     y \\
     z
-\end{bmatrix} = \begin{bmatrix}
+\end{bmatrix}  |\ x, y, z \in \mathbb{K} \right)$$
+Substitute
+$x = -z$ and $y = -3z$:
+$$ E_{\lambda_{2}} = \left( \begin{bmatrix}
     -z \\
     -3z \\
     z
-\end{bmatrix} : z \in \mathbb{K} $$
-$$ v_{2} = z \cdot \begin{bmatrix}
-    -1 \\
-    -3 \\
-    1
-\end{bmatrix} : z \in \mathbb{K} $$
-
-There is no need to calculate
-${v_{3}}$,
-because characteristic polynomial has a double root, therefore
-${v_{3}} = {v_{2}}$.
-
-## Eigenspace
-Eigenspace is a set of all eigenvectors of a matrix corresponding to a certain eigenvalue.
-
-If we consider previous example, then
-$$ E_{\lambda_{1}} = \left( y \cdot \begin{bmatrix}
-    1 \\
-    1 \\
-    0
-\end{bmatrix} + z \cdot \begin{bmatrix}
-    1 \\
-    0 \\
-    1
-\end{bmatrix} |\ y, z \in \mathbb{K} \right)$$
-$$ \dim(E_{\lambda_{1}}) = 2 $$
-$$ E_{\lambda_{1}} = \text{Span} \left( \begin{bmatrix}
-    1 \\
-    1 \\
-    0
-\end{bmatrix}, \begin{bmatrix}
-    1 \\
-    0 \\
-    1
-\end{bmatrix} \right) $$
-Where
-$E_{\lambda_{1}}$
-is the eigenspace of
-$\lambda_{1}$.
-
+\end{bmatrix}  |\ z \in \mathbb{K} \right)$$
 $$ E_{\lambda_{2}} = \left( z \cdot \begin{bmatrix}
     -1 \\
     -3 \\
@@ -235,10 +225,18 @@ $$ E_{\lambda_{2}} = \text{Span} \left( \begin{bmatrix}
     -3 \\
     1
 \end{bmatrix} \right) $$
-Where
-$E_{\lambda_{2}}$
-is the eigenspace of
-$\lambda_{2}$.
+Therefore
+$$ v_{3} = \begin{bmatrix}
+    -1 \\
+    -3 \\
+    1
+\end{bmatrix} $$
+
+There is no need to calculate for
+$\lambda_{3}$,
+because characteristic polynomial has a double root, which means that
+$\lambda_{2}$
+has a multiplicity of 2.
 
 ## Eigenbasis
 Eigenbasis is a basis consisting of eigenvectors of a matrix.

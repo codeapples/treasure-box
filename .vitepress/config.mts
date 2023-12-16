@@ -54,10 +54,11 @@ export default defineConfig({
     ]
   },
   markdown: {
+    // TODO: figure out how to use latex macros in mathjax
     math: {}
   },
   vite: {
     // https://vitejs.dev/config/
-
+    // TODO: configure js and css minification & chunk size
   }
 })
