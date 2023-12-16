@@ -82,7 +82,7 @@ $$ f(x_{1}) = f(x_{2}) \Rightarrow x_{1} = x_{2} $$
 $$ \frac{3x_{1} + 2}{x_{1} - 1} = \frac{3x_{2} + 2}{x_{2} - 1} $$
 $$ \frac{3x_{1} + 2}{x_{1} - 1} - \frac{3x_{2} + 2}{x_{2} - 1} = 0 $$
 $$ \frac{(3x_{1} + 2)(x_{2} - 1) - (3x_{2} + 2)(x_{1} - 1)}{(x_{1} - 1)(x_{2} - 1)} = 0 $$
-Only possible if nominator is equal to zero
+Only possible if numerator is equal to zero
 $$ (3x_{1} + 2)(x_{2} - 1) - (3x_{2} + 2)(x_{1} - 1) = 0 $$
 $$ 3x_{1}x_{2} - 3x_{1} + 2x_{2} - 2 - 3x_{1}x_{2} + 3x_{2} + 2x_{1} - 2 = 0 $$
 $$ 5x_{2} - 5x_{1} = 0 $$
