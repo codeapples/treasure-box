@@ -134,4 +134,27 @@ So $K := \sqrt{-11p} + 11$ is a good lower bound.
 $$ \forall p \lt 0\ \exists K := \sqrt{-11p} + 11 \gt 0\ \forall x \in \mathopen(K; +\infty\mathclose) \cap D_{f}\ \Rightarrow\ \frac{-2x^7 + 3x^5 - x^3 +2x^4 + x + 5}{3x^5 + 4x^2 + x + 3} \lt p $$
 
 ## Finite limit at infinity
-Incoming...
+Function $f$ has a **finite limit at infinity**
+$$ \lim_{x \to +\infty} f(x) = L$$
+if the following is true:
+$$ \forall \varepsilon \gt 0\ \exists K \gt 0\ \forall x \in \mathopen(K; +\infty\mathclose) \cap D_{f}\ \Rightarrow\ |f(x) - L| \lt \varepsilon $$
+
+### Prove by definition
+<br>
+
+#### Example 1
+Let's prove that
+$$ \lim_{x \to +\infty} \frac{x^2 + 3x - 1 - 2x^3}{3x^3 + x^2 + x + 5} = -\frac{2}{3} $$
+$$ \forall \varepsilon \gt 0\ \exists K \gt 0\ \forall x \in \mathopen(K; +\infty\mathclose) \cap D_{f}\ \Rightarrow\ \left|\frac{x^2 + 3x - 1 - 2x^3}{3x^3 + x^2 + x + 5} + \frac{2}{3}\right| \lt \varepsilon $$
+
+We need to find the upper bound for $|f(x) - L|$.
+
+$$ \left| f(x) + \frac{2}{3} \right| = \left| \frac{x^2 + 3x - 1 - 2x^3}{3x^3 + x^2 + x + 5} + \frac{2}{3} \right| = \frac{|3x^2 + 9x - 3 - 6x^3 + 6x^3 + 2x^2 + 2x + 10|}{|9x^3 + 3x^2 + 3x + 15|}$$
+$$\text{for $x \gt 0$ }\ : \frac{5x^2 + 11x + 2}{9x^3 + 3x^2 + 3x + 15} \le \frac{18x^2}{9x^3} \le \frac{2}{x}$$
+
+Therefore
+$$ \frac{2}{x} \lt \varepsilon\ \Leftrightarrow\ x \gt \frac{2}{\varepsilon}\ |\ x \ge 1$$
+
+So $K := \frac{2}{\varepsilon} + 1 > 0$
+
+$$ \forall \varepsilon \gt 0\ \exists K := \frac{2}{\varepsilon} + 1 \gt 0\ \forall x \in \mathopen(K; +\infty\mathclose) \cap D_{f}\ \Rightarrow\ \left|\frac{x^2 + 3x - 1 - 2x^3}{3x^3 + x^2 + x + 5} + \frac{2}{3}\right| \lt \varepsilon $$
