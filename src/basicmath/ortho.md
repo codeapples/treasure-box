@@ -436,5 +436,3 @@ $$ v_{\perp} = v - v_{\parallel} = \begin{bmatrix}
     0 \\
     0
 \end{bmatrix} $$
-
-

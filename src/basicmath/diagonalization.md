@@ -175,11 +175,11 @@ $$ \begin{cases}
 \end{cases} $$
 
 Eigenspace $E_{\lambda_{2}}$ is:
-$$ E_{\lambda_{2}} = \left( y \cdot \begin{bmatrix}
+$$ E_{\lambda_{2}} = \left( x \cdot \begin{bmatrix}
     1 \\
     -3 \\
     -5
-\end{bmatrix} |\ y \in \mathbb{K} \right) $$
+\end{bmatrix} |\ x \in \mathbb{K} \right) $$
 $$ \dim(E_{\lambda_{2}}) = 1 $$
 $$ E_{\lambda_{2}} = \text{Span} \left( \begin{bmatrix}
     1 \\
