@@ -5,7 +5,7 @@ title: Home
 
 hero:
   name: "ELTE CS BSc"
-  text: "Treasure box"
+  text: "treasure box"
   tagline: Helpful materials for students
   actions:
     - theme: brand

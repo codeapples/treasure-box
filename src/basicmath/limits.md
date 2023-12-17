@@ -82,7 +82,7 @@ $$ \lim_{x \to +\infty} \frac{3x^4 + x^2 - 3x + 5}{2x^3 + 2x + 1} = +\infty $$
 $$ \forall P \gt 0\ \exists K \gt 0\ \forall x \in \mathopen(K; +\infty\mathclose) \cap D_{f}\ \Rightarrow\ \frac{3x^4 + x^2 - 3x + 5}{2x^3 + 2x + 1} \gt P $$
 To find the lower bound we need to find the lower bound for the numerator and the upper bound for the denominator.
 
-$$ \frac{P(x)}{Q(x)} \ge \frac{3x^4 - 3x^3}{2x^3 + 2x^3 + 1x^3} \ge \frac{2x^4 - x^3(x - 3)}{5x^3} \ge \frac{2x^4}{5x^3} \ge \frac{2}{5}x$$
+$$ \frac{P(x)}{Q(x)} \ge \frac{3x^4 - 3x^3}{2x^3 + 2x^3 + 1x^3} \ge \frac{2x^4 + x^3(x - 3)}{5x^3} \ge \frac{2x^4}{5x^3} \ge \frac{2}{5}x$$
 
 Therefore
 $$ \frac{2}{5}x \gt P \gt 0 \leftrightarrow x \gt \frac{5}{2}P $$
