@@ -6,6 +6,7 @@ const gID = process.env.GA_ID || 'XXXXXXXXXX'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   themeConfig: {
+    logo: '/assets/favicons/android-chrome-192x192.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },/*
@@ -25,7 +26,8 @@ export default defineConfig({
               { text: '[P] Algo: Seq -> Single', link: '/programming/single.md' },
               { text: '[P] Algo: Seq -> Seq', link: '/programming/sequence.md' },
               { text: '[P] Algo: Sort and other', link: '/programming/sort.md' },
-              { text: '[P] Practical examples', link: '/programming/poa-examples.md' }
+              { text: '[P] Practical examples', link: '/programming/poa-examples.md' },
+              { text: '[P] C2 sample solutions', link: '/programming/c2-examples.md' },
             ]
           },
           {
@@ -48,7 +50,18 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/codeapples/treasure-box' }
-    ]
+    ],
+
+    lastUpdated: {
+      text: 'Updated at',
+      formatOptions: {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      }
+    },
+    search: {
+      provider: 'local'
+    }
   },
 
   markdown: {
@@ -82,6 +95,10 @@ export default defineConfig({
       gtag('js', new Date());
       gtag('config', 'G-${gID}');`
     ],
+    ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/assets/favicons/apple-touch-icon.png" }],
+    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/assets/favicons/favicon-32x32.png" }],
+    ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/assets/favicons/favicon-16x16.png" }],
+    ['link', { rel: "manifest", href: "/assets/favicons/site.webmanifest" }],
+    ['link', { rel: "shortcut icon", href: "/assets/favicons/favicon.ico" }],
   ],
-
 })
