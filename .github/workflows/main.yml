@@ -29,6 +29,7 @@ jobs:
       - name: Build
         run: pnpm docs:build
 
+        # TODO: Change to rsync
       - name: Deploy
         uses: appleboy/scp-action@v0.1.4
         with:

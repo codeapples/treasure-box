@@ -6,7 +6,7 @@ const gID = process.env.GA_ID || 'XXXXXXXXXX'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   themeConfig: {
-    logo: '/assets/favicons/android-chrome-192x192.png',
+    logo: '/android-chrome-192x192.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },/*
@@ -95,10 +95,10 @@ export default defineConfig({
       gtag('js', new Date());
       gtag('config', 'G-${gID}');`
     ],
-    ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/assets/favicons/apple-touch-icon.png" }],
-    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/assets/favicons/favicon-32x32.png" }],
-    ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/assets/favicons/favicon-16x16.png" }],
-    ['link', { rel: "manifest", href: "/assets/favicons/site.webmanifest" }],
-    ['link', { rel: "shortcut icon", href: "/assets/favicons/favicon.ico" }],
+    ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" }],
+    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
+    ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" }],
+    ['link', { rel: "manifest", href: "/site.webmanifest" }],
+    ['link', { rel: "shortcut icon", href: "/favicon.ico" }],
   ],
 })

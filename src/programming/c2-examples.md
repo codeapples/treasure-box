@@ -21,8 +21,8 @@ integers those mean the number of gifts in the rucksacks (1≤G≤2000).
 ### Output
 You have to write exactly 4 lines into the standard output. Each line
 must contain an answer for the given question in the given order. First
-line contains a number, the number of rucksacks that contains exaclty 10
-gifts. The second line contains the index of the Elf who pakced the most
+line contains a number, the number of rucksacks that contains exactly 10
+gifts. The second line contains the index of the Elf who packed the most
 gift. The third line contains the number of the Elves and their indexes
 separated by space. The last, fourth line contains YES or NO that answers
 the fourth question.
@@ -178,7 +178,7 @@ wonBattles/allBattels);
 
 ### Input
 The first line of the standard input contains the number of gladiators
-(1≤N≤200) and the number of won battles(1≤W≤3). The next N line contains
+(1≤N≤200) and the number of won battles(1≤W≤30). The next N line contains
 the name of each gladiator (1≤Length(Gi))≤50), the time they
 arrived(0≤Gi≤500), if they arrived “before Christ” BC or “anno Domini” AD
 (in the year of the Lord), how many battles they had (0≤Gi≤100), and how
@@ -216,6 +216,7 @@ Aurelius<br>
 ```c#
 namespace C2_sample2;
 class Program {
+
   struct Gladiator {
     public string name;
     public int year;
