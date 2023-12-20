@@ -4,13 +4,15 @@ layout: home
 title: Home
 
 hero:
-  name: "ELTE CS BSc"
-  text: "treasure box"
-  tagline: Helpful materials for students
+  name: 'ELTE CS BSc'
+  text: 'treasure box'
+  tagline: Study smarter, not harder
+  image:
+    src: /android-chrome-512x512.png
   actions:
     - theme: brand
       text: Browse materials
-      link: /info
+      link: /materials/introduction
     - theme: alt
       text: CS BSc website
       link: https://csbsc.elte.hu/
@@ -18,11 +20,10 @@ hero:
 features:
   - title: Programming [P]
     details: Materials for programming course (1st Semester)
-    link: /programming/
+    link: /materials/programming/
   - title: Basic Mathematics [BM]
     details: Materials for basic mathematics course (1st Semester)
-    link: /basicmath/
+    link: /materials//basicmath/
   #- title: Feature C
   #  details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-

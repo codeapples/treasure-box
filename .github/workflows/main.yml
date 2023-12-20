@@ -27,15 +27,15 @@ jobs:
         run: pnpm install
 
       - name: Build
-        run: pnpm docs:build
+        run: pnpm build
 
         # TODO: Change to rsync
       - name: Deploy
-        uses: appleboy/scp-action@v0.1.4
+        uses: Burnett01/rsync-deployments@6.0.0
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          password: ${{ secrets.SSH_PASSWORD }}
-          source: "dist/*"
-          target: "../web"
-          strip_components: 1
+          switches: -avzr --delete
+          path: dist/
+          remote_path: ../web
+          remote_host: ${{ secrets.SSH_HOST }}
+          remote_user: ${{ secrets.SSH_USERNAME }}
+          remote_key: ${{ secrets.SSH_KEY }}

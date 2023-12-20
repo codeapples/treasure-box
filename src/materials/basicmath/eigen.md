@@ -5,11 +5,13 @@ title: \[BM\] Eigenvalues & eigenvectors
 # Eigenvalues and eigenvectors
 
 ## Introduction
+
 Eigenvalues are special scalars associated with a linear system of equations (i.e., a matrix equation) that are sometimes also known as characteristic roots, characteristic values, proper values, or latent roots.
 
 Eigenvectors are special vectors associated with a linear system of equations (i.e., a matrix equation) that are sometimes also known as characteristic vectors, proper vectors, or latent vectors.
 
 ## Calculation
+
 Let
 $$ A \in \mathbb{K}^{n \times n} $$
 be a square matrix. The eigenvalues and eigenvectors of A are calculated using the following steps:
@@ -19,6 +21,7 @@ be a square matrix. The eigenvalues and eigenvectors of A are calculated using t
 3. Calculate the eigenvectors
 
 ### Characteristic polynomial
+
 The characteristic polynomial of a matrix is calculated using the following formula:
 $$ \det(A - \lambda I) = 0 $$
 where
@@ -26,26 +29,33 @@ $\lambda$
 is the eigenvalue of A.
 
 ### Roots of the characteristic polynomial
+
 The roots of the characteristic polynomial are calculated using the following formula:
-$$ \lambda_{i} = \frac{1}{2} \left( -b \pm \sqrt{b^{2} - 4ac} \right) $$
+$$ \lambda\_{i} = \frac{1}{2} \left( -b \pm \sqrt{b^{2} - 4ac} \right) $$
 where
 $a$, $b$, $c$
 are the coefficients of the characteristic polynomial.
 
 ### Eigenvectors
+
 The eigenvectors are calculated using the following formula:
-$$ (A - \lambda_{i} I) \cdot v_{i} = 0 $$
+$$ (A - \lambda*{i} I) \cdot v*{i} = 0 $$
 where
-$v_{i}$
+$v\_{i}$
 is the eigenvector of A.
 
 ## Example
+
 Let
-$$ A = \begin{bmatrix}
+
+$$
+A = \begin{bmatrix}
     2 & -1 & -1 \\
     3 & -2 & -3 \\
     -1 & 1 & 2
-\end{bmatrix} $$
+\end{bmatrix}
+$$
+
 be a square matrix. The eigenvalues and eigenvectors of A are calculated using the following steps:
 
 1. Calculate the characteristic polynomial
@@ -53,21 +63,29 @@ be a square matrix. The eigenvalues and eigenvectors of A are calculated using t
 3. Calculate the eigenvectors
 
 ### Characteristic polynomial
+
 The characteristic polynomial of A is calculated using the following formula:
 $$ \det(A - \lambda I) = 0 $$
 where
 $\lambda$
 is the eigenvalue of A.
-$$ \lambda I = \begin{bmatrix}
+
+$$
+\lambda I = \begin{bmatrix}
     \lambda & 0 & 0 \\
     0 & \lambda & 0 \\
     0 & 0 & \lambda
-\end{bmatrix} $$
-$$ \det(A - \lambda I) = \begin{vmatrix}
+\end{bmatrix}
+$$
+
+$$
+\det(A - \lambda I) = \begin{vmatrix}
     2 - \lambda & -1 & -1 \\
     3 & -2 - \lambda & -3 \\
     -1 & 1 & 2 - \lambda
-\end{vmatrix} = 0 $$
+\end{vmatrix} = 0
+$$
+
 Use diagonal rule to calculate the determinant.
 $$ \det(A - \lambda I) = (2 - \lambda) \cdot (-2 - \lambda) \cdot (2 - \lambda) + 3 \cdot 1 \cdot (-1) + (-1) \cdot (-3) \cdot (-1)\ \rangle$$
 $$-\ (-1) \cdot (-2 - \lambda) \cdot (-1) - 3 \cdot (-1) \cdot (2 - \lambda) - (2 - \lambda) \cdot 1 \cdot (-3) = $$
@@ -82,36 +100,47 @@ $$ = -\lambda \cdot (\lambda^{2} - 2\lambda + 1) = $$
 $$ = -\lambda \cdot (\lambda - 1)^{2} = 0 $$
 The characteristic polynomial of A is:
 $$ \lambda \cdot (\lambda - 1)^{2} = 0 $$
+
 ### Roots of the characteristic polynomial
+
 The roots of the characteristic polynomial are:
-$$ \lambda_{1} = 1,\ \lambda_{2} = 1,\ \lambda_{3} = 0 $$
+$$ \lambda*{1} = 1,\ \lambda*{2} = 1,\ \lambda*{3} = 0 $$
 You can also say that the **eigenvalues** of A are:
-$$ \lambda_{1} = 1,\ \lambda_{2} = 1,\ \lambda_{3} = 0 $$
+$$ \lambda*{1} = 1,\ \lambda*{2} = 1,\ \lambda*{3} = 0 $$
 
 ### Eigenvectors
+
 The eigenvectors are calculated using the following formula:
-$$ (A - \lambda_{i} I) \cdot v_{i} = 0 $$
+$$ (A - \lambda*{i} I) \cdot v*{i} = 0 $$
 where
-$v_{i}$
+$v\_{i}$
 is the eigenvector of A.
 
 So we put eigenvalues one-by-one into the formula:
 
 First, calculate for
 $\lambda_{1} = 1$:
-$$ (A - \lambda_{1} I) \cdot v_{1} = 0 $$
-$$ (A - 1 \cdot I) \cdot v_{1} = 0 $$
-$$ \begin{bmatrix}
+$$ (A - \lambda*{1} I) \cdot v*{1} = 0 $$
+$$ (A - 1 \cdot I) \cdot v\_{1} = 0 $$
+
+$$
+\begin{bmatrix}
     2 - 1 & -1 & -1 \\
     3 & -2 - 1 & -3 \\
     -1 & 1 & 2 - 1
-\end{bmatrix} \cdot v_{1} = 0 $$
-$$ \begin{bmatrix}
+\end{bmatrix} \cdot v_{1} = 0
+$$
+
+$$
+\begin{bmatrix}
     1 & -1 & -1 \\
     3 & -3 & -3 \\
     -1 & 1 & 1
-\end{bmatrix} \cdot v_{1} = 0 $$
-$$ \begin{bmatrix}
+\end{bmatrix} \cdot v_{1} = 0
+$$
+
+$$
+\begin{bmatrix}
     1 & -1 & -1 \\
     3 & -3 & -3 \\
     -1 & 1 & 1
@@ -119,27 +148,41 @@ $$ \begin{bmatrix}
     1 & -1 & -1 \\
     0 & 0 & 0 \\
     0 & 0 & 0
-\end{bmatrix} $$
-$$ \begin{cases}
+\end{bmatrix}
+$$
+
+$$
+\begin{cases}
     x - y - z = 0 \\
     0 = 0 \\
     0 = 0
-\end{cases}\ \rightarrow\ x = y + z $$
+\end{cases}\ \rightarrow\ x = y + z
+$$
+
 Now we can determine the **eigenspace** of
 $\lambda_{1} = 1$:
-$$ E_{\lambda_{1}} = \left( \begin{bmatrix}
+
+$$
+E_{\lambda_{1}} = \left( \begin{bmatrix}
     x \\
     y \\
     z
-\end{bmatrix}  |\ x, y, z \in \mathbb{K} \right)$$
+\end{bmatrix}  |\ x, y, z \in \mathbb{K} \right)
+$$
+
 Substitute
 $x = y + z$:
-$$ E_{\lambda_{1}} = \left( \begin{bmatrix}
+
+$$
+E_{\lambda_{1}} = \left( \begin{bmatrix}
     y + z \\
     y \\
     z
-\end{bmatrix}  |\ y, z \in \mathbb{K} \right)$$
-$$ E_{\lambda_{1}} = \left( y \cdot \begin{bmatrix}
+\end{bmatrix}  |\ y, z \in \mathbb{K} \right)
+$$
+
+$$
+E_{\lambda_{1}} = \left( y \cdot \begin{bmatrix}
     1 \\
     1 \\
     0
@@ -147,9 +190,13 @@ $$ E_{\lambda_{1}} = \left( y \cdot \begin{bmatrix}
     1 \\
     0 \\
     1
-\end{bmatrix} |\ y, z \in \mathbb{K} \right)$$
-$$ \dim(E_{\lambda_{1}}) = 2 $$
-$$ E_{\lambda_{1}} = \text{Span} \left( \begin{bmatrix}
+\end{bmatrix} |\ y, z \in \mathbb{K} \right)
+$$
+
+$$ \dim(E*{\lambda*{1}}) = 2 $$
+
+$$
+E_{\lambda_{1}} = \text{Span} \left( \begin{bmatrix}
     1 \\
     1 \\
     0
@@ -157,9 +204,13 @@ $$ E_{\lambda_{1}} = \text{Span} \left( \begin{bmatrix}
     1 \\
     0 \\
     1
-\end{bmatrix} \right) $$
+\end{bmatrix} \right)
+$$
+
 Therefore
-$$ v_{1} = \begin{bmatrix}
+
+$$
+v_{1} = \begin{bmatrix}
     1 \\
     1 \\
     0
@@ -167,7 +218,8 @@ $$ v_{1} = \begin{bmatrix}
     1 \\
     0 \\
     1
-\end{bmatrix} $$
+\end{bmatrix}
+$$
 
 There is no need to calculate for
 $\lambda_{2}$,
@@ -177,14 +229,19 @@ has a multiplicity of 2.
 
 Second, calculate for
 $\lambda_{3} = 0$:
-$$ (A - \lambda_{3} I) \cdot v_{2} = 0 $$
-$$ (A - 0 \cdot I) \cdot v_{2} = 0 $$
-$$ \begin{bmatrix}
+$$ (A - \lambda*{3} I) \cdot v*{2} = 0 $$
+$$ (A - 0 \cdot I) \cdot v\_{2} = 0 $$
+
+$$
+\begin{bmatrix}
     2 & -1 & -1 \\
     3 & -2 & -3 \\
     -1 & 1 & 2
-\end{bmatrix} \cdot v_{2} = 0 $$
-$$ \begin{bmatrix}
+\end{bmatrix} \cdot v_{2} = 0
+$$
+
+$$
+\begin{bmatrix}
     2 & -1 & -1 \\
     3 & -2 & -3 \\
     -1 & 1 & 2
@@ -196,53 +253,78 @@ $$ \begin{bmatrix}
     1 & 0 & 1 \\
     0 & 0 & 0 \\
     0 & 1 & 3
-\end{bmatrix} $$
-$$ \begin{cases}
+\end{bmatrix}
+$$
+
+$$
+\begin{cases}
     x + z = 0 \\
     0 = 0 \\
     y + 3z = 0
 \end{cases}\ \rightarrow\ \begin{cases}
     x = -z \\
     y = -3z
-\end{cases}$$
+\end{cases}
+$$
+
 Now we can determine the **eigenspace** of
 $\lambda_{3} = 0$:
-$$ E_{\lambda_{3}} = \left( \begin{bmatrix}
+
+$$
+E_{\lambda_{3}} = \left( \begin{bmatrix}
     x \\
     y \\
     z
-\end{bmatrix}  |\ x, y, z \in \mathbb{K} \right)$$
+\end{bmatrix}  |\ x, y, z \in \mathbb{K} \right)
+$$
+
 Substitute
 $x = -z$ and $y = -3z$:
-$$ E_{\lambda_{3}} = \left( \begin{bmatrix}
+
+$$
+E_{\lambda_{3}} = \left( \begin{bmatrix}
     -z \\
     -3z \\
     z
-\end{bmatrix}  |\ z \in \mathbb{K} \right)$$
-$$ E_{\lambda_{3}} = \left( z \cdot \begin{bmatrix}
-    -1 \\
-    -3 \\
-    1
-\end{bmatrix} |\ z \in \mathbb{K} \right)$$
-$$ \dim(E_{\lambda_{3}}) = 1 $$
-$$ E_{\lambda_{3}} = \text{Span} \left( \begin{bmatrix}
-    -1 \\
-    -3 \\
-    1
-\end{bmatrix} \right) $$
-Therefore
-$$ v_{3} = \begin{bmatrix}
-    -1 \\
-    -3 \\
-    1
-\end{bmatrix} $$
+\end{bmatrix}  |\ z \in \mathbb{K} \right)
+$$
 
+$$
+E_{\lambda_{3}} = \left( z \cdot \begin{bmatrix}
+    -1 \\
+    -3 \\
+    1
+\end{bmatrix} |\ z \in \mathbb{K} \right)
+$$
+
+$$ \dim(E*{\lambda*{3}}) = 1 $$
+
+$$
+E_{\lambda_{3}} = \text{Span} \left( \begin{bmatrix}
+    -1 \\
+    -3 \\
+    1
+\end{bmatrix} \right)
+$$
+
+Therefore
+
+$$
+v_{3} = \begin{bmatrix}
+    -1 \\
+    -3 \\
+    1
+\end{bmatrix}
+$$
 
 ## Eigenbasis
+
 Eigenbasis is a basis consisting of eigenvectors of a matrix.
 
 If we consider previous example, then
-$$ B = \left( \begin{bmatrix}
+
+$$
+B = \left( \begin{bmatrix}
     1 \\
     1 \\
     0
@@ -254,5 +336,7 @@ $$ B = \left( \begin{bmatrix}
     -1 \\
     -3 \\
     1
-\end{bmatrix} \right) $$
+\end{bmatrix} \right)
+$$
+
 is an eigenbasis of A, assuming that vectors are linearly independent.

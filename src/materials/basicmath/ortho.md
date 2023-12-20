@@ -1,23 +1,29 @@
 ---
 title: \[BM\] Orthogonal
 ---
+
 # Orthogonal and orthonormal basis
 
 ## Introduction
+
 An orthogonal basis is a basis of a vector space where all the vectors are linearly independent and orthogonal to each other (i.e., the dot product of any two vectors is 0).
 
 An orthonormal basis is a basis of a vector space where all the vectors are orthogonal to each other and have a length of 1.
 
 ## Scalar product
+
 The scalar product of two vectors is calculated using the following formula:
-$$ \langle u, v \rangle = u \cdot v = \sum_{i=1}^{n} u_{i} \cdot v_{i} $$
+$$ \langle u, v \rangle = u \cdot v = \sum*{i=1}^{n} u*{i} \cdot v\_{i} $$
 where
 $u$, $v$
 are vectors.
 
 ### Example
+
 Let
-$$ u = \begin{bmatrix}
+
+$$
+u = \begin{bmatrix}
     1 \\
     2 \\
     3
@@ -25,36 +31,42 @@ $$ u = \begin{bmatrix}
     4 \\
     5 \\
     6
-\end{bmatrix} $$
+\end{bmatrix}
+$$
+
 be vectors. The scalar product of $u$ and $v$ is calculated using the following formula:
 $$ \langle u, v \rangle = u \cdot v = 1 \cdot 4 + 2 \cdot 5 + 3 \cdot 6 = 4 + 10 + 18 = 32 $$
 The scalar product of $u$ and $v$ is 32.
 
 ## Orthogonal basis
+
 Basis of vector space can be orthogonalized using the Gram-Schmidt process. To transform the basis into orthogonal basis we need to project each vector onto the subspace orthogonal to the previous vectors.
 
 Given $v_{1}, v_{2}, v_{3}$ which are non orthogonal independent vectors, we can calculate the orthogonal basis $b_{1}, b_{2}, b_{3}$ following these steps:
 
 So, let:
-$$ v_{1}, v_{2}, v_{3}: \text{non orthogonal} $$
-$$ W = span(v_{1}, v_{2}, v_{3}) : \text{vector space} $$
-$$ B = \{v_{1}, v_{2}, v_{3}\} : \text{basis of $W$} $$
+$$ v*{1}, v*{2}, v*{3}: \text{non orthogonal} $$
+$$ W = span(v*{1}, v*{2}, v*{3}) : \text{vector space} $$
+$$ B = \{v*{1}, v*{2}, v*{3}\} : \text{basis of $W$} $$
 $$ \text{---} $$
-$$ b_{1}, b_{2}, b_{3}: \text{orthogonal} $$
-$$ B_{o} = \{b_{1}, b_{2}, b_{3}\} : \text{orthogonal basis of $W$} $$
+$$ b*{1}, b*{2}, b*{3}: \text{orthogonal} $$
+$$ B*{o} = \{b*{1}, b*{2}, b*{3}\} : \text{orthogonal basis of $W$} $$
 We need to find $b_{1}, b_{2}, b_{3}$:
 
 Let:
-$$ b_{1} = v_{1}$$
+$$ b*{1} = v*{1}$$
 $$\text{(assume that of the vectors is on the first orthogonal axis) } $$
 then:
-$$ v_{2}^{'} = b_{2} = v_{2} - horizontal\ correction  = v_{2} - \frac{\langle v_{2}, b_{1} \rangle}{\langle b_{1}, b_{1} \rangle} \cdot b_{1} $$
+$$ v*{2}^{'} = b*{2} = v*{2} - horizontal\ correction = v*{2} - \frac{\langle v*{2}, b*{1} \rangle}{\langle b*{1}, b*{1} \rangle} \cdot b*{1} $$
 and therefore:
-$$ v_{3}^{'} = b_{3} = v_{3} - \frac{\langle v_{3}, b_{1} \rangle}{\langle b_{1}, b_{1} \rangle} \cdot b_{1} - \frac{\langle v_{3}, b_{2} \rangle}{\langle b_{2}, b_{2} \rangle} \cdot b_{2} $$
+$$ v*{3}^{'} = b*{3} = v*{3} - \frac{\langle v*{3}, b*{1} \rangle}{\langle b*{1}, b*{1} \rangle} \cdot b*{1} - \frac{\langle v*{3}, b*{2} \rangle}{\langle b*{2}, b*{2} \rangle} \cdot b*{2} $$
 
 ### Example
+
 Let
-$$ v_{1} = \begin{bmatrix}
+
+$$
+v_{1} = \begin{bmatrix}
     1 \\
     1 \\
     -1 \\
@@ -69,17 +81,24 @@ $$ v_{1} = \begin{bmatrix}
     1 \\
     2 \\
     1
-\end{bmatrix} $$
+\end{bmatrix}
+$$
+
 be vectors. The orthogonal basis of $v_{1}, v_{2}, v_{3}$ is calculated using the following steps:
 
-$$ b_{1} = v_{1} = \begin{bmatrix}
+$$
+b_{1} = v_{1} = \begin{bmatrix}
     1 \\
     1 \\
     -1 \\
     0
-\end{bmatrix} $$
+\end{bmatrix}
+$$
+
 $$ \text{- - -} $$
-$$ b_{2} = v_{2} - \frac{\langle v_{2}, b_{1} \rangle}{\langle b_{1}, b_{1} \rangle} \cdot b_{1} = \begin{bmatrix}
+
+$$
+b_{2} = v_{2} - \frac{\langle v_{2}, b_{1} \rangle}{\langle b_{1}, b_{1} \rangle} \cdot b_{1} = \begin{bmatrix}
     1 \\
     1 \\
     1 \\
@@ -89,8 +108,11 @@ $$ b_{2} = v_{2} - \frac{\langle v_{2}, b_{1} \rangle}{\langle b_{1}, b_{1} \ran
     1 \\
     -1 \\
     0
-\end{bmatrix} =$$
-$$= \begin{bmatrix}
+\end{bmatrix} =
+$$
+
+$$
+= \begin{bmatrix}
     1 \\
     1 \\
     1 \\
@@ -105,16 +127,23 @@ $$= \begin{bmatrix}
     \frac{2}{3} \\
     \frac{4}{3} \\
     -1
-\end{bmatrix} $$
-$$ b_{2} = \begin{bmatrix}
+\end{bmatrix}
+$$
+
+$$
+b_{2} = \begin{bmatrix}
     \frac{2}{3} \\
     \frac{2}{3} \\
     \frac{4}{3} \\
     -1
-\end{bmatrix} $$
+\end{bmatrix}
+$$
+
 $$ \text{- - -} $$
-$$ b_{3} = v_{3} - \frac{\langle v_{3}, b_{1} \rangle}{\langle b_{1}, b_{1} \rangle} \cdot b_{1} - \frac{\langle v_{3}, b_{2} \rangle}{\langle b_{2}, b_{2} \rangle} \cdot b_{2} =$$
-$$= \begin{bmatrix}
+$$ b*{3} = v*{3} - \frac{\langle v*{3}, b*{1} \rangle}{\langle b*{1}, b*{1} \rangle} \cdot b*{1} - \frac{\langle v*{3}, b*{2} \rangle}{\langle b*{2}, b*{2} \rangle} \cdot b*{2} =$$
+
+$$
+= \begin{bmatrix}
     2 \\
     1 \\
     2 \\
@@ -129,8 +158,11 @@ $$= \begin{bmatrix}
     \frac{2}{3} \\
     \frac{4}{3} \\
     -1
-\end{bmatrix} =$$
-$$= \begin{bmatrix}
+\end{bmatrix} =
+$$
+
+$$
+= \begin{bmatrix}
     2 \\
     1 \\
     2 \\
@@ -170,15 +202,22 @@ $$= \begin{bmatrix}
     1 \\
     1 \\
     -1
-\end{bmatrix}$$
-$$ b_{3} = \begin{bmatrix}
+\end{bmatrix}
+$$
+
+$$
+b_{3} = \begin{bmatrix}
     1 \\
     0 \\
     1 \\
     2
-\end{bmatrix} $$
+\end{bmatrix}
+$$
+
 The orthogonal basis of $v_{1}, v_{2}, v_{3}$ is:
-$$ B_{o} = \left\{ \begin{bmatrix}
+
+$$
+B_{o} = \left\{ \begin{bmatrix}
     1 \\
     1 \\
     -1 \\
@@ -193,42 +232,49 @@ $$ B_{o} = \left\{ \begin{bmatrix}
     0 \\
     1 \\
     2
-\end{bmatrix} \right\} $$
+\end{bmatrix} \right\}
+$$
 
 ## Orthonormal basis
+
 Orthogonal basis can be transformed into orthonormal basis by normalizing each vector in the basis.
 
 Given $b_{1}, b_{2}, b_{3}$ which are orthogonal independent vectors, we can calculate the orthonormal basis $e_{1}, e_{2}, e_{3}$ following these steps:
 
 So, if
-$$ b_{1}, b_{2}, b_{3}: \text{orthogonal} $$
-$$ B_{o} = \{b_{1}, b_{2}, b_{3}\} : \text{orthogonal basis of $W$} $$
+$$ b*{1}, b*{2}, b*{3}: \text{orthogonal} $$
+$$ B*{o} = \{b*{1}, b*{2}, b*{3}\} : \text{orthogonal basis of $W$} $$
 then
-$$ e_{1}, e_{2}, e_{3}: \text{orthonormal} $$
-$$ B_{on} = \{e_{1}, e_{2}, e_{3}\} : \text{orthonormal basis of $W$} $$
+$$ e*{1}, e*{2}, e*{3}: \text{orthonormal} $$
+$$ B*{on} = \{e*{1}, e*{2}, e*{3}\} : \text{orthonormal basis of $W$} $$
 
 Formula for vector normalization:
-$$ e_{1} = \frac{b_{1}}{\|b_{1}\|},\ e_{2} = \frac{b_{2}}{\|b_{2}\|},\ e_{3} = \frac{b_{3}}{\|b_{3}\|} $$
+$$ e*{1} = \frac{b*{1}}{\|b*{1}\|},\ e*{2} = \frac{b*{2}}{\|b*{2}\|},\ e*{3} = \frac{b*{3}}{\|b*{3}\|} $$
 where
-$\|b_{1}\|$, $\|b_{2}\|$, $\|b_{3}\|$
+$\|b*{1}\|$, $\|b_{2}\|$, $\|b_{3}\|$
 are the lengths of $b_{1}$, $b_{2}$, $b_{3}$.
 
 Length of a vector is calculated using the following formula:
-$$ \|v\| = \sqrt{\langle v, v \rangle} = \sqrt{v \cdot v} = \sqrt{\sum_{i=1}^{n} v_{i}^{2}} $$
+$$ \|v\| = \sqrt{\langle v, v \rangle} = \sqrt{v \cdot v} = \sqrt{\sum*{i=1}^{n} v*{i}^{2}} $$
 
 For example, given a vector $v$:
-$$ v = \begin{bmatrix}
+
+$$
+v = \begin{bmatrix}
     1 \\
     2 \\
     3
-\end{bmatrix} $$
+\end{bmatrix}
+$$
 
-$$ \|v\| = \sqrt{\langle v, v \rangle} = \sqrt{v \cdot v} = \sqrt{\sum_{i=1}^{n} v_{i}^{2}} = \sqrt{1^{2} + 2^{2} + 3^{2}} = \sqrt{14} $$
+$$ \|v\| = \sqrt{\langle v, v \rangle} = \sqrt{v \cdot v} = \sqrt{\sum*{i=1}^{n} v*{i}^{2}} = \sqrt{1^{2} + 2^{2} + 3^{2}} = \sqrt{14} $$
 
 ### Example
+
 Using previous example, we can calculate the orthonormal basis of $v_{1}, v_{2}, v_{3}$:
 
-$$ e_{1} = \frac{b_{1}}{\|b_{1}\|} = \frac{\begin{bmatrix}
+$$
+e_{1} = \frac{b_{1}}{\|b_{1}\|} = \frac{\begin{bmatrix}
     1 \\
     1 \\
     -1 \\
@@ -243,8 +289,11 @@ $$ e_{1} = \frac{b_{1}}{\|b_{1}\|} = \frac{\begin{bmatrix}
     \frac{1}{\sqrt{3}} \\
     -\frac{1}{\sqrt{3}} \\
     0
-\end{bmatrix} $$
-$$ e_{2} = \frac{b_{2}}{\|b_{2}\|} = \frac{\begin{bmatrix}
+\end{bmatrix}
+$$
+
+$$
+e_{2} = \frac{b_{2}}{\|b_{2}\|} = \frac{\begin{bmatrix}
     \frac{2}{3} \\
     \frac{2}{3} \\
     \frac{4}{3} \\
@@ -259,8 +308,11 @@ $$ e_{2} = \frac{b_{2}}{\|b_{2}\|} = \frac{\begin{bmatrix}
     \frac{2}{\sqrt{33}} \\
     \frac{4}{\sqrt{33}} \\
     -\frac{3}{\sqrt{33}}
-\end{bmatrix} $$
-$$ e_{3} = \frac{b_{3}}{\|b_{3}\|} = \frac{\begin{bmatrix}
+\end{bmatrix}
+$$
+
+$$
+e_{3} = \frac{b_{3}}{\|b_{3}\|} = \frac{\begin{bmatrix}
     1 \\
     0 \\
     1 \\
@@ -275,9 +327,13 @@ $$ e_{3} = \frac{b_{3}}{\|b_{3}\|} = \frac{\begin{bmatrix}
     0 \\
     \frac{1}{\sqrt{6}} \\
     \frac{2}{\sqrt{6}}
-\end{bmatrix} $$
+\end{bmatrix}
+$$
+
 The orthonormal basis of $v_{1}, v_{2}, v_{3}$ is:
-$$ B_{on} = \left\{ \begin{bmatrix}
+
+$$
+B_{on} = \left\{ \begin{bmatrix}
     \frac{1}{\sqrt{3}} \\
     \frac{1}{\sqrt{3}} \\
     -\frac{1}{\sqrt{3}} \\
@@ -292,28 +348,33 @@ $$ B_{on} = \left\{ \begin{bmatrix}
     0 \\
     \frac{1}{\sqrt{6}} \\
     \frac{2}{\sqrt{6}}
-\end{bmatrix} \right\} $$
+\end{bmatrix} \right\}
+$$
 
 ## Vector decomposition
+
 Given a vector space $W$ and a vector $v \in W$, we can decompose $v$ into a parallel component $v_{\parallel}$ and a perpendicular(orthogonal) component $v_{\perp}$.
 
 In order to do that we need to know the orthogonal basis $B_{o}$ of $W$.
 
 After that we can project $v$ onto each vector in $B_{o}$ and sum the projections to get $v_{\parallel}$.
 
-$$ v_{\parallel} = \sum_{i=1}^{n} \frac{\langle v, b_{i} \rangle}{\langle b_{i}, b_{i} \rangle} \cdot b_{i} $$
+$$ v*{\parallel} = \sum*{i=1}^{n} \frac{\langle v, b*{i} \rangle}{\langle b*{i}, b*{i} \rangle} \cdot b*{i} $$
 where
-$b_{i}$
-is the $i$-th vector in $B_{o}$.
+$b*{i}$
+is the $i$-th vector in $B*{o}$.
 
 Then we can calculate $v_{\perp}$:
-$$ v_{\perp} = v - v_{\parallel} $$
+$$ v*{\perp} = v - v*{\parallel} $$
 
 ### Example
+
 Let
 $$ W = subspace \in \mathbb{R}^{4} $$
 With orthogonal basis:
-$$ B_{o} = \left\{ \begin{bmatrix}
+
+$$
+B_{o} = \left\{ \begin{bmatrix}
     1 \\
     1 \\
     -1 \\
@@ -328,19 +389,26 @@ $$ B_{o} = \left\{ \begin{bmatrix}
     0 \\
     1 \\
     2
-\end{bmatrix} \right\} $$
+\end{bmatrix} \right\}
+$$
+
 And arbitrary vector $v$ in $W$:
-$$ v = \begin{bmatrix}
+
+$$
+v = \begin{bmatrix}
     4 \\
     3 \\
     2 \\
     0
-\end{bmatrix} $$
+\end{bmatrix}
+$$
 
 Let's decompose $v$ into a parallel component $v_{\parallel}$ and a perpendicular(orthogonal) component $v_{\perp}$.
 
-$$ v_{\parallel} = \sum_{i=1}^{n} \frac{\langle v, b_{i} \rangle}{\langle b_{i}, b_{i} \rangle} \cdot b_{i} = \frac{\langle v, b_{1} \rangle}{\langle b_{1}, b_{1} \rangle} \cdot b_{1} + \frac{\langle v, b_{2} \rangle}{\langle b_{2}, b_{2} \rangle} \cdot b_{2} + \frac{\langle v, b_{3} \rangle}{\langle b_{3}, b_{3} \rangle} \cdot b_{3}$$
-$$ \frac{\langle v, b_{1} \rangle}{\langle b_{1}, b_{1} \rangle} \cdot b_{1} = \frac{4 \cdot 1 + 3 \cdot 1 + 2 \cdot (-1) + 0 \cdot 0}{1 \cdot 1 + 1 \cdot 1 + (-1) \cdot (-1) + 0 \cdot 0} \cdot \begin{bmatrix}
+$$ v*{\parallel} = \sum*{i=1}^{n} \frac{\langle v, b*{i} \rangle}{\langle b*{i}, b*{i} \rangle} \cdot b*{i} = \frac{\langle v, b*{1} \rangle}{\langle b*{1}, b*{1} \rangle} \cdot b*{1} + \frac{\langle v, b*{2} \rangle}{\langle b*{2}, b*{2} \rangle} \cdot b*{2} + \frac{\langle v, b*{3} \rangle}{\langle b*{3}, b*{3} \rangle} \cdot b*{3}$$
+
+$$
+\frac{\langle v, b_{1} \rangle}{\langle b_{1}, b_{1} \rangle} \cdot b_{1} = \frac{4 \cdot 1 + 3 \cdot 1 + 2 \cdot (-1) + 0 \cdot 0}{1 \cdot 1 + 1 \cdot 1 + (-1) \cdot (-1) + 0 \cdot 0} \cdot \begin{bmatrix}
     1 \\
     1 \\
     -1 \\
@@ -355,9 +423,11 @@ $$ \frac{\langle v, b_{1} \rangle}{\langle b_{1}, b_{1} \rangle} \cdot b_{1} = \
     \frac{5}{3} \\
     -\frac{5}{3} \\
     0
-\end{bmatrix} $$
+\end{bmatrix}
+$$
 
-$$ \frac{\langle v, b_{2} \rangle}{\langle b_{2}, b_{2} \rangle} \cdot b_{2} = \frac{4 \cdot \frac{2}{3} + 3 \cdot \frac{2}{3} + 2 \cdot \frac{4}{3} + 0 \cdot (-1)}{\frac{2}{3} \cdot \frac{2}{3} + \frac{2}{3} \cdot \frac{2}{3} + \frac{4}{3} \cdot \frac{4}{3} + (-1) \cdot (-1)} \cdot \begin{bmatrix}
+$$
+\frac{\langle v, b_{2} \rangle}{\langle b_{2}, b_{2} \rangle} \cdot b_{2} = \frac{4 \cdot \frac{2}{3} + 3 \cdot \frac{2}{3} + 2 \cdot \frac{4}{3} + 0 \cdot (-1)}{\frac{2}{3} \cdot \frac{2}{3} + \frac{2}{3} \cdot \frac{2}{3} + \frac{4}{3} \cdot \frac{4}{3} + (-1) \cdot (-1)} \cdot \begin{bmatrix}
     \frac{2}{3} \\
     \frac{2}{3} \\
     \frac{4}{3} \\
@@ -372,8 +442,11 @@ $$ \frac{\langle v, b_{2} \rangle}{\langle b_{2}, b_{2} \rangle} \cdot b_{2} = \
     \frac{4}{3} \\
     \frac{8}{3} \\
     -2
-\end{bmatrix} $$
-$$ \frac{\langle v, b_{3} \rangle}{\langle b_{3}, b_{3} \rangle} \cdot b_{3} = \frac{4 \cdot 1 + 3 \cdot 0 + 2 \cdot 1 + 0 \cdot 2}{1 \cdot 1 + 0 \cdot 0 + 1 \cdot 1 + 2 \cdot 2} \cdot \begin{bmatrix}
+\end{bmatrix}
+$$
+
+$$
+\frac{\langle v, b_{3} \rangle}{\langle b_{3}, b_{3} \rangle} \cdot b_{3} = \frac{4 \cdot 1 + 3 \cdot 0 + 2 \cdot 1 + 0 \cdot 2}{1 \cdot 1 + 0 \cdot 0 + 1 \cdot 1 + 2 \cdot 2} \cdot \begin{bmatrix}
     1 \\
     0 \\
     1 \\
@@ -388,8 +461,11 @@ $$ \frac{\langle v, b_{3} \rangle}{\langle b_{3}, b_{3} \rangle} \cdot b_{3} = \
     0 \\
     1 \\
     2
-\end{bmatrix} $$
-$$ v_{\parallel} = \begin{bmatrix}
+\end{bmatrix}
+$$
+
+$$
+v_{\parallel} = \begin{bmatrix}
     \frac{5}{3} \\
     \frac{5}{3} \\
     -\frac{5}{3} \\
@@ -419,8 +495,11 @@ $$ v_{\parallel} = \begin{bmatrix}
     3 \\
     2 \\
     0
-\end{bmatrix} $$
-$$ v_{\perp} = v - v_{\parallel} = \begin{bmatrix}
+\end{bmatrix}
+$$
+
+$$
+v_{\perp} = v - v_{\parallel} = \begin{bmatrix}
     4 \\
     3 \\
     2 \\
@@ -435,4 +514,5 @@ $$ v_{\perp} = v - v_{\parallel} = \begin{bmatrix}
     0 \\
     0 \\
     0
-\end{bmatrix} $$
+\end{bmatrix}
+$$

@@ -1,24 +1,30 @@
 # C2 coding exam<br>sample solutions
+
 Please note that code provided tends to be excessively thorough for input checking which is not required on the actual exam. But is mostly done for educational purposes.
 
 Also code doesn't use any data structures other than arrays and doesn't use any inbuilt array methods for sorting or searching. This is done to show how to implement these algorithms yourself.
 
 ## Elves
+
 At Christmas the boss of Elves registered how many gifts
 were packed into rucksacks by each Elves. Write a program
 that determines the followings:
+
 1. How many rucksacks contain exactly 10 gifts?
 2. Who packed the most gifts into rucksacks?
 3. How many Elves and who (with index) packed more than K gifts into the rucksacks?
 4. Did it happen, that an Elf packed less gifts into all the rucksacksthan someone else’s minimum gift number?
 
 ### Input
+
 The first line of the standard input contains the number of Elves
 (1≤N≤1000), and the given K number (1≤K≤2000). Afterward, there are N
 lines, one line for each Elf. Each line contains the number of the
 rucksacks (1≤R≤1000) that was packed by the given Elf, it is followed by R
 integers those mean the number of gifts in the rucksacks (1≤G≤2000).
+
 ### Output
+
 You have to write exactly 4 lines into the standard output. Each line
 must contain an answer for the given question in the given order. First
 line contains a number, the number of rucksacks that contains exactly 10
@@ -26,7 +32,9 @@ gifts. The second line contains the index of the Elf who packed the most
 gift. The third line contains the number of the Elves and their indexes
 separated by space. The last, fourth line contains YES or NO that answers
 the fourth question.
+
 ### Value samples
+
 **Input**<br>
 3 30<br>
 5 1 2 2 2 2<br>
@@ -38,7 +46,9 @@ the fourth question.
 3<br>
 2 2 3<br>
 YES<br>
+
 ### Solution
+
 ```c#
 namespace C2_sample1;
 class Program {
@@ -162,35 +172,41 @@ class Program {
 ```
 
 ## Gladiators
+
 Gladiators arrived at Capua to train and fight in the arena
 in hope of one day fighting at the legendary Colosseum. We
 have information on the name of the gladiator, the year they
 arrived, if it was “before Christ” BC or “anno Domini” AD (in
 the year of the Lord), how many battles they had, and how
 many battles they won. Create a program that gives the:
+
 1. the number of those gladiators who won more than W battles;
 2. list the name of the gladiators who arrived to the city before Christ
-(BC) and taken part in more than 14 battles;
+   (BC) and taken part in more than 14 battles;
 3. sum of the battles won by the top 3 gladiators; (who won the most
-battles)
+   battles)
 4. name of the gladiator who has the best win rate; (winRate =
-wonBattles/allBattels);
+   wonBattles/allBattels);
 
 ### Input
+
 The first line of the standard input contains the number of gladiators
 (1≤N≤200) and the number of won battles(1≤W≤30). The next N line contains
 the name of each gladiator (1≤Length(Gi))≤50), the time they
 arrived(0≤Gi≤500), if they arrived “before Christ” BC or “anno Domini” AD
 (in the year of the Lord), how many battles they had (0≤Gi≤100), and how
 many battles they won (0≤Gi≤100).
+
 ### Output
+
 1. The number of those gladiators who won more than W battles must be entered in the first line!
 2. In the following lines list the name of the gladiators who arrived to the city before Christ (BC) and taken part in more than 14 battles! If there are no such gladiators print NONE instead!
 3. In the first line, give the sum of the battles won by the best 3 gladiators!
 4. In the first line, name of the gladiator with the best win rate; the win rate is calculated according to the following formula:
-$$ winRate = \frac{wonBattles}{totalBattles} $$
+   $$ winRate = \frac{wonBattles}{totalBattles} $$
 
 ### Value samples
+
 **Input**<br>
 10;16<br>
 Maximus;72;AD;12;10<br>
@@ -212,7 +228,9 @@ Octavius<br>
 Gaius<br>
 69<br>
 Aurelius<br>
+
 ### Solution
+
 ```c#
 namespace C2_sample2;
 class Program {

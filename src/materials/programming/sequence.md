@@ -11,45 +11,55 @@ E.g. get square of every element or convert all elements to lowercase.
 
 #### Input
 
-$$ X[1..] \in \mathbb{S}_{1}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
-$$ F: \mathbb{S}_{1} \rightarrow \mathbb{S}_{2}\text{ // transformation function}$$
+$$ X[1..] \in \mathbb{S}_{1}^\*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+$$ F: \mathbb{S}_{1} \rightarrow \mathbb{S}\_{2}\text{ // transformation function}$$
 
 #### Postcondition
+
 $$\forall i\ (1 \le i \le length(X)):Y[i] = F(X[i])$$
 
 #### Implementation
+
 ```c#
 for (int i = 0; i < X.Length; i++){
   Y[i] = F(X[i]);
 }
 ```
+
 #### Note
+
 Copy can be used to transform multiple sequences into a single sequence.
 The only difference is that input is a set of sequences instead of a single sequence.
 E.g. sum two vectors
 
-
 ## Multiple item selection (MIS)
+
 Used to select multiple elements from a sequence based on a certain condition.
 Resulting sequence can be shorter or same length as the original sequence.
 Therefore MIS implements Counting PoA, because we need separate indexing for the original and resulting sequences.
 
 #### Input
-$$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+
+$$ X[1..] \in \mathbb{S}^\*\text{ // where $\mathbb{S}$ - arbitrary set}$$
 $$ F: \mathbb{S} \rightarrow \mathbb{L}\text{ // logical function or expression}$$
 
 #### Postcondition
-$$cnt = \sum_{i=1}^{length(X)} \\
+
+$$
+cnt = \sum_{i=1}^{length(X)} \\
     \begin{cases}
       1 & \text{if $F(X[i])$ // if condition is met}\\
       0 & \text{otherwise}
-    \end{cases}$$
+    \end{cases}
+$$
+
 $$Y[1..cnt] = \bigcup_{i=1}^{length(X)}\{\ X[i]\ |\ F(X[i])\ \}$$
 
-*Short notation:*
-$$ (cnt, Y[1..cnt]) = \text{MULTISELECT}_{i=1}^{length(X)} (X[i] | F(X[i]))$$
+_Short notation:_
+$$ (cnt, Y[1..cnt]) = \text{MULTISELECT}\_{i=1}^{length(X)} (X[i] | F(X[i]))$$
 
 #### Implementation
+
 ```c#
 int cnt = 0;
 for (int i = 0; i < X.Length; i++){
@@ -63,25 +73,33 @@ for (int i = 0; i < X.Length; i++){
 ```
 
 ## Partitioning
+
 Used to split a sequence into two sequences based on a certain condition.
 E.g. split a list of numbers into even and odd numbers.
 
 #### Input
-$$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+
+$$ X[1..] \in \mathbb{S}^\*\text{ // where $\mathbb{S}$ - arbitrary set}$$
 $$ F: \mathbb{S} \rightarrow \mathbb{L}\text{ // logical function or expression}$$
 
 #### Postcondition
-$$cnt = \sum_{i=1}^{length(X)} \\
+
+$$
+cnt = \sum_{i=1}^{length(X)} \\
     \begin{cases}
       1 & \text{if $F(X[i])$ // if condition is met}\\
       0 & \text{otherwise}
-    \end{cases}$$
+    \end{cases}
+$$
+
 $$Y[1..cnt] = \bigcup_{i=1}^{length(X)} \{\ X[i]\ |\ F(X[i])\ \}$$
 $$Z[1..length(X) - cnt] = \bigcup_{i=1}^{length(X)} \{\ X[i]\ |\ \neg F(X[i])\ \}$$
 
-*Short notation:*
-$$ (cnt, Y, Z) = \text{PARTITION}_{i=1}^{length(X)} (X[i] | F(X[i]))$$
+_Short notation:_
+$$ (cnt, Y, Z) = \text{PARTITION}\_{i=1}^{length(X)} (X[i] | F(X[i]))$$
+
 #### Implementation
+
 ```c#
 int cnt = 0;
 for (int i = 0; i < X.Length; i++){
@@ -95,26 +113,35 @@ for (int i = 0; i < X.Length; i++){
   }
 }
 ```
+
 #### Note
+
 Partitioning can be used to within a single sequence. Instead of two resulting sequences, we have two partitions within the same sequence. E.g. rearrange collection so even numbers are placed before odd numbers.
 
 ## Intersection
+
 Used to find common elements or elements with a common attribute between two sequences.
 
 #### Input
-$$ X[1..] \in \mathbb{S}_{1}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
-$$ Y[1..] \in \mathbb{S}_{2}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+
+$$ X[1..] \in \mathbb{S}_{1}^\*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+$$ Y[1..] \in \mathbb{S}_{2}^\*\text{ // where $\mathbb{S}$ - arbitrary set}$$
 $$ F: \mathbb{S}_{1} \times \mathbb{S}_{2} \rightarrow \mathbb{L}\text{ // logical function or expression}$$
 
 #### Postcondition
-$$cnt = \sum_{i=1}^{length(X)} \\
+
+$$
+cnt = \sum_{i=1}^{length(X)} \\
     \begin{cases}
       1 & \text{if $F(X[i], Y[j])$ // if condition is met}\\
       0 & \text{otherwise}
-    \end{cases}$$
+    \end{cases}
+$$
+
 $$Z[1..cnt] = \bigcup_{i=1}^{length(X)} \{\ X[i]\ |\ \exists j\ (1 \le j \le length(Y)) : F(X[i], Y[j])\ \}$$
 
 #### Implementation
+
 ```c#
 int cnt = 0;
 for (int i = 0; i < X.Length; i++){
@@ -130,22 +157,29 @@ for (int i = 0; i < X.Length; i++){
 ```
 
 ## Union
+
 Used to combine two sequences into a single sequence.
 Repeated elements that exist in both sequences are not duplicated in the resulting sequence.
 
 #### Input
-$$ X[1..] \in \mathbb{S}_{1}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
-$$ Y[1..] \in \mathbb{S}_{2}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+
+$$ X[1..] \in \mathbb{S}_{1}^\*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+$$ Y[1..] \in \mathbb{S}_{2}^\*\text{ // where $\mathbb{S}$ - arbitrary set}$$
 
 #### Postcondition
-$$cnt = \sum_{i=1}^{length(X)} \\
+
+$$
+cnt = \sum_{i=1}^{length(X)} \\
     \begin{cases}
       1 & \text{if $X[i] \notin Y$}\\
       0 & \text{otherwise}
-    \end{cases}$$
+    \end{cases}
+$$
+
 $$Z[1..length(X) + length(Y) - cnt] = \{ \bigcup_{i=1}^{length(X)} \{\ X[i]\ |\ X[i] \notin Y\ \}\} \cup Y$$
 
 #### Implementation
+
 ```c#
 int cnt = 0;
 for (int i = 0; i < X.Length; i++){
@@ -163,11 +197,14 @@ for (int j = 0; j < Y.Length; j++){
   cnt++;
 }
 ```
+
 #### Note
+
 There are order-preserving implementations of union, but they are more complicated.
 E.g. order-preserving merge of two sorted sequences.
 
 #### Implementation
+
 ```c#
 int i = 0;
 int j = 0;
@@ -192,21 +229,28 @@ while (i < X.Length && j < Y.Length){
 ```
 
 ## Set transformation
+
 Used to transform a sequence into a set.
 E.g. remove duplicates from a sequence.
 
 #### Input
-$$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+
+$$ X[1..] \in \mathbb{S}^\*\text{ // where $\mathbb{S}$ - arbitrary set}$$
 
 #### Postcondition
-$$cnt = \sum_{i=1}^{length(X)} \\
+
+$$
+cnt = \sum_{i=1}^{length(X)} \\
     \begin{cases}
       1 & \text{if\ $\ \nexists j\ (1 \le j \lt i): X[i] = X[j]$}\\
       0 & \text{otherwise}
-    \end{cases}$$
+    \end{cases}
+$$
+
 $$Y[1..cnt] = \bigcup_{i=1}^{length(X)} \{\ X[i]\ |\ X[i] \notin Y\ \}$$
 
 #### Implementation
+
 ```c#
 int cnt = 0;
 for (int i = 0; i < X.Length; i++){
@@ -219,33 +263,47 @@ for (int i = 0; i < X.Length; i++){
   }
 }
 ```
+
 #### Note
+
 Set transformation is a special case of MIS, where the condition is based on whether an item has been put in the resulting set yet (determined by Decision PoA).
 
 ## Multiset transformation
+
 Used to transform a sequence into a multiset. Multiset stores several attributes of the original sequence. E.g. value and count of each value or other.
 
 ### First example
+
 Get names of students and count how many students have the same name.
+
 #### Input
-$$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+
+$$ X[1..] \in \mathbb{S}^\*\text{ // where $\mathbb{S}$ - arbitrary set}$$
 
 #### Postcondition
-$$cnt = \sum_{i=1}^{length(X)} \\
+
+$$
+cnt = \sum_{i=1}^{length(X)} \\
     \begin{cases}
       1 & \text{if\ $\ \nexists j\ (1 \le j \lt i): X[i] = X[j]$}\\
       0 & \text{otherwise}
-    \end{cases}$$
+    \end{cases}
+$$
+
 $$Y[1..cnt] = \bigcup_{i=1}^{length(X)} \{\ X[i]\ |\ X[i] \notin Y\ \}$$
-$$Z[1..cnt] = \bigcup_{i=1}^{length(X)} \{\ \sum_{j=1}^{length(X)} \\
+
+$$
+Z[1..cnt] = \bigcup_{i=1}^{length(X)} \{\ \sum_{j=1}^{length(X)} \\
     \begin{cases}
       1 & \text{if $X[j] = Y[i]$}\\
       0 & \text{otherwise}
-    \end{cases}\ \}$$
+    \end{cases}\ \}
+$$
 
 Where Y contains unique names and Z contains count of each name.
 
 #### Implementation
+
 ```c#
 int cnt = 0;
 for (int i = 0; i < X.Length; i++){
@@ -270,23 +328,34 @@ for (int i = 0; i < X.Length; i++){
   }
 }
 ```
+
 ### Second example
+
 We're given a list of payouts and we need to calculate the total amount earned for each employee.
+
 #### Input
-$$ T_{employee} = \{\ name\ \times\ amount\ \}$$
-$$ X[1..] \in T_{employee}^n$$
+
+$$ T*{employee} = \{\ name\ \times\ amount\ \}$$
+$$ X[1..] \in T*{employee}^n$$
+
 #### Postcondition
-$$cnt = \sum_{i=1}^{length(X)} \\
+
+$$
+cnt = \sum_{i=1}^{length(X)} \\
     \begin{cases}
       1 & \text{if\ $\ \nexists j\ (1 \le j \lt i): X[i].name = X[j].name$}\\
       0 & \text{otherwise}
-    \end{cases}$$
-$$ U[1..cnt] = \bigcup_{i=1}^{length(X)} \{\ X[i].name\ |\ X[i].name \notin U\ \}$$
+    \end{cases}
+$$
+
+$$ U[1..cnt] = \bigcup*{i=1}^{length(X)} \{\ X[i].name\ |\ X[i].name \notin U\ \}$$
 Where U is a set of unique employee names. *After Set transformation PoA*
 $$ R[1..cnt].name = U[1..cnt]$$
-$$ R[1..cnt].amount =\bigcup_{i=1}^{length(X)} \{\ \sum_{j=1}^{length(X)} X[j].amount\ |\ X[j].name = U[i].name\ \}$$
+$$ R[1..cnt].amount =\bigcup*{i=1}^{length(X)} \{\ \sum\_{j=1}^{length(X)} X[j].amount\ |\ X[j].name = U[i].name\ \}$$
 Where R is resulting collection of structures of employees.
+
 #### Implementation
+
 ```c#
 int cnt = 0;
 for (int i = 0; i < X.Length; i++){

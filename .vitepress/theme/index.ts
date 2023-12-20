@@ -1,10 +1,12 @@
 // https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
-import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+import type { Theme } from 'vitepress'
+import '@unocss/reset/tailwind-compat.css'
+import 'uno.css'
 import './style.css'
 
-export default {
+const theme: Theme = {
   extends: DefaultTheme,
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
@@ -13,5 +15,7 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     // ...
-  }
-} satisfies Theme
+  },
+}
+
+export default theme

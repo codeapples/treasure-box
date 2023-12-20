@@ -1,18 +1,23 @@
 ---
 title: \[P\] Algorithms
 ---
+
 # Patterns of algorithms<br>sort & other
 
 ## Bubble sort
+
 Used to sort a collection of elements with simple exchange method.
 
 #### Input
+
 $$ X[1..] \in \mathbb{R}^n$$
 
 #### Postcondition
+
 $$\forall_{i=1}^{length(X)-1} X[i] \le X[i+1]$$
 
 #### Implementation
+
 ```c#
 // we need to do this n - 1 times
 for (int i = 0; i < X.Length - 1; i++){
@@ -32,15 +37,19 @@ for (int i = 0; i < X.Length - 1; i++){
 ```
 
 ## Selection sort
+
 Used to sort a collection of elements by finding the smallest element and moving it to the beginning of the collection.
 
 #### Input
+
 $$ X[1..] \in \mathbb{R}^n$$
 
 #### Postcondition
+
 $$\forall_{i=1}^{length(X)-1} X[i] \le X[i+1]$$
 
 #### Implementation
+
 ```c#
 // we need to do this n - 1 times
 for (int i = 0; i < X.Length - 1; i++){

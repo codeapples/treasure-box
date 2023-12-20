@@ -1,21 +1,37 @@
 {
   "name": "treasure-box",
-  "type": "module",
   "version": "1.0.0",
+  "packageManager": "pnpm@8.12.1",
   "description": "",
-  "author": "",
-  "license": "MPLv2",
+  "type": "module",
   "keywords": [],
+  "license": "MPLv2",
+  "author": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
   },
   "devDependencies": {
+    "@sxzz/eslint-config": "^3.7.5",
+    "@types/node": "^20.10.5",
+    "@unocss/reset": "^0.58.0",
     "dotenv": "^16.3.1",
+    "eslint": "npm:eslint-ts-patch@8.55.0-1",
+    "eslint-ts-patch": "8.55.0-1",
     "markdown-it-mathjax3": "^4.3.2",
     "prettier": "^3.1.1",
+    "typescript": "^5.3.3",
+    "unocss": "^0.58.0",
+    "unplugin-vue-components": "^0.26.0",
     "vitepress": "1.0.0-rc.32"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "vitepress@1.0.0-rc.32": "patches/vitepress@1.0.0-rc.32.patch"
+    }
   }
 }
