@@ -1,5 +1,6 @@
 .VPContent {
   display: flex;
+  flex-direction: column;
 }
 
 .VPPage {
