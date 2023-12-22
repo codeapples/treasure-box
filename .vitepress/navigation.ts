@@ -1,7 +1,6 @@
 import type { DefaultTheme } from 'vitepress'
 
 const nav: DefaultTheme.NavItem[] = [
-  { text: 'Articles', link: '/articles/' },
   {
     text: 'Materials',
     items: [
@@ -16,6 +15,8 @@ const nav: DefaultTheme.NavItem[] = [
       { text: 'Semester 2', items: [] },
     ],
   },
+  { text: 'Posts', link: '/posts/' },
+  { text: 'Contributors', link: '' },
 ]
 
 const sidebar: DefaultTheme.Sidebar = {

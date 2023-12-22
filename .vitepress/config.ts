@@ -1,12 +1,19 @@
-import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
+import { align } from '@mdit/plugin-align'
+/* import { imgLazyload } from '@mdit/plugin-img-lazyload' */
+import { imgMark } from '@mdit/plugin-img-mark'
+import { imgSize, obsidianImageSize } from '@mdit/plugin-img-size'
+import { include } from '@mdit/plugin-include'
+import { figure } from '@mdit/plugin-figure'
+import { sub } from '@mdit/plugin-sub'
+import { sup } from '@mdit/plugin-sup'
 import { nav, sidebar } from './navigation'
-import vite from './vite.config'
 import 'dotenv/config'
 
 const gID = process.env.GA_ID || 'XXXXXXXXXX'
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid({
   themeConfig: {
     logo: '/android-chrome-192x192.png',
     // https://vitepress.dev/reference/default-theme-config
@@ -15,6 +22,9 @@ export default defineConfig({
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/codeapples/treasure-box' }],
 
+    editLink: {
+      pattern: 'https://github.com/codeapples/treasure-box/edit/main/src/:path',
+    },
     lastUpdated: {
       text: 'Updated at',
       formatOptions: {
@@ -27,20 +37,46 @@ export default defineConfig({
     },
   },
 
-  markdown: {
-    // TODO: figure out how to use latex macros in mathjax
-    math: {},
+  mermaid: {
+    theme: 'neutral',
   },
 
-  vite,
+  markdown: {
+    math: {
+      // TODO: figure out how to use latex macros in mathjax
+    },
+    config(md) {
+      md.use(align)
+      md.use(sub)
+      md.use(sup)
+      md.use(figure)
+      md.use(imgMark)
+      /* md.use(imgLazyload) */
+      md.use(imgSize)
+      md.use(obsidianImageSize)
+      md.use(include, {
+        // your options, currentPath is required
+        currentPath: (env) => env.filePath,
+        deep: true,
+      })
+    },
+  },
+
+  vite: { configFile: '.vitepress/vite.config.ts' },
 
   title: 'Treasure box',
   description: 'A collection of useful student materials.',
+
+  scrollOffset: 'header',
 
   srcDir: 'src',
   outDir: 'dist',
 
   cleanUrls: true,
+
+  sitemap: {
+    hostname: 'https://pdkom.web.elte.hu',
+  },
 
   head: [
     ['script', { async: '', src: `https://www.googletagmanager.com/gtag/js?id=G-${gID}` }],

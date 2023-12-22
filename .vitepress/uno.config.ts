@@ -1,4 +1,12 @@
-import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
+import {
+  defineConfig,
+  presetAttributify,
+  presetIcons,
+  presetTypography,
+  presetUno,
+  transformerDirectives,
+  transformerVariantGroup,
+} from 'unocss'
 
 export default defineConfig({
   shortcuts: {
@@ -10,6 +18,12 @@ export default defineConfig({
     'text-brand-red': 'color-$vp-c-red-1',
   },
   blocklist: ['container'],
-  presets: [presetUno(), presetAttributify(), presetIcons()],
+  presets: [presetUno(), presetAttributify(), presetTypography(), presetIcons()],
+  theme: {
+    colors: {
+      primary: 'var(--vp-c-brand)',
+    },
+  },
+  transformers: [transformerDirectives(), transformerVariantGroup()],
   safelist: ['font-mono', 'mb0!', 'no-underline!'],
 })

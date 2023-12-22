@@ -3,7 +3,7 @@ import { GLOB_TSX, sxzz } from '@sxzz/eslint-config'
 const config = sxzz(
   [
     {
-      ignores: ['dist/*', '.vscode/*', '.prettierrc'],
+      ignores: ['dist/*', '.vscode/*', '.prettierrc', '.vitepress/theme/overrides'],
     },
     {
       rules: {

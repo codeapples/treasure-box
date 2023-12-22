@@ -16,6 +16,14 @@
     "preview": "vitepress preview"
   },
   "devDependencies": {
+    "@mdit/plugin-align": "^0.8.0",
+    "@mdit/plugin-figure": "^0.8.0",
+    "@mdit/plugin-img-lazyload": "^0.8.0",
+    "@mdit/plugin-img-mark": "^0.8.0",
+    "@mdit/plugin-img-size": "^0.8.0",
+    "@mdit/plugin-include": "^0.8.0",
+    "@mdit/plugin-sub": "^0.8.0",
+    "@mdit/plugin-sup": "^0.8.0",
     "@sxzz/eslint-config": "^3.7.5",
     "@types/node": "^20.10.5",
     "@unocss/reset": "^0.58.0",
@@ -23,15 +31,17 @@
     "eslint": "npm:eslint-ts-patch@8.55.0-1",
     "eslint-ts-patch": "8.55.0-1",
     "markdown-it-mathjax3": "^4.3.2",
+    "mermaid": "^10.6.1",
     "prettier": "^3.1.1",
-    "typescript": "^5.3.3",
     "unocss": "^0.58.0",
     "unplugin-vue-components": "^0.26.0",
-    "vitepress": "1.0.0-rc.32"
+    "vitepress": "1.0.0-rc.32",
+    "vitepress-markdown-timeline": "^1.2.1",
+    "vitepress-plugin-codeblocks-fold": "^1.2.28",
+    "vitepress-plugin-image-viewer": "^1.1.2",
+    "vitepress-plugin-mermaid": "^2.0.16",
+    "vitepress-plugin-nprogress": "^0.0.4",
+    "vitepress-plugin-theme-override": "^0.0.2"
   },
-  "pnpm": {
-    "patchedDependencies": {
-      "vitepress@1.0.0-rc.32": "patches/vitepress@1.0.0-rc.32.patch"
-    }
-  }
+  "pnpm": {}
 }
