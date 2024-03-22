@@ -7,6 +7,7 @@ import { include } from '@mdit/plugin-include'
 import { figure } from '@mdit/plugin-figure'
 import { sub } from '@mdit/plugin-sub'
 import { sup } from '@mdit/plugin-sup'
+/* import Container from 'markdown-it-container' */
 import { nav, sidebar } from './navigation'
 import 'dotenv/config'
 
@@ -20,11 +21,15 @@ export default withMermaid({
     nav,
     sidebar,
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/codeapples/treasure-box' }],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/codeapples/treasure-box' },
+      { icon: 'discord', link: 'https://discord.gg/Bjtv7GnZDM' },
+    ],
 
     editLink: {
       pattern: 'https://github.com/codeapples/treasure-box/edit/main/src/:path',
     },
+
     lastUpdated: {
       text: 'Updated at',
       formatOptions: {
@@ -59,6 +64,22 @@ export default withMermaid({
         currentPath: (env) => env.filePath,
         deep: true,
       })
+      /* md.use(Container, 'card', {
+        render: (tokens, idx) => {
+          const token = tokens[idx]
+
+          const title = token.info.trim().slice(5).trim()
+
+          const isCardBordered = token.attrs && token.attrs.some(([key]) => key === 'bordered')
+
+          const titleHtml = md.render(`## ${title}`)
+          const demoContent = title ? `<template #title>${titleHtml}</template>` : ''
+
+          return token.nesting === 1
+            ? `<Demo :class="[${isCardBordered} && 'vp-demo-bordered']">${demoContent}`
+            : '</Demo>\n'
+        },
+      }) */
     },
   },
 

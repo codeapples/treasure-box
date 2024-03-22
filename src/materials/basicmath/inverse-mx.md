@@ -11,9 +11,9 @@ $$ A \in \mathbb{K}^{n \times n} $$
 are invertible **if and only if** their determinant is **not zero**.
 $$\det(A) \neq 0 \Leftrightarrow A^{-1} \text{ exists}$$
 
-Matrices that are not invertible are called **singular** or _degenerate_.
+Matrices that are not invertible are called **singular** or *degenerate*.
 
-Matrices that are invertible are called **regular** or _non-singular_.
+Matrices that are invertible are called **regular** or *non-singular*.
 
 The inverse of a matrix is a matrix that when multiplied with the original matrix produces the identity matrix.
 $$ I = A \cdot A^{-1} = A^{-1} \cdot A $$
@@ -43,9 +43,9 @@ be a square matrix. The inverse of A is calculated using the following steps:
 ### Determinant
 
 The determinant of a matrix is calculated recursively using the following formula:
-$$ \det(A) = \sum*{i=1}^{n} (-1)^{i+j} \cdot a*{ij} \cdot \det(A*{ij}) $$
+$$ \det(A) = \sum_{i=1}^{n} (-1)^{i+j} \cdot a_{ij} \cdot \det(A_{ij}) $$
 where
-$A*{ij}$
+$A_{ij}$
 is the sub determinant matrix of A, which is calculated by removing the i-th row and the j-th column from A.
 
 ### Sub determinant matrices
@@ -87,7 +87,7 @@ The adjugate matrix is also called the classical adjoint matrix or the adjugate 
 ### Inverse matrix
 
 The inverse matrix is calculated using the following formula:
-$$ A^{-1} = \frac{1}{\det(A)} \cdot A^{\*} $$
+$$ A^{-1} = \frac{1}{\det(A)} \cdot A^{*} $$
 The result is checked by multiplying the original matrix with the inverse matrix.
 $$ A \cdot A^{-1} = I $$
 

@@ -4,7 +4,7 @@ title: \[BM\] General
 
 # Math topics<br>for test preparation
 
-The materials intent to cover complicated math topics that you are expected to know and understand before certain tests.
+The materials intent to cover basic math topics that you are expected to know and understand before certain tests.
 
 **Work in progress!**
 

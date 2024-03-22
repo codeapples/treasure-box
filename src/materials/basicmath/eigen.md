@@ -31,7 +31,7 @@ is the eigenvalue of A.
 ### Roots of the characteristic polynomial
 
 The roots of the characteristic polynomial are calculated using the following formula:
-$$ \lambda\_{i} = \frac{1}{2} \left( -b \pm \sqrt{b^{2} - 4ac} \right) $$
+$$ \lambda_{i} = \frac{1}{2} \left( -b \pm \sqrt{b^{2} - 4ac} \right) $$
 where
 $a$, $b$, $c$
 are the coefficients of the characteristic polynomial.
@@ -39,9 +39,9 @@ are the coefficients of the characteristic polynomial.
 ### Eigenvectors
 
 The eigenvectors are calculated using the following formula:
-$$ (A - \lambda*{i} I) \cdot v*{i} = 0 $$
+$$ (A - \lambda_{i} I) \cdot v_{i} = 0 $$
 where
-$v\_{i}$
+$v_{i}$
 is the eigenvector of A.
 
 ## Example
@@ -104,24 +104,24 @@ $$ \lambda \cdot (\lambda - 1)^{2} = 0 $$
 ### Roots of the characteristic polynomial
 
 The roots of the characteristic polynomial are:
-$$ \lambda*{1} = 1,\ \lambda*{2} = 1,\ \lambda*{3} = 0 $$
+$$ \lambda_{1} = 1,\ \lambda_{2} = 1,\ \lambda_{3} = 0 $$
 You can also say that the **eigenvalues** of A are:
-$$ \lambda*{1} = 1,\ \lambda*{2} = 1,\ \lambda*{3} = 0 $$
+$$ \lambda_{1} = 1,\ \lambda_{2} = 1,\ \lambda_{3} = 0 $$
 
 ### Eigenvectors
 
 The eigenvectors are calculated using the following formula:
-$$ (A - \lambda*{i} I) \cdot v*{i} = 0 $$
+$$ (A - \lambda_{i} I) \cdot v_{i} = 0 $$
 where
-$v\_{i}$
+$v_{i}$
 is the eigenvector of A.
 
 So we put eigenvalues one-by-one into the formula:
 
 First, calculate for
 $\lambda_{1} = 1$:
-$$ (A - \lambda*{1} I) \cdot v*{1} = 0 $$
-$$ (A - 1 \cdot I) \cdot v\_{1} = 0 $$
+$$ (A - \lambda_{1} I) \cdot v_{1} = 0 $$
+$$ (A - 1 \cdot I) \cdot v_{1} = 0 $$
 
 $$
 \begin{bmatrix}
@@ -193,7 +193,7 @@ E_{\lambda_{1}} = \left( y \cdot \begin{bmatrix}
 \end{bmatrix} |\ y, z \in \mathbb{K} \right)
 $$
 
-$$ \dim(E*{\lambda*{1}}) = 2 $$
+$$ \dim(E_{\lambda_{1}}) = 2 $$
 
 $$
 E_{\lambda_{1}} = \text{Span} \left( \begin{bmatrix}
@@ -229,8 +229,8 @@ has a multiplicity of 2.
 
 Second, calculate for
 $\lambda_{3} = 0$:
-$$ (A - \lambda*{3} I) \cdot v*{2} = 0 $$
-$$ (A - 0 \cdot I) \cdot v\_{2} = 0 $$
+$$ (A - \lambda_{3} I) \cdot v_{2} = 0 $$
+$$ (A - 0 \cdot I) \cdot v_{2} = 0 $$
 
 $$
 \begin{bmatrix}
@@ -297,7 +297,7 @@ E_{\lambda_{3}} = \left( z \cdot \begin{bmatrix}
 \end{bmatrix} |\ z \in \mathbb{K} \right)
 $$
 
-$$ \dim(E*{\lambda*{3}}) = 1 $$
+$$ \dim(E_{\lambda_{3}}) = 1 $$
 
 $$
 E_{\lambda_{3}} = \text{Span} \left( \begin{bmatrix}

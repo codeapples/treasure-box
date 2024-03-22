@@ -4,7 +4,11 @@ import UnoCSS from 'unocss/vite'
 import Components from 'unplugin-vue-components/vite'
 import VitepressThemeOverride from 'vitepress-plugin-theme-override'
 
+/* const env = loadEnv(mode, projectRoot)
+process.env = { ...process.env, ...env } */
+
 export default defineConfig({
+  envDir: fileURLToPath(new URL('../', import.meta.url)),
   plugins: [
     Components({
       dirs: [fileURLToPath(new URL('./components', import.meta.url))],

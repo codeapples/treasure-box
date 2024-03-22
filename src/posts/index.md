@@ -1,9 +1,11 @@
 ---
 title: Posts
-layout: page
+aside: false
+editLink: false
+lastUpdated: false
+pageClass: post-list
 ---
 
-<PostList>
 ```mermaid
 graph TD
 A[Christmas] -->|Get money| B(Go shopping)
@@ -14,5 +16,3 @@ C -->|Three| F[fa:fa-car Car]
 ```
 
 ## hello
-
-</PostList>

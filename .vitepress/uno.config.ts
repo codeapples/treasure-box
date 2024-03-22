@@ -25,5 +25,5 @@ export default defineConfig({
     },
   },
   transformers: [transformerDirectives(), transformerVariantGroup()],
-  safelist: ['font-mono', 'mb0!', 'no-underline!'],
+  safelist: ['font-mono', 'mb0!', 'no-underline!', 'i-gravity-ui-person', 'i-gravity-ui-key'],
 })

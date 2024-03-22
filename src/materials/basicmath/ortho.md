@@ -13,7 +13,7 @@ An orthonormal basis is a basis of a vector space where all the vectors are orth
 ## Scalar product
 
 The scalar product of two vectors is calculated using the following formula:
-$$ \langle u, v \rangle = u \cdot v = \sum*{i=1}^{n} u*{i} \cdot v\_{i} $$
+$$ \langle u, v \rangle = u \cdot v = \sum_{i=1}^{n} u_{i} \cdot v_{i} $$
 where
 $u$, $v$
 are vectors.
@@ -45,21 +45,21 @@ Basis of vector space can be orthogonalized using the Gram-Schmidt process. To t
 Given $v_{1}, v_{2}, v_{3}$ which are non orthogonal independent vectors, we can calculate the orthogonal basis $b_{1}, b_{2}, b_{3}$ following these steps:
 
 So, let:
-$$ v*{1}, v*{2}, v*{3}: \text{non orthogonal} $$
-$$ W = span(v*{1}, v*{2}, v*{3}) : \text{vector space} $$
-$$ B = \{v*{1}, v*{2}, v*{3}\} : \text{basis of $W$} $$
+$$ v_{1}, v_{2}, v_{3}: \text{non orthogonal} $$
+$$ W = span(v_{1}, v_{2}, v_{3}) : \text{vector space} $$
+$$ B = \{v_{1}, v_{2}, v_{3}\} : \text{basis of $W$} $$
 $$ \text{---} $$
-$$ b*{1}, b*{2}, b*{3}: \text{orthogonal} $$
-$$ B*{o} = \{b*{1}, b*{2}, b*{3}\} : \text{orthogonal basis of $W$} $$
+$$ b_{1}, b_{2}, b_{3}: \text{orthogonal} $$
+$$ B_{o} = \{b_{1}, b_{2}, b_{3}\} : \text{orthogonal basis of $W$} $$
 We need to find $b_{1}, b_{2}, b_{3}$:
 
 Let:
-$$ b*{1} = v*{1}$$
+$$ b_{1} = v_{1}$$
 $$\text{(assume that of the vectors is on the first orthogonal axis) } $$
 then:
-$$ v*{2}^{'} = b*{2} = v*{2} - horizontal\ correction = v*{2} - \frac{\langle v*{2}, b*{1} \rangle}{\langle b*{1}, b*{1} \rangle} \cdot b*{1} $$
+$$ v_{2}^{'} = b_{2} = v_{2} - horizontal\ correction  = v_{2} - \frac{\langle v_{2}, b_{1} \rangle}{\langle b_{1}, b_{1} \rangle} \cdot b_{1} $$
 and therefore:
-$$ v*{3}^{'} = b*{3} = v*{3} - \frac{\langle v*{3}, b*{1} \rangle}{\langle b*{1}, b*{1} \rangle} \cdot b*{1} - \frac{\langle v*{3}, b*{2} \rangle}{\langle b*{2}, b*{2} \rangle} \cdot b*{2} $$
+$$ v_{3}^{'} = b_{3} = v_{3} - \frac{\langle v_{3}, b_{1} \rangle}{\langle b_{1}, b_{1} \rangle} \cdot b_{1} - \frac{\langle v_{3}, b_{2} \rangle}{\langle b_{2}, b_{2} \rangle} \cdot b_{2} $$
 
 ### Example
 
@@ -140,7 +140,7 @@ b_{2} = \begin{bmatrix}
 $$
 
 $$ \text{- - -} $$
-$$ b*{3} = v*{3} - \frac{\langle v*{3}, b*{1} \rangle}{\langle b*{1}, b*{1} \rangle} \cdot b*{1} - \frac{\langle v*{3}, b*{2} \rangle}{\langle b*{2}, b*{2} \rangle} \cdot b*{2} =$$
+$$ b_{3} = v_{3} - \frac{\langle v_{3}, b_{1} \rangle}{\langle b_{1}, b_{1} \rangle} \cdot b_{1} - \frac{\langle v_{3}, b_{2} \rangle}{\langle b_{2}, b_{2} \rangle} \cdot b_{2} =$$
 
 $$
 = \begin{bmatrix}
@@ -242,20 +242,20 @@ Orthogonal basis can be transformed into orthonormal basis by normalizing each v
 Given $b_{1}, b_{2}, b_{3}$ which are orthogonal independent vectors, we can calculate the orthonormal basis $e_{1}, e_{2}, e_{3}$ following these steps:
 
 So, if
-$$ b*{1}, b*{2}, b*{3}: \text{orthogonal} $$
-$$ B*{o} = \{b*{1}, b*{2}, b*{3}\} : \text{orthogonal basis of $W$} $$
+$$ b_{1}, b_{2}, b_{3}: \text{orthogonal} $$
+$$ B_{o} = \{b_{1}, b_{2}, b_{3}\} : \text{orthogonal basis of $W$} $$
 then
-$$ e*{1}, e*{2}, e*{3}: \text{orthonormal} $$
-$$ B*{on} = \{e*{1}, e*{2}, e*{3}\} : \text{orthonormal basis of $W$} $$
+$$ e_{1}, e_{2}, e_{3}: \text{orthonormal} $$
+$$ B_{on} = \{e_{1}, e_{2}, e_{3}\} : \text{orthonormal basis of $W$} $$
 
 Formula for vector normalization:
-$$ e*{1} = \frac{b*{1}}{\|b*{1}\|},\ e*{2} = \frac{b*{2}}{\|b*{2}\|},\ e*{3} = \frac{b*{3}}{\|b*{3}\|} $$
+$$ e_{1} = \frac{b_{1}}{\|b_{1}\|},\ e_{2} = \frac{b_{2}}{\|b_{2}\|},\ e_{3} = \frac{b_{3}}{\|b_{3}\|} $$
 where
-$\|b*{1}\|$, $\|b_{2}\|$, $\|b_{3}\|$
+$\|b_{1}\|$, $\|b_{2}\|$, $\|b_{3}\|$
 are the lengths of $b_{1}$, $b_{2}$, $b_{3}$.
 
 Length of a vector is calculated using the following formula:
-$$ \|v\| = \sqrt{\langle v, v \rangle} = \sqrt{v \cdot v} = \sqrt{\sum*{i=1}^{n} v*{i}^{2}} $$
+$$ \|v\| = \sqrt{\langle v, v \rangle} = \sqrt{v \cdot v} = \sqrt{\sum_{i=1}^{n} v_{i}^{2}} $$
 
 For example, given a vector $v$:
 
@@ -267,7 +267,7 @@ v = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-$$ \|v\| = \sqrt{\langle v, v \rangle} = \sqrt{v \cdot v} = \sqrt{\sum*{i=1}^{n} v*{i}^{2}} = \sqrt{1^{2} + 2^{2} + 3^{2}} = \sqrt{14} $$
+$$ \|v\| = \sqrt{\langle v, v \rangle} = \sqrt{v \cdot v} = \sqrt{\sum_{i=1}^{n} v_{i}^{2}} = \sqrt{1^{2} + 2^{2} + 3^{2}} = \sqrt{14} $$
 
 ### Example
 
@@ -359,13 +359,13 @@ In order to do that we need to know the orthogonal basis $B_{o}$ of $W$.
 
 After that we can project $v$ onto each vector in $B_{o}$ and sum the projections to get $v_{\parallel}$.
 
-$$ v*{\parallel} = \sum*{i=1}^{n} \frac{\langle v, b*{i} \rangle}{\langle b*{i}, b*{i} \rangle} \cdot b*{i} $$
+$$ v_{\parallel} = \sum_{i=1}^{n} \frac{\langle v, b_{i} \rangle}{\langle b_{i}, b_{i} \rangle} \cdot b_{i} $$
 where
-$b*{i}$
-is the $i$-th vector in $B*{o}$.
+$b_{i}$
+is the $i$-th vector in $B_{o}$.
 
 Then we can calculate $v_{\perp}$:
-$$ v*{\perp} = v - v*{\parallel} $$
+$$ v_{\perp} = v - v_{\parallel} $$
 
 ### Example
 
@@ -405,7 +405,7 @@ $$
 
 Let's decompose $v$ into a parallel component $v_{\parallel}$ and a perpendicular(orthogonal) component $v_{\perp}$.
 
-$$ v*{\parallel} = \sum*{i=1}^{n} \frac{\langle v, b*{i} \rangle}{\langle b*{i}, b*{i} \rangle} \cdot b*{i} = \frac{\langle v, b*{1} \rangle}{\langle b*{1}, b*{1} \rangle} \cdot b*{1} + \frac{\langle v, b*{2} \rangle}{\langle b*{2}, b*{2} \rangle} \cdot b*{2} + \frac{\langle v, b*{3} \rangle}{\langle b*{3}, b*{3} \rangle} \cdot b*{3}$$
+$$ v_{\parallel} = \sum_{i=1}^{n} \frac{\langle v, b_{i} \rangle}{\langle b_{i}, b_{i} \rangle} \cdot b_{i} = \frac{\langle v, b_{1} \rangle}{\langle b_{1}, b_{1} \rangle} \cdot b_{1} + \frac{\langle v, b_{2} \rangle}{\langle b_{2}, b_{2} \rangle} \cdot b_{2} + \frac{\langle v, b_{3} \rangle}{\langle b_{3}, b_{3} \rangle} \cdot b_{3}$$
 
 $$
 \frac{\langle v, b_{1} \rangle}{\langle b_{1}, b_{1} \rangle} \cdot b_{1} = \frac{4 \cdot 1 + 3 \cdot 1 + 2 \cdot (-1) + 0 \cdot 0}{1 \cdot 1 + 1 \cdot 1 + (-1) \cdot (-1) + 0 \cdot 0} \cdot \begin{bmatrix}

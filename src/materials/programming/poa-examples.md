@@ -68,15 +68,15 @@ We know the birth year of N friends. Write an algorithm that gives how many of t
 
 ::: tip
 
-1. Count the number of friends born in each year. _Multiset transformation PoA_
-2. Find the maximum in the resulting multiset. _Maximum selection PoA_
+1. Count the number of friends born in each year. *Multiset transformation PoA*
+2. Find the maximum in the resulting multiset. *Maximum selection PoA*
    :::
 
 #### Input
 
-$$ T*{friend} = (name \times birthyear) $$
+$$ T_{friend} = (name \times birthyear) $$
 $$ n \in \mathbb{N}^+ $$
-$$ friends[1..n] \in T*{friend}^n$$
+$$ friends[1..n] \in T_{friend}^n$$
 
 #### Postcondition
 
@@ -88,7 +88,7 @@ cnt = \sum_{i=1}^{length(friends)} \\
     \end{cases}
 $$
 
-$$ U[1..cnt] = \bigcup\_{i=1}^{length(friends)} \{\ friends[i].birthyear\ |\ friends[i].birthyear \notin U\ \}$$
+$$ U[1..cnt] = \bigcup_{i=1}^{length(friends)} \{\ friends[i].birthyear\ |\ friends[i].birthyear \notin U\ \}$$
 Where U is a set of unique birth years. *After Set transformation PoA*
 $$ R[1..cnt].birthyear = U[1..cnt]$$
 
@@ -127,16 +127,16 @@ highest temperatures that mostly deviate from the average for the whole period.
 
 ::: tip
 
-1. Calculate the average temperature for the period. _Sequence calculation PoA_
-2. Transform the sequence into deviations from the average. _Copy PoA_
-3. Select maximum deviation. _Maximum selection PoA_
-4. Select days with maximum deviation. _Multiple item selection PoA_
+1. Calculate the average temperature for the period. *Sequence calculation PoA*
+2. Transform the sequence into deviations from the average. *Copy PoA*
+3. Select maximum deviation. *Maximum selection PoA*
+4. Select days with maximum deviation. *Multiple item selection PoA*
    :::
 
 #### Input
 
-$$ T*{measurement} = (loc \times day \times temp) $$
-$$ measurements[1..] \in T*{measurement}^{n}$$
+$$ T_{measurement} = (loc \times day \times temp) $$
+$$ measurements[1..] \in T_{measurement}^{n}$$
 
 #### Postcondition
 

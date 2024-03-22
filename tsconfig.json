@@ -11,7 +11,7 @@
     },
     "resolveJsonModule": true,
 
-    "types": [],
+    "types": ["vite/client"],
     "allowJs": true,
     "strict": true,
     "strictNullChecks": true,
@@ -24,5 +24,6 @@
   "vueCompilerOptions": {
     "plugins": []
   },
-  "exclude": ["dist", "node_modules"]
+  "include": ["./src/**/*", "./.vitepress/**/*", "./eslint.config.ts"],
+  "exclude": ["./.vitepress/cache/**/*", "**/dist/**", "**/node_modules/**", "**/public/**"]
 }

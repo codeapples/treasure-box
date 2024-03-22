@@ -11,8 +11,8 @@ E.g. get square of every element or convert all elements to lowercase.
 
 #### Input
 
-$$ X[1..] \in \mathbb{S}_{1}^\*\text{ // where $\mathbb{S}$ - arbitrary set}$$
-$$ F: \mathbb{S}_{1} \rightarrow \mathbb{S}\_{2}\text{ // transformation function}$$
+$$ X[1..] \in \mathbb{S}_{1}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+$$ F: \mathbb{S}_{1} \rightarrow \mathbb{S}_{2}\text{ // transformation function}$$
 
 #### Postcondition
 
@@ -40,7 +40,7 @@ Therefore MIS implements Counting PoA, because we need separate indexing for the
 
 #### Input
 
-$$ X[1..] \in \mathbb{S}^\*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+$$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
 $$ F: \mathbb{S} \rightarrow \mathbb{L}\text{ // logical function or expression}$$
 
 #### Postcondition
@@ -55,8 +55,8 @@ $$
 
 $$Y[1..cnt] = \bigcup_{i=1}^{length(X)}\{\ X[i]\ |\ F(X[i])\ \}$$
 
-_Short notation:_
-$$ (cnt, Y[1..cnt]) = \text{MULTISELECT}\_{i=1}^{length(X)} (X[i] | F(X[i]))$$
+*Short notation:*
+$$ (cnt, Y[1..cnt]) = \text{MULTISELECT}_{i=1}^{length(X)} (X[i] | F(X[i]))$$
 
 #### Implementation
 
@@ -79,7 +79,7 @@ E.g. split a list of numbers into even and odd numbers.
 
 #### Input
 
-$$ X[1..] \in \mathbb{S}^\*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+$$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
 $$ F: \mathbb{S} \rightarrow \mathbb{L}\text{ // logical function or expression}$$
 
 #### Postcondition
@@ -95,8 +95,8 @@ $$
 $$Y[1..cnt] = \bigcup_{i=1}^{length(X)} \{\ X[i]\ |\ F(X[i])\ \}$$
 $$Z[1..length(X) - cnt] = \bigcup_{i=1}^{length(X)} \{\ X[i]\ |\ \neg F(X[i])\ \}$$
 
-_Short notation:_
-$$ (cnt, Y, Z) = \text{PARTITION}\_{i=1}^{length(X)} (X[i] | F(X[i]))$$
+*Short notation:*
+$$ (cnt, Y, Z) = \text{PARTITION}_{i=1}^{length(X)} (X[i] | F(X[i]))$$
 
 #### Implementation
 
@@ -124,8 +124,8 @@ Used to find common elements or elements with a common attribute between two seq
 
 #### Input
 
-$$ X[1..] \in \mathbb{S}_{1}^\*\text{ // where $\mathbb{S}$ - arbitrary set}$$
-$$ Y[1..] \in \mathbb{S}_{2}^\*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+$$ X[1..] \in \mathbb{S}_{1}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+$$ Y[1..] \in \mathbb{S}_{2}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
 $$ F: \mathbb{S}_{1} \times \mathbb{S}_{2} \rightarrow \mathbb{L}\text{ // logical function or expression}$$
 
 #### Postcondition
@@ -163,8 +163,8 @@ Repeated elements that exist in both sequences are not duplicated in the resulti
 
 #### Input
 
-$$ X[1..] \in \mathbb{S}_{1}^\*\text{ // where $\mathbb{S}$ - arbitrary set}$$
-$$ Y[1..] \in \mathbb{S}_{2}^\*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+$$ X[1..] \in \mathbb{S}_{1}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+$$ Y[1..] \in \mathbb{S}_{2}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
 
 #### Postcondition
 
@@ -235,7 +235,7 @@ E.g. remove duplicates from a sequence.
 
 #### Input
 
-$$ X[1..] \in \mathbb{S}^\*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+$$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
 
 #### Postcondition
 
@@ -278,7 +278,7 @@ Get names of students and count how many students have the same name.
 
 #### Input
 
-$$ X[1..] \in \mathbb{S}^\*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+$$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
 
 #### Postcondition
 
@@ -335,9 +335,8 @@ We're given a list of payouts and we need to calculate the total amount earned f
 
 #### Input
 
-$$ T*{employee} = \{\ name\ \times\ amount\ \}$$
-$$ X[1..] \in T*{employee}^n$$
-
+$$ T_{employee} = \{\ name\ \times\ amount\ \}$$
+$$ X[1..] \in T_{employee}^n$$
 #### Postcondition
 
 $$
@@ -348,10 +347,10 @@ cnt = \sum_{i=1}^{length(X)} \\
     \end{cases}
 $$
 
-$$ U[1..cnt] = \bigcup*{i=1}^{length(X)} \{\ X[i].name\ |\ X[i].name \notin U\ \}$$
+$$ U[1..cnt] = \bigcup_{i=1}^{length(X)} \{\ X[i].name\ |\ X[i].name \notin U\ \}$$
 Where U is a set of unique employee names. *After Set transformation PoA*
 $$ R[1..cnt].name = U[1..cnt]$$
-$$ R[1..cnt].amount =\bigcup*{i=1}^{length(X)} \{\ \sum\_{j=1}^{length(X)} X[j].amount\ |\ X[j].name = U[i].name\ \}$$
+$$ R[1..cnt].amount =\bigcup_{i=1}^{length(X)} \{\ \sum_{j=1}^{length(X)} X[j].amount\ |\ X[j].name = U[i].name\ \}$$
 Where R is resulting collection of structures of employees.
 
 #### Implementation

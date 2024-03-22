@@ -7,6 +7,9 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    CustomLayout: typeof import('./components/CustomLayout.vue')['default']
+    NavAuth: typeof import('./components/NavAuth.vue')['default']
+    Page: typeof import('./components/Page.vue')['default']
     PostList: typeof import('./components/PostList.vue')['default']
   }
 }

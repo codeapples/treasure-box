@@ -6,7 +6,7 @@ title: \[BM\] Diagonalization
 
 ## Introduction
 
-Matrix diagonalization is the process of taking a square matrix and converting it into a special type of matrix - a so-called _diagonal matrix_ - that shares the same fundamental properties of the underlying matrix. The diagonal matrix is a matrix where all the elements are zero except for the elements along the diagonal.
+Matrix diagonalization is the process of taking a square matrix and converting it into a special type of matrix - a so-called *diagonal matrix* - that shares the same fundamental properties of the underlying matrix. The diagonal matrix is a matrix where all the elements are zero except for the elements along the diagonal.
 
 The diagonal matrix is a special case of a triangular matrix, which is a matrix where all the elements above or below the diagonal are zero.
 
@@ -103,9 +103,9 @@ $$ -\lambda + 2\lambda^{2} - \lambda^{3} - 2 + 2\lambda = 0 $$
 $$ -\lambda^{3} + 2\lambda^{2} + \lambda - 2 = 0 $$
 $$ (\lambda - 1) \cdot (\lambda + 1) \cdot (\lambda - 2) = 0 $$
 So, the eigenvalues of $A$ are:
-$$ \lambda*{1} = 1 $$
-$$ \lambda*{2} = -1 $$
-$$ \lambda\_{3} = 2 $$
+$$ \lambda_{1} = 1 $$
+$$ \lambda_{2} = -1 $$
+$$ \lambda_{3} = 2 $$
 
 ### Eigenvectors
 
@@ -322,7 +322,7 @@ E_{\lambda_{3}} = \left( x \cdot \begin{bmatrix}
 \end{bmatrix} |\ x \in \mathbb{K} \right)
 $$
 
-$$ \dim(E*{\lambda*{3}}) = 1 $$
+$$ \dim(E_{\lambda_{3}}) = 1 $$
 
 $$
 E_{\lambda_{3}} = \text{Span} \left( \begin{bmatrix}

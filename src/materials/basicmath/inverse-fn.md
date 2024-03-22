@@ -9,10 +9,10 @@ title: \[BM\] Inverse Functions
 First we need to acknowledge that if we have a function
 $$ f(x) = y $$
 then domain of this function
-$$ D*{f} = \{ x \in \mathbb{K} \} $$
+$$ D_{f} = \{ x \in \mathbb{K} \} $$
 is a set of all possible values of $x$ that can be used as an input for $f$,<br>
 while range of this function
-$$ R*{f} = \{ y \in \mathbb{K} \} $$
+$$ R_{f} = \{ y \in \mathbb{K} \} $$
 is a set of all possible values of $y$ that $f$ provides as an output
 
 Domain $D_{f}$ is usually specified in the problem statement.
@@ -23,7 +23,7 @@ A function $f$ is called **injective** if for every $y \in R_{f}$ there is exact
 $$ f(x) = y $$
 
 The formula to check function injectivity property is:
-$$ f(x*{1}) = f(x*{2}) \Rightarrow x*{1} = x*{2} $$
+$$ f(x_{1}) = f(x_{2}) \Rightarrow x_{1} = x_{2} $$
 
 ## Inverse functions
 
@@ -31,7 +31,7 @@ Let $f$ be an injective function. Then the inverse function of $f$ is a function
 $$ f^{-1}(y) = x \Leftrightarrow f(x) = y $$
 
 Also the important property of inverse functions is that
-$$ D*{f^{-1}} = R*{f}\ \text{ and }\ R*{f} = D*{f^{-1}} $$
+$$ D_{f^{-1}} = R_{f}\ \text{ and }\ R_{f} = D_{f^{-1}} $$
 
 ## Example 1
 
@@ -43,13 +43,13 @@ Let's calculate the inverse function of $f$ and find range of $f$ by using inver
 
 #### Check injectivity
 
-$$ f(x*{1}) = f(x*{2}) \Rightarrow x*{1} = x*{2} $$
-$$ x*{1}^{2} + 2 = x*{2}^{2} + 2\ \Rightarrow\ x*{1}^{2} = x*{2}^{2} $$
+$$ f(x_{1}) = f(x_{2}) \Rightarrow x_{1} = x_{2} $$
+$$ x_{1}^{2} + 2 = x_{2}^{2} + 2\ \Rightarrow\ x_{1}^{2} = x_{2}^{2} $$
 $$ \Downarrow $$
-$$ x*{1} = x*{2}\ \text{ or }\ x*{1} = -x*{2} $$
+$$ x_{1} = x_{2}\ \text{ or }\ x_{1} = -x_{2} $$
 
 But since the domain of $f$ does not include negative numbers, then
-$$ x*{1} = - x*{2} $$
+$$ x_{1} = - x_{2} $$
 is impossible.
 
 Therefore, $f$ is **injective** within $D_{f}$.
@@ -72,7 +72,7 @@ $$ 2 \le \sqrt{y - 2} \lt \infty $$
 $$ 4 \le y - 2 \lt \infty $$
 $$ 6 \le y \lt \infty $$
 Therefore
-$$ D*{f^{-1}} = R*{f} = \mathopen[6; \infty \mathclose) $$
+$$ D_{f^{-1}} = R_{f} = \mathopen[6; \infty \mathclose) $$
 
 ## Example 2
 
@@ -84,15 +84,15 @@ Let's calculate the inverse function of $f$ and find range of $f$ by using inver
 
 #### Check injectivity
 
-$$ f(x*{1}) = f(x*{2}) \Rightarrow x*{1} = x*{2} $$
-$$ \frac{3x*{1} + 2}{x*{1} - 1} = \frac{3x*{2} + 2}{x*{2} - 1} $$
-$$ \frac{3x*{1} + 2}{x*{1} - 1} - \frac{3x*{2} + 2}{x*{2} - 1} = 0 $$
-$$ \frac{(3x*{1} + 2)(x*{2} - 1) - (3x*{2} + 2)(x*{1} - 1)}{(x*{1} - 1)(x*{2} - 1)} = 0 $$
+$$ f(x_{1}) = f(x_{2}) \Rightarrow x_{1} = x_{2} $$
+$$ \frac{3x_{1} + 2}{x_{1} - 1} = \frac{3x_{2} + 2}{x_{2} - 1} $$
+$$ \frac{3x_{1} + 2}{x_{1} - 1} - \frac{3x_{2} + 2}{x_{2} - 1} = 0 $$
+$$ \frac{(3x_{1} + 2)(x_{2} - 1) - (3x_{2} + 2)(x_{1} - 1)}{(x_{1} - 1)(x_{2} - 1)} = 0 $$
 Only possible if numerator is equal to zero
-$$ (3x*{1} + 2)(x*{2} - 1) - (3x*{2} + 2)(x*{1} - 1) = 0 $$
-$$ 3x*{1}x*{2} - 3x*{1} + 2x*{2} - 2 - 3x*{1}x*{2} + 3x*{2} + 2x*{1} - 2 = 0 $$
-$$ 5x*{2} - 5x*{1} = 0 $$
-$$ x*{2} = x*{1} $$
+$$ (3x_{1} + 2)(x_{2} - 1) - (3x_{2} + 2)(x_{1} - 1) = 0 $$
+$$ 3x_{1}x_{2} - 3x_{1} + 2x_{2} - 2 - 3x_{1}x_{2} + 3x_{2} + 2x_{1} - 2 = 0 $$
+$$ 5x_{2} - 5x_{1} = 0 $$
+$$ x_{2} = x_{1} $$
 
 Therefore, $f$ is **injective** within $D_{f}$.
 
@@ -120,7 +120,7 @@ $$ \frac{5}{y - 3} \gt 0 $$
 $$ y - 3 \gt 0 $$
 $$ y \gt 3 $$
 Therefore
-$$ D*{f^{-1}} = R*{f} = \mathopen(3; \infty \mathclose) $$
+$$ D_{f^{-1}} = R_{f} = \mathopen(3; \infty \mathclose) $$
 
 ## Example 3
 
@@ -132,13 +132,13 @@ Let's calculate the inverse function of $f$ and find range of $f$ by using inver
 
 #### Check injectivity
 
-$$ f(x*{1}) = f(x*{2}) \Rightarrow x*{1} = x*{2} $$
-$$ x*{1}^{2} - 2x*{1} + 2 = x*{2}^{2} - 2x*{2} + 2 $$
-$$ x*{1}^{2} - x*{2}^{2} - 2x*{1} + 2x*{2} = 0 $$
-$$ (x*{1} - x*{2})(x*{1} + x*{2}) - 2(x*{1} - x*{2}) = 0 $$
-$$ (x*{1} - x*{2})(x*{1} + x*{2} - 2) = 0 $$
+$$ f(x_{1}) = f(x_{2}) \Rightarrow x_{1} = x_{2} $$
+$$ x_{1}^{2} - 2x_{1} + 2 = x_{2}^{2} - 2x_{2} + 2 $$
+$$ x_{1}^{2} - x_{2}^{2} - 2x_{1} + 2x_{2} = 0 $$
+$$ (x_{1} - x_{2})(x_{1} + x_{2}) - 2(x_{1} - x_{2}) = 0 $$
+$$ (x_{1} - x_{2})(x_{1} + x_{2} - 2) = 0 $$
 $$ \Downarrow $$
-$$ x*{1} = x*{2}\ \text{ or }\ x*{1} + x*{2} - 2 = 0 $$
+$$ x_{1} = x_{2}\ \text{ or }\ x_{1} + x_{2} - 2 = 0 $$
 
 The only possible value of $x$ within $D_{f}$ that satisfies $x_{1} + x_{2} - 2 = 0$ is $x = 1$. And if $x_{1} = x_{2} = 1$, then $f(x_{1}) = f(x_{2}) \Rightarrow x_{1} = x_{2}$ holds.
 
@@ -177,4 +177,4 @@ $$ y - 1 \lt 0 $$
 $$ y \lt 1 $$
 
 $y \lt 1$ does not satisfy $y \geq 1$, therefore
-$$ D*{f^{-1}} = R*{f} = \mathopen(1; \infty \mathclose) $$
+$$ D_{f^{-1}} = R_{f} = \mathopen(1; \infty \mathclose) $$

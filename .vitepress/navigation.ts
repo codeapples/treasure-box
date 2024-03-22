@@ -1,4 +1,4 @@
-import type { DefaultTheme } from 'vitepress'
+import type { DefaultTheme } from 'vitepress/theme'
 
 const nav: DefaultTheme.NavItem[] = [
   {
@@ -12,10 +12,10 @@ const nav: DefaultTheme.NavItem[] = [
           { text: 'Basic Mathematics', link: '/materials/basicmath/' },
         ],
       },
-      { text: 'Semester 2', items: [] },
+      { text: 'Semester 2', items: [{ text: 'Analysis', link: '/materials/analysis/' }] },
     ],
   },
-  { text: 'Posts', link: '/posts/' },
+  /* { text: 'Posts', link: '/posts/' }, */
   { text: 'Contributors', link: '' },
 ]
 
@@ -47,10 +47,16 @@ const sidebar: DefaultTheme.Sidebar = {
           items: [
             { text: '[BM] General', link: '/materials/basicmath/' },
             { text: '[BM] Inverse matrices', link: '/materials/basicmath/inverse-mx.md' },
-            { text: '[BM] Inverse matrices Gauss-Jordan method', link: '/materials/basicmath/inverse-mx-gj.md' },
+            {
+              text: '[BM] Inverse matrices Gauss-Jordan method',
+              link: '/materials/basicmath/inverse-mx-gj.md',
+            },
             { text: '[BM] Eigenvalues and eigenvectors', link: '/materials/basicmath/eigen.md' },
             { text: '[BM] Diagonalization', link: '/materials/basicmath/diagonalization.md' },
-            { text: '[BM] Orthogonal and orthonormal basis', link: '/materials/basicmath/ortho.md' },
+            {
+              text: '[BM] Orthogonal and orthonormal basis',
+              link: '/materials/basicmath/ortho.md',
+            },
             { text: '[BM] Inverse functions', link: '/materials/basicmath/inverse-fn.md' },
             { text: '[BM] Proving limits', link: '/materials/basicmath/limits.md' },
           ],
@@ -60,7 +66,24 @@ const sidebar: DefaultTheme.Sidebar = {
     {
       text: 'Semester 2',
       collapsed: false,
-      items: [],
+      items: [
+        {
+          text: 'Analysis I [A-1]',
+          collapsed: true,
+          items: [
+            { text: '[A-1] General', link: '/materials/analysis/' },
+            { text: '[A-1] Invertable functions', link: '/materials/analysis/invertable.md' },
+            { text: '[A-1] Function compositions', link: '/materials/analysis/compositions.md' },
+            { text: '[A-1] Bounded sets', link: '/materials/analysis/bounded.md' },
+            { text: '[A-1] Convergent sequences', link: '/materials/analysis/convergent.md' },
+            { text: '[A-1] Computing limits', link: '/materials/analysis/limits-comp.md' },
+            {
+              text: '[A-1] Limits of recursive sequences',
+              link: '/materials/analysis/limits-rs.md',
+            },
+          ],
+        },
+      ],
     },
   ],
 }
