@@ -239,9 +239,27 @@ $$
 $$
 
 $$
-= \lim_{n \to \infty} \frac{n\sqrt{3 + \frac{5}{n^2}} - n\sqrt{3 + \frac{3}{n^2}}}{n\sqrt{1 + \frac{9}{n^2}} - n} = \lim_{n \to \infty} \frac{n(\sqrt{3 + \frac{5}{n^2}} - \sqrt{3 + \frac{3}{n^2}})}{n(\sqrt{1 + \frac{9}{n^2}} - 1)} =
+= \lim_{n \to \infty} \frac{(\sqrt{3n^2 + 5} - \sqrt{3n^2 + 3})(\sqrt{3n^2 + 5} + \sqrt{3n^2 + 3})}{(\sqrt{n^2 + 9} - n)(\sqrt{3n^2 + 5} + \sqrt{3n^2 + 3})} =
 $$
 
 $$
-= \frac{\sqrt{3 + 0} - \sqrt{3 + 0}}{\sqrt{1 + 0} - 1} = \frac{0}{0} = \text{indeterminate}
+= \lim_{n \to \infty} \frac{3n^2 + 5 - 3n^2 - 3}{n(\sqrt{1 + \frac{9}{n^2}} - 1) \cdot n(\sqrt{3 + \frac{5}{n^2}} + \sqrt{3 + \frac{3}{n^2}})} =
 $$
+
+$$
+= \lim_{n \to \infty} \frac{2}{n^2(\sqrt{1 + \frac{9}{n^2}} - 1)(\sqrt{3 + \frac{5}{n^2}} + \sqrt{3 + \frac{3}{n^2}})} =
+$$
+
+$$
+= \lim_{n \to \infty} \frac{2 \cdot (\sqrt{1 + \frac{9}{n^2} } + 1)}{n^2(1 + \frac{9}{n^2} - 1)(\sqrt{3 + \frac{5}{n^2}} + \sqrt{3 + \frac{3}{n^2}})} =
+$$
+
+$$
+= \lim_{n \to \infty} \frac{2 \cdot (\sqrt{1 + \frac{9}{n^2} } + 1)}{9(\sqrt{3 + \frac{5}{n^2}} + \sqrt{3 + \frac{3}{n^2}})} = \frac{2}{9} \lim_{n \to \infty} \frac{\sqrt{1 + \frac{9}{n^2} } + 1}{\sqrt{3 + \frac{5}{n^2}} + \sqrt{3 + \frac{3}{n^2}}} =
+$$
+
+$$
+= \frac{2}{9} \cdot \frac{\sqrt{1 + 0} + 1}{\sqrt{3 + 0} + \sqrt{3 + 0}} = \frac{2}{9} \cdot \frac{1 + 1}{\sqrt{3} + \sqrt{3}} = \frac{2}{9} \cdot \frac{2}{2\sqrt{3}} = \frac{2}{9\sqrt{3}}
+$$
+
+
