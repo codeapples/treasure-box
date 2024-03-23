@@ -17,14 +17,10 @@ The materials intent to cover analysis topics that you are expected to know and 
 - [Computing limits](/materials/analysis/limits-comp.md)
 - [Limits of recursive sequences](/materials/analysis/limits-rs.md)
 
-<!-- ## Math topics for Test #3
-
-- [Inverse of matrices using Gauss-Jordan elimination](/materials/basicmath/inverse-mx-gj.md)
-- [Eigenvalues and eigenvectors](/materials/basicmath/eigen.md)
-- [Diagonalization of matrices](/materials/basicmath/diagonalization.md)
-- [Orthogonal and orthonormal basis](/materials/basicmath/ortho.md)
-- [Inverse functions](/materials/basicmath/inverse-fn.md)
-- [Proving limits by definition](/materials/basicmath/limits.md)
- -->
-## Sample tests
+## Midterm samples
 - [Test 1](/materials/analysis/sample/1.pdf)
+
+## Endterm topics
+
+## Endterm samples
+
