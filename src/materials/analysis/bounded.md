@@ -27,6 +27,7 @@ A number $B$ is called the **least upper bound** (or **supremum**) of the set $H
 
 1. $B$ is an upper bound of $H$: $\forall x \in H: x \leq B$.
 2. $B$ is the smallest upper bound. In other words, any smaller number than $B$ is not an upper bound of $H$:
+
 $$
 if\ t < B \text{ then there is } x \in H \text{ so that } x > t
 $$
@@ -57,6 +58,7 @@ A number $b$ is called the **greatest lower bound** (or **infimum**) of the set 
 
 1. $b$ is a lower bound of $H$: $\forall x \in H: x \geq b$.
 2. $b$ is the greatest lower bound. In other words, any greater number than $b$ is not a lower bound of $H$:
+
 $$
 if\ t > b \text{ then there is } x \in H \text{ so that } x < t
 $$
@@ -104,11 +106,11 @@ On the opposite, when the denominator $4n + 6$ is smallest, the function is also
 Since $n \in \mathbb{N}$, the smallest value of $n$ is $0$ $\implies$ the smallest denominator is $4 \cdot 0 + 6 = 6$, then the function would look like
 
 $$
-\frac{1}{2} - \frac{1}{4n + 6} \leq \frac{1}{2} - \frac{1}{4 \cdot 0 + 6}
+\frac{1}{2} - \frac{1}{4n + 6} \geq \frac{1}{2} - \frac{1}{4 \cdot 0 + 6}
 $$
 
 $$
-\frac{1}{2} - \frac{1}{4n + 6} \leq \frac{1}{2} - \frac{1}{6} = \frac{3}{6} - \frac{1}{6} = \frac{2}{6} = \frac{1}{3}
+\frac{1}{2} - \frac{1}{4n + 6} \geq \frac{1}{2} - \frac{1}{6} = \frac{3}{6} - \frac{1}{6} = \frac{2}{6} = \frac{1}{3}
 $$
 
 Therefore, the lower bound of the set $H$ is $\frac{1}{3}$.
@@ -307,7 +309,7 @@ $$
 x > \frac{1}{1 + \epsilon}
 $$
 
-Since we need a value greater than $\frac{1}{1 + \epsilon}$ but we still need  to stay within range $\mathopen(0; 1\mathclose)$, we can choose
+Since we need a value greater than $\frac{1}{1 + \epsilon}$ but we still need to stay within range $\mathopen(0; 1\mathclose)$, we can choose
 
 $$
 x := \frac{\frac{1}{1 + \epsilon} + 1}{2} = \frac{2 + \epsilon}{2 + 2\epsilon}
