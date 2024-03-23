@@ -6,8 +6,6 @@ title: \[A-1\] General
 
 The materials intent to cover analysis topics that you are expected to know and understand before certain tests.
 
-**Work in progress!**
-
 ## Midterm topics
 
 - [Invertable functions](/materials/analysis/invertable.md)
@@ -18,9 +16,12 @@ The materials intent to cover analysis topics that you are expected to know and 
 - [Limits: recursive sequences](/materials/analysis/limits-rs.md)
 
 ## Midterm samples
-- [Test 1](/samples/analysis/1.pdf)
+
+- [Sample 1](/samples/analysis/1.pdf)
+- [Sample 2](/samples/analysis/2.pdf)
+- [Sample 3](/samples/analysis/3.pdf)
+- [Sample 4](/samples/analysis/4.pdf)
 
 ## Endterm topics
 
 ## Endterm samples
-

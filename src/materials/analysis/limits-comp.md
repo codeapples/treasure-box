@@ -7,6 +7,7 @@ title: \[A-1\] Determining limits
 ## Properties of infinity and zero
 
 ### Determinate form
+
 - Infinity plus or minus a real number is infinity: $\pm\infty \pm k = \pm\infty \quad \forall k \in \mathbb{R}$
 - Infinity plus infinity is infinity: $\infty + \infty = \infty$
 - Infinity by a real number is plus or minus infinity: $\infty \cdot \pm k = \pm\infty \quad \forall k \in \mathbb{R \setminus \{0\}}$
@@ -262,4 +263,74 @@ $$
 = \frac{2}{9} \cdot \frac{\sqrt{1 + 0} + 1}{\sqrt{3 + 0} + \sqrt{3 + 0}} = \frac{2}{9} \cdot \frac{1 + 1}{\sqrt{3} + \sqrt{3}} = \frac{2}{9} \cdot \frac{2}{2\sqrt{3}} = \frac{2}{9\sqrt{3}}
 $$
 
+## Example 9
 
+Determine the limit of the sequence
+
+$$
+\lim_{n \to \infty} \frac{5^{n + 1} + 2^n}{3 \cdot 5^n - 5^{-n}}
+$$
+
+$$
+\lim_{n \to \infty} \frac{5^{n + 1} + 2^n}{3 \cdot 5^n - 5^{-n}} = \frac{\infty + \infty}{\infty - 0} = \text{indeterminate}
+$$
+
+Transform/simplify and take out dominant terms:
+
+$$
+\lim_{n \to \infty} \frac{5^{n + 1} + 2^n}{3 \cdot 5^n - 5^{-n}} = \lim_{n \to \infty} \frac{5 \cdot 5^n + 2^n}{3 \cdot 5^n - \frac{1}{5^n}} =
+$$
+
+$$
+= \lim_{n \to \infty} \frac{5^n(5 + \frac{2^n}{5^n})}{5^n(3 - \frac{1}{5^{2n}})} = \lim_{n \to \infty} \frac{5 + 0}{3 - 0} = \frac{5}{3}
+$$
+
+## Example 10
+
+Determine the limit of the sequence
+
+$$
+\lim_{n \to \infty} \sqrt[n]{3n^5 + 2n + 1}
+$$
+
+### Solution 1 - Sandwich theorem
+
+$$
+\sqrt[n]{3n^5} \leq \sqrt[n]{3n^5 + 2n + 1} \leq \sqrt[n]{3n^5 + 2n^5 + n^5} = \sqrt[n]{6n^5} \quad \forall n \in \mathbb{N}^+
+$$
+
+$$
+\underbrace{\sqrt[n]{3} \cdot (\sqrt[n]{n})^5}_{1} \leq \underbrace{\sqrt[n]{3n^5 + 2n + 1}}_{(\text{sandwich})} \leq \underbrace{\sqrt[n]{6} \cdot (\sqrt[n]{n}^5)}_{1}
+$$
+
+So
+
+$$
+\lim_{n \to \infty} \sqrt[n]{3n^5 + 2n + 1} = 1
+$$
+
+### Solution 2 - Using $\lim_{n \to \infty} \sqrt[n]{x_n}$
+
+$$
+\sqrt[n]{3n^5 + 2n + 1} = \sqrt[n]{n^5 \cdot (3 + \frac{2}{n^4} + \frac{1}{n^5})} = (\sqrt[n]{n})^5 \cdot \underbrace{\sqrt[n]{3 + \frac{2}{n^4} + \frac{1}{n^5}}}_{=: x_n}
+$$
+
+where
+
+$$
+\lim_{n \to \infty} x_n = \lim_{n \to \infty} (3 + \frac{2}{n^4} + \frac{1}{n^5}) = 3 \implies \lim_{n \to \infty} \sqrt[n]{x_n} = 1
+$$
+
+So
+
+$$
+\lim_{n \to \infty} \sqrt[n]{3n^5 + 2n + 1} = 1^5 \cdot 1 = 1
+$$
+
+<!-- ## Example 11
+
+Determine the limit of the sequence
+
+$$
+\lim_{n \to \infty} \sqrt[n]{\frac{n + 1}{2n + 3}}
+$$ -->
