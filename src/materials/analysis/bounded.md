@@ -86,7 +86,7 @@ Find $\sup H$, $\inf H$, $\max H$ and $\min H$.
 First, try to transform the equation, so that it becomes easier to comprehend how the function behaves, especially with very large or very small values of $n$.
 
 $$
-\frac{n + 1}{2n + 3} = \frac{1}{2} \cdot \frac{2n + 2}{2x + 3} = \frac{1}{2} \cdot \frac{2n + 3 - 1}{2n + 3} =
+\frac{n + 1}{2n + 3} = \frac{1}{2} \cdot \frac{2n + 2}{2n + 3} = \frac{1}{2} \cdot \frac{2n + 3 - 1}{2n + 3} =
 $$
 
 $$
