@@ -73,7 +73,7 @@ const sidebar: DefaultTheme.Sidebar = {
           items: [
             { text: '[A-1] General', link: '/materials/analysis/' },
             { text: '[A-1] Invertable functions', link: '/materials/analysis/invertable.md' },
-            { text: '[A-1] Function compositions', link: '/materials/analysis/compositions.md' },
+            { text: '[A-1] Function composition', link: '/materials/analysis/composition.md' },
             { text: '[A-1] Bounded sets', link: '/materials/analysis/bounded.md' },
             { text: '[A-1] Convergent sequences', link: '/materials/analysis/convergent.md' },
             { text: '[A-1] Computing limits', link: '/materials/analysis/limits-comp.md' },

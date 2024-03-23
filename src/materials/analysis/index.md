@@ -11,7 +11,7 @@ The materials intent to cover analysis topics that you are expected to know and 
 ## Midterm topics
 
 - [Invertable functions](/materials/analysis/invertable.md)
-- [Function compositions](/materials/analysis/compositions.md)
+- [Function composition](/materials/analysis/composition.md)
 - [Bounded sets](/materials/analysis/bounded.md)
 - [Convergent sequences](/materials/analysis/convergent.md)
 - [Computing limits](/materials/analysis/limits-comp.md)
@@ -26,3 +26,5 @@ The materials intent to cover analysis topics that you are expected to know and 
 - [Inverse functions](/materials/basicmath/inverse-fn.md)
 - [Proving limits by definition](/materials/basicmath/limits.md)
  -->
+## Sample tests
+- [Test 1](/materials/analysis/sample/1.pdf)
