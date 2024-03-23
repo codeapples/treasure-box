@@ -14,7 +14,7 @@ The materials intent to cover analysis topics that you are expected to know and 
 - [Function composition](/materials/analysis/composition.md)
 - [Bounded sets](/materials/analysis/bounded.md)
 - [Limits: proving by definition](/materials/analysis/limits-def.md)
-- [Limits: determining](/materials/analysis/limits-comp.md)
+- [Limits: determining limits](/materials/analysis/limits-comp.md)
 - [Limits: recursive sequences](/materials/analysis/limits-rs.md)
 
 ## Midterm samples
