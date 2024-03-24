@@ -9,13 +9,17 @@ title: \[A-1\] Proving limits by definition
 Let $(a_n)$ be a sequence of real numbers. We say that $(a_n)$ converges to a real number $L$ if for every $\varepsilon > 0$ there exists a natural number $N$ such that for all $n \geq N$ we have $|a_n - L| < \varepsilon$.
 
 #### Notation
-$$ \lim_{n \to \infty} a_n = L $$
+
+$$
+\lim_{n \to \infty} a_n = L
+$$
 
 $$
 \forall \varepsilon > 0\ \exists N \in \mathbb{N}\ \forall n \in \mathbb{N}\ n \geq N : |a_n - L| < \varepsilon
 $$
 
 #### General steps
+
 - Simplify the inequality $|a_n - L| < \varepsilon$, get rid of the absolute value.
 - Use order preserving estimates to simplify further.
 - Find a suitable $N$ for which $|a_n - L| < \varepsilon$ holds for all $n \geq N$.
@@ -28,7 +32,9 @@ Let $(a_n)$ be a sequence of real numbers. We say that $(a_n)$ diverges to $+\in
 
 Notation:
 
-$$ \lim_{n \to \infty} a_n = +\infty $$
+$$
+\lim_{n \to \infty} a_n = +\infty
+$$
 
 $$
 \forall P > 0\ \exists N \in \mathbb{N}\ \forall n \in \mathbb{N}\ n \geq N : a_n > P
@@ -40,7 +46,9 @@ Let $(a_n)$ be a sequence of real numbers. We say that $(a_n)$ diverges to $-\in
 
 Notation:
 
-$$ \lim_{n \to \infty} a_n = -\infty $$
+$$
+\lim_{n \to \infty} a_n = -\infty
+$$
 
 $$
 \forall P < 0\ \exists N \in \mathbb{N}\ \forall n \in \mathbb{N}\ n \geq N : a_n < P
@@ -124,6 +132,10 @@ $$
 
 $$
 \left| \frac{-2n^2 - 2n + 8}{n^3 + n^2 + n + 1} \right| < \varepsilon
+$$
+
+$$
+\frac{\left| -2n^2 - 2n + 8 \right|}{\left| n^3 + n^2 + n + 1 \right|} < \varepsilon
 $$
 
 $$
