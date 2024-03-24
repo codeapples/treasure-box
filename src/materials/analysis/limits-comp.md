@@ -48,6 +48,10 @@ Let $(a_n)$ and $(b_n)$ be two sequences of real numbers that converge to real n
 - $\lim_{n \to \infty} \sqrt[n]{\frac{k^n}{n!}} = 0$, where $k \in \mathbb{R}$
 - $\lim_{n \to \infty} \frac{n!}{n^n} = 0$
 - $\lim_{n \to \infty} (n^k \cdot q^n) = 0$, where $k \in \mathbb{N}$ and $q \in \mathopen(-1; 1\mathclose)$
+- $\lim_{n \to \infty} (1 + \frac{1}{n})^{n} = e$
+- $\lim_{n \to \infty} (1 - \frac{1}{n})^{n} = \frac{1}{e}$
+- $\lim_{n \to \infty} (1 + \frac{1}{a_n})^{a_n} = e$, where $a_n \in \mathbb{N}^+$ and $\lim_{n \to \infty} a_n = \infty$
+- $\lim_{n \to \infty} (1 - \frac{1}{a_n})^{a_n} = \frac{1}{e}$, where $a_n \in \mathbb{N}^+$ and $\lim_{n \to \infty} a_n = \infty$
 
 ### Squeeze principle (Sandwich theorem)
 
