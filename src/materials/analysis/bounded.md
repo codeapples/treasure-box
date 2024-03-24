@@ -142,7 +142,13 @@ $$
 While $n > 0$
 
 $$
-\epsilon > \frac{1}{4n + 6} \implies \epsilon > \frac{1}{4n}
+\epsilon > \frac{1}{4n + 6}
+$$
+
+We need $\epsilon > \frac{1}{4n + 6}$, we can simplify and take $\epsilon > \frac{1}{4n}$.
+
+$$
+\frac{1}{4n + 6} < \frac{1}{4n} < \epsilon
 $$
 
 $$
@@ -242,7 +248,13 @@ $$
 While $x > 0$
 
 $$
-\epsilon > \frac{1}{\sqrt{x + 1} + \sqrt{x}} \implies \epsilon > \frac{1}{\sqrt{x}}
+\epsilon > \frac{1}{\sqrt{x + 1} + \sqrt{x}}
+$$
+
+We need $\epsilon > \frac{1}{\sqrt{x + 1} + \sqrt{x}}$, we can simplify and take $\epsilon > \frac{1}{\sqrt{x}}$.
+
+$$
+\frac{1}{\sqrt{x + 1} + \sqrt{x}} < \frac{1}{\sqrt{x}} < \epsilon
 $$
 
 $$
@@ -438,7 +450,13 @@ $$
 While $x \neq 0$
 
 $$
-\epsilon > \frac{1}{25x^2 + 10} \implies \epsilon > \frac{1}{25x^2}
+\epsilon > \frac{1}{25x^2 + 10}
+$$
+
+We need $\epsilon > \frac{1}{25x^2 + 10}$, we can simplify and take $\epsilon > \frac{1}{25x^2}$.
+
+$$
+\frac{1}{25x^2 + 10} < \frac{1}{25x^2} < \epsilon
 $$
 
 $$
