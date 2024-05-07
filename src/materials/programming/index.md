@@ -1,5 +1,5 @@
 ---
-title: \[P\] General
+title: '[P] General'
 ---
 
 # Basic patterns of algorithms
@@ -24,3 +24,5 @@ Patterns of Algorithms that transform a sequence of values into another sequence
 - [Union](/materials/programming/sequence.md#union)
 - [Set transformation](/materials/programming/sequence.md#set-transformation)
 - [Multiset transformation](/materials/programming/sequence.md#multiset-transformation)
+
+<!-- TODO: Add c2 examples -->

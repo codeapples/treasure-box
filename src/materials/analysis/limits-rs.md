@@ -1,17 +1,16 @@
 ---
-title: \[A-1\] Limits of recursive sequences
+title: '[A-1] Limits of recursive sequences'
 ---
 
 # Limits of recursive sequences
 
 ## General steps
+
 In order to prove that a recursive sequence $(a_n)$ converges to a limit $A$, we need to show that:
 
 1. $(a_n)$ is monotonically increasing or decreasing.
 2. $(a_n)$ is bounded.
 3. Find the limit $A$.
-
-
 
 ## Example 1
 

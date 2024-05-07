@@ -1,5 +1,5 @@
 ---
-title: \[A-1\] Invertable functions
+title: '[A-1] Invertable functions'
 ---
 
 # Invertable functions
@@ -10,7 +10,7 @@ Link to basic bath materials: [Inverse functions](/materials/basicmath/inverse-f
 
 ## Determining invertability
 
-Function $f$ is invertible if it is one-to-one or *injective*. This means that for every $y$ in the codomain of $f$, there is exactly one $x$ in the domain of $f$ such that $f(x) = y$.
+Function $f$ is invertible if it is one-to-one or _injective_. This means that for every $y$ in the codomain of $f$, there is exactly one $x$ in the domain of $f$ such that $f(x) = y$.
 ::: details
 ![](/assets/injective-ex.svg)
 <br>
@@ -18,6 +18,7 @@ Function $f$ is invertible if it is one-to-one or *injective*. This means that f
 :::
 
 So to chech for invertablility, we need to check if the function is one-to-one.
+
 $$
 f(x_1) = f(x_2) \Rightarrow x_1 = x_2
 $$
@@ -25,17 +26,19 @@ $$
 ## Inverse function
 
 If $f$ is invertible, then there exists a function $f^{-1}$ such that
+
 $$
 f^{-1}(f(x)) = x \quad \text{and} \quad f(f^{-1}(y)) = y
 $$
 
-
 ## Example 1
 
 Let
+
 $$
 f(x) = \frac{2x + 1}{3x - 2} : x \in \mathopen(-\infty; \frac{2}{3}\mathclose) \cup \mathopen(\frac{2}{3}; \infty\mathclose)
 $$
+
 be a function. Determine if $f$ is invertible and calculate the inverse function and its domain.
 
 ### Step 1: Check injectivity
@@ -57,9 +60,11 @@ $$
 So $f$ is **invertible**.
 
 ### Step 2: Calculate inverse function
+
 We need to find $f^{-1}(y)$.
 
 And determine $D_{f^{-1}} = R_{f}$, where
+
 $$
 R_{f} = \{\ y \in \mathbb{R}\ |\ \exists x \in D_{f} : y = f(x)\ \} =
 $$
@@ -69,11 +74,12 @@ $$
 $$
 
 #### First
+
 Solve for $x$.
+
 $$
 y = \frac{2x + 1}{3x - 2}
 $$
-
 
 $$
 y(3x - 2) = 2x + 1
@@ -96,19 +102,23 @@ x = \frac{2y + 1}{3y - 2}
 $$
 
 So
+
 $$
 f^{-1}(y) = \frac{2y + 1}{3y - 2}
 $$
 
 #### Second
+
 Determine $D_{f^{-1}}$.
 
 In order for $f^{-1}$ to make sense, $3y - 2$ must be non-zero, so
+
 $$
 3y - 2 \neq 0\ \Rightarrow\ y \neq \frac{2}{3}
 $$
 
 But we also need to consider the domain of $f$.
+
 $$
 x \in \mathopen(-\infty; \frac{2}{3}\mathclose) \cup \mathopen(\frac{2}{3}; \infty\mathclose)
 $$
@@ -125,14 +135,16 @@ $$
 
 which is always true $\implies$ ignore it.
 
-
 ### Conclusion
+
 $$
 f^{-1}(y) = \frac{2y + 1}{3y - 2} : (\ y \in \mathbb{R} \setminus \frac{2}{3}\ )
 $$
 
 ## Example 2
+
 Let
+
 $$
 f(x) = \frac{x + 1}{3x - 2} : (x \in \mathopen[2; \infty \mathclose))
 $$
@@ -158,9 +170,11 @@ $$
 So $f$ is **invertible**.
 
 ### Step 2: Calculate inverse function
+
 We need to find $f^{-1}(y)$.
 
 And determine $D_{f^{-1}} = R_{f}$, where
+
 $$
 R_{f} = \{\ y \in \mathbb{R}\ |\ \exists x \in D_{f} : y = f(x)\ \} =
 $$
@@ -172,6 +186,7 @@ $$
 #### First
 
 Solve for $x$.
+
 $$
 y = \frac{x + 1}{3x - 2}
 $$
@@ -197,6 +212,7 @@ x = \frac{2y + 1}{3y - 1}
 $$
 
 So
+
 $$
 f^{-1}(y) = \frac{2y + 1}{3y - 1}
 $$
@@ -206,11 +222,13 @@ $$
 Determine $D_{f^{-1}}$.
 
 In order for $f^{-1}$ to make sense, $3y - 1$ must be non-zero, so
+
 $$
 3y - 1 \neq 0\ \Rightarrow\ y \neq \frac{1}{3}
 $$
 
 But we also need to consider the domain of $f$.
+
 $$
 x \in \mathopen[2; \infty \mathclose)
 $$
@@ -264,11 +282,13 @@ $$
 Second case is not possible $\implies$ ignore it.
 
 Therefore, because $y \neq \frac{1}{3}$, and $y \in \mathopen(\frac{1}{3}; \frac{3}{4}\mathclose]$, final domain of $f^{-1}$ is
+
 $$
 D_{f^{-1}} = R_{f} = \mathopen(\frac{1}{3}; \frac{3}{4}\mathclose]
 $$
 
 ### Conclusion
+
 $$
 f^{-1}(y) = \frac{2y + 1}{3y - 1} : (\ y \in \mathopen(\frac{1}{3}; \frac{3}{4}\mathclose]\ )
 $$

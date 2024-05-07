@@ -1,5 +1,5 @@
 ---
-title: \[P\] Algorithms
+title: '[P] Algorithms'
 ---
 
 # Patterns of algorithms<br>sort & other
@@ -10,11 +10,15 @@ Used to sort a collection of elements with simple exchange method.
 
 #### Input
 
-$$ X[1..] \in \mathbb{R}^n$$
+$$
+X[1..] \in \mathbb{R}^n
+$$
 
 #### Postcondition
 
-$$\forall_{i=1}^{length(X)-1} X[i] \le X[i+1]$$
+$$
+\forall_{i=1}^{length(X)-1} X[i] \le X[i+1]
+$$
 
 #### Implementation
 
@@ -42,11 +46,15 @@ Used to sort a collection of elements by finding the smallest element and moving
 
 #### Input
 
-$$ X[1..] \in \mathbb{R}^n$$
+$$
+X[1..] \in \mathbb{R}^n
+$$
 
 #### Postcondition
 
-$$\forall_{i=1}^{length(X)-1} X[i] \le X[i+1]$$
+$$
+\forall_{i=1}^{length(X)-1} X[i] \le X[i+1]
+$$
 
 #### Implementation
 

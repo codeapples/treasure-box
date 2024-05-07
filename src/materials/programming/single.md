@@ -1,5 +1,5 @@
 ---
-title: \[P\] Algorithms
+title: '[P] Algorithms'
 ---
 
 # Patterns of algorithms:<br>sequence -> single value (reduction)
@@ -10,8 +10,13 @@ Used to count a number of elements in a collection, or to count the number of ti
 
 #### Input
 
-$$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
-$$ F: \mathbb{S} \rightarrow \mathbb{L}\text{ // logical function or expression}$$
+$$
+X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}
+$$
+
+$$
+F: \mathbb{S} \rightarrow \mathbb{L}\text{ // logical function or expression}
+$$
 
 #### Postcondition
 
@@ -42,15 +47,25 @@ Used to find the maximum element (value or index or both) in a collection.
 
 #### Input
 
-$$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
+$$
+X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}
+$$
 
 #### Postcondition
 
-$$maxInd, maxVal = \max_{i=1}^{length(X)} X[i]$$
+$$
+maxInd, maxVal = \max_{i=1}^{length(X)} X[i]
+$$
 
-*Short notation:*
-$$ (maxInd) = \text{MAXIND}_{i=1}^{length(X)} (i)$$
-$$ (maxVal) = \text{MAXVAL}_{i=1}^{length(X)} (X[i])$$
+_Short notation:_
+
+$$
+(maxInd) = \text{MAXIND}_{i=1}^{length(X)} (i)
+$$
+
+$$
+(maxVal) = \text{MAXVAL}_{i=1}^{length(X)} (X[i])
+$$
 
 #### Implementation
 
@@ -93,15 +108,29 @@ Used to select an element that has a certain attribute from a collection. It is 
 
 #### Input
 
-$$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
-$$ F: \mathbb{S} \rightarrow \mathbb{L}\text{ // logical function or expression}$$
+$$
+X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}
+$$
+
+$$
+F: \mathbb{S} \rightarrow \mathbb{L}\text{ // logical function or expression}
+$$
 
 #### Postcondition
 
-$$ind = i:F(X[i])\ and$$
-$$val = X[ind]$$
-*Short notation:*
-$$ (ind, val) = \text{SELECT}_{i=1}^{length(X)} (X[i]\ |\ F(X[i]))$$
+$$
+ind = i:F(X[i])\ and
+$$
+
+$$
+val = X[ind]
+$$
+
+_Short notation:_
+
+$$
+(ind, val) = \text{SELECT}_{i=1}^{length(X)} (X[i]\ |\ F(X[i]))
+$$
 
 #### Implementation
 
@@ -126,12 +155,19 @@ Used to determine if a collection has an item/element with certain attribute.
 
 #### Input
 
-$$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
-$$ F: \mathbb{S} \rightarrow \mathbb{L}\text{ // logical function or expression}$$
+$$
+X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}
+$$
+
+$$
+F: \mathbb{S} \rightarrow \mathbb{L}\text{ // logical function or expression}
+$$
 
 #### Postcondition
 
-$$exists = \exists_{i=1}^{length(X)}F(X[i])$$
+$$
+exists = \exists_{i=1}^{length(X)}F(X[i])
+$$
 
 #### Implementation
 
@@ -152,7 +188,9 @@ A variation of Decision PoA is Decision(All), which is used to determine if all 
 
 #### Postcondition
 
-$$all = \forall_{i=1}^{length(X)}F(X[i])$$
+$$
+all = \forall_{i=1}^{length(X)}F(X[i])
+$$
 
 #### Implementation
 
@@ -177,17 +215,33 @@ Search combines the functionality of Decision and Selection PoAs.
 
 #### Input
 
-$$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
-$$ F: \mathbb{S} \rightarrow \mathbb{L}\text{ // logical function or expression}$$
+$$
+X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}
+$$
+
+$$
+F: \mathbb{S} \rightarrow \mathbb{L}\text{ // logical function or expression}
+$$
 
 #### Postcondition
 
-$$exists = \exists_{i=1}^{length(X)}F(X[i])$$
-$$\text{if $exists$}\rightarrow ind = i:F(X[i])\ and$$
-$$val = X[ind]$$
+$$
+exists = \exists_{i=1}^{length(X)}F(X[i])
+$$
 
-*Short notation:*
-$$ (exists, ind, val) = \text{SEARCH}_{i=1}^{length(X)} (X[i]\ |\ F(X[i]))$$
+$$
+\text{if $exists$}\rightarrow ind = i:F(X[i])\ and
+$$
+
+$$
+val = X[ind]
+$$
+
+_Short notation:_
+
+$$
+(exists, ind, val) = \text{SEARCH}_{i=1}^{length(X)} (X[i]\ |\ F(X[i]))
+$$
 
 #### Implementation
 
@@ -234,18 +288,27 @@ Examples: sum, product, concatenation of all the elements of a collection.
 
 #### Input
 
-$$ X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}$$
-$$ F: \mathbb{S} \rightarrow \mathbb{S}\text{ // transformation function that returns value $\in\mathbb{S}$}$$
+$$
+X[1..] \in \mathbb{S}^*\text{ // where $\mathbb{S}$ - arbitrary set}
+$$
+
+$$
+F: \mathbb{S} \rightarrow \mathbb{S}\text{ // transformation function that returns value $\in\mathbb{S}$}
+$$
 
 #### Postcondition
 
-$$sc = F(X[1]..X[length(X)])\text{ // where $sc$ - sequence calculation result}$$
+$$
+sc = F(X[1]..X[length(X)])\text{ // where $sc$ - sequence calculation result}
+$$
 
 ### Specific example: Summation
 
 #### Postcondition
 
-$$sc = \sum_{i=1}^{length(X)}X[i]$$
+$$
+sc = \sum_{i=1}^{length(X)}X[i]
+$$
 
 #### Implementation
 
@@ -260,7 +323,9 @@ for (int i = 0; i < X.Length; i++){
 
 #### Postcondition
 
-$$sc = \prod_{i=1}^{length(X)}X[i]$$
+$$
+sc = \prod_{i=1}^{length(X)}X[i]
+$$
 
 #### Implementation
 
@@ -275,7 +340,9 @@ for (int i = 0; i < X.Length; i++){
 
 #### Postcondition
 
-$$sc = X[1]..X[length(X)]$$
+$$
+sc = X[1]..X[length(X)]
+$$
 
 #### Implementation
 

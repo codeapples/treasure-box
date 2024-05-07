@@ -1,5 +1,5 @@
 ---
-title: \[BM\] Matrices
+title: '[BM] Matrices'
 ---
 
 # Inversion of matrices<br>using Gauss-Jordan elimination
@@ -7,11 +7,22 @@ title: \[BM\] Matrices
 ## Introduction
 
 Square matrices
-$$ A \in \mathbb{K}^{n \times n} $$
+
+$$
+A \in \mathbb{K}^{n \times n}
+$$
+
 are invertible **if and only if** their determinant is **not zero**.
-$$\det(A) \neq 0 \Leftrightarrow A^{-1} \text{ exists}$$
+
+$$
+\det(A) \neq 0 \Leftrightarrow A^{-1} \text{ exists}
+$$
+
 The inverse of a matrix is a matrix that when multiplied with the original matrix produces the identity matrix.
-$$ I = A \cdot A^{-1} = A^{-1} \cdot A $$
+
+$$
+I = A \cdot A^{-1} = A^{-1} \cdot A
+$$
 
 ## Inverse calculation
 
@@ -71,7 +82,10 @@ A^{-1} = \begin{bmatrix}
 $$
 
 The result is checked by multiplying the original matrix with the inverse matrix.
-$$ A \cdot A^{-1} = I $$
+
+$$
+A \cdot A^{-1} = I
+$$
 
 ### Notes
 

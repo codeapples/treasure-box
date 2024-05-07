@@ -1,5 +1,5 @@
 ---
-title: \[A-1\] General
+title: '[A-1] General'
 ---
 
 # Analysis I<br>for test preparation
@@ -23,5 +23,7 @@ The materials intent to cover analysis topics that you are expected to know and 
 - [Sample 4](/samples/analysis/4.pdf)
 
 ## Endterm topics
+
+- [Determining sum of series](/materials/analysis/series.md)
 
 ## Endterm samples

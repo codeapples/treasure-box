@@ -1,5 +1,5 @@
 ---
-title: \[BM\] Eigenvalues & eigenvectors
+title: '[BM] Eigenvalues & eigenvectors'
 ---
 
 # Eigenvalues and eigenvectors
@@ -13,7 +13,11 @@ Eigenvectors are special vectors associated with a linear system of equations (i
 ## Calculation
 
 Let
-$$ A \in \mathbb{K}^{n \times n} $$
+
+$$
+A \in \mathbb{K}^{n \times n}
+$$
+
 be a square matrix. The eigenvalues and eigenvectors of A are calculated using the following steps:
 
 1. Calculate the characteristic polynomial
@@ -23,26 +27,32 @@ be a square matrix. The eigenvalues and eigenvectors of A are calculated using t
 ### Characteristic polynomial
 
 The characteristic polynomial of a matrix is calculated using the following formula:
-$$ \det(A - \lambda I) = 0 $$
-where
-$\lambda$
-is the eigenvalue of A.
+
+$$
+\det(A - \lambda I) = 0
+$$
+
+where $\lambda$ is the eigenvalue of A.
 
 ### Roots of the characteristic polynomial
 
 The roots of the characteristic polynomial are calculated using the following formula:
-$$ \lambda_{i} = \frac{1}{2} \left( -b \pm \sqrt{b^{2} - 4ac} \right) $$
-where
-$a$, $b$, $c$
-are the coefficients of the characteristic polynomial.
+
+$$
+\lambda_{i} = \frac{1}{2} \left( -b \pm \sqrt{b^{2} - 4ac} \right)
+$$
+
+where $a$, $b$, $c$ are the coefficients of the characteristic polynomial.
 
 ### Eigenvectors
 
 The eigenvectors are calculated using the following formula:
-$$ (A - \lambda_{i} I) \cdot v_{i} = 0 $$
-where
-$v_{i}$
-is the eigenvector of A.
+
+$$
+(A - \lambda_{i} I) \cdot v_{i} = 0
+$$
+
+where $v_{i}$ is the eigenvector of A.
 
 ## Example
 
@@ -65,10 +75,12 @@ be a square matrix. The eigenvalues and eigenvectors of A are calculated using t
 ### Characteristic polynomial
 
 The characteristic polynomial of A is calculated using the following formula:
-$$ \det(A - \lambda I) = 0 $$
-where
-$\lambda$
-is the eigenvalue of A.
+
+$$
+\det(A - \lambda I) = 0
+$$
+
+where $\lambda$ is the eigenvalue of A.
 
 $$
 \lambda I = \begin{bmatrix}
@@ -87,41 +99,93 @@ $$
 $$
 
 Use diagonal rule to calculate the determinant.
-$$ \det(A - \lambda I) = (2 - \lambda) \cdot (-2 - \lambda) \cdot (2 - \lambda) + 3 \cdot 1 \cdot (-1) + (-1) \cdot (-3) \cdot (-1)\ \rangle$$
-$$-\ (-1) \cdot (-2 - \lambda) \cdot (-1) - 3 \cdot (-1) \cdot (2 - \lambda) - (2 - \lambda) \cdot 1 \cdot (-3) = $$
-$$ = (2 - \lambda) \cdot (-2 - \lambda) \cdot (2 - \lambda) - 6 + (2 + \lambda) + 3 \cdot (2 - \lambda) + 3 \cdot (2 - \lambda) = $$
-$$ = (2 - \lambda) \cdot (-2 - \lambda) \cdot (2 - \lambda) - 6 + 2 + \lambda + 6 - 3\lambda + 6 - 3\lambda = $$
-$$ = (2 - \lambda) \cdot (-2 - \lambda) \cdot (2 - \lambda) + 8 - 5\lambda = $$
-$$ = (2 - \lambda) \cdot (-4 - 2\lambda + 2\lambda + \lambda^{2}) + 8 - 5\lambda = $$
-$$ = (2 - \lambda) \cdot (-4 + \lambda^{2}) + 8 - 5\lambda = $$
-$$ = -8 + 2\lambda^{2} + 4\lambda - \lambda^{3} + 8 - 5\lambda = $$
-$$ = -\lambda^{3} + 2\lambda^{2} - \lambda = $$
-$$ = -\lambda \cdot (\lambda^{2} - 2\lambda + 1) = $$
-$$ = -\lambda \cdot (\lambda - 1)^{2} = 0 $$
+
+$$
+\det(A - \lambda I) = (2 - \lambda) \cdot (-2 - \lambda) \cdot (2 - \lambda) + 3 \cdot 1 \cdot (-1) + (-1) \cdot (-3) \cdot (-1)\ \rangle
+$$
+
+$$
+-\ (-1) \cdot (-2 - \lambda) \cdot (-1) - 3 \cdot (-1) \cdot (2 - \lambda) - (2 - \lambda) \cdot 1 \cdot (-3) =
+$$
+
+$$
+= (2 - \lambda) \cdot (-2 - \lambda) \cdot (2 - \lambda) - 6 + (2 + \lambda) + 3 \cdot (2 - \lambda) + 3 \cdot (2 - \lambda) =
+$$
+
+$$
+= (2 - \lambda) \cdot (-2 - \lambda) \cdot (2 - \lambda) - 6 + 2 + \lambda + 6 - 3\lambda + 6 - 3\lambda =
+$$
+
+$$
+= (2 - \lambda) \cdot (-2 - \lambda) \cdot (2 - \lambda) + 8 - 5\lambda =
+$$
+
+$$
+= (2 - \lambda) \cdot (-4 - 2\lambda + 2\lambda + \lambda^{2}) + 8 - 5\lambda =
+$$
+
+$$
+= (2 - \lambda) \cdot (-4 + \lambda^{2}) + 8 - 5\lambda =
+$$
+
+$$
+= -8 + 2\lambda^{2} + 4\lambda - \lambda^{3} + 8 - 5\lambda =
+$$
+
+$$
+= -\lambda^{3} + 2\lambda^{2} - \lambda =
+$$
+
+$$
+= -\lambda \cdot (\lambda^{2} - 2\lambda + 1) =
+$$
+
+$$
+= -\lambda \cdot (\lambda - 1)^{2} = 0
+$$
+
 The characteristic polynomial of A is:
-$$ \lambda \cdot (\lambda - 1)^{2} = 0 $$
+
+$$
+\lambda \cdot (\lambda - 1)^{2} = 0
+$$
 
 ### Roots of the characteristic polynomial
 
 The roots of the characteristic polynomial are:
-$$ \lambda_{1} = 1,\ \lambda_{2} = 1,\ \lambda_{3} = 0 $$
+
+$$
+\lambda_{1} = 1,\ \lambda_{2} = 1,\ \lambda_{3} = 0
+$$
+
 You can also say that the **eigenvalues** of A are:
-$$ \lambda_{1} = 1,\ \lambda_{2} = 1,\ \lambda_{3} = 0 $$
+
+$$
+\lambda_{1} = 1,\ \lambda_{2} = 1,\ \lambda_{3} = 0
+$$
 
 ### Eigenvectors
 
 The eigenvectors are calculated using the following formula:
-$$ (A - \lambda_{i} I) \cdot v_{i} = 0 $$
-where
-$v_{i}$
-is the eigenvector of A.
+
+$$
+(A - \lambda_{i} I) \cdot v_{i} = 0
+$$
+
+where $v_{i}$ is the eigenvector of A.
 
 So we put eigenvalues one-by-one into the formula:
 
 First, calculate for
 $\lambda_{1} = 1$:
-$$ (A - \lambda_{1} I) \cdot v_{1} = 0 $$
-$$ (A - 1 \cdot I) \cdot v_{1} = 0 $$
+
+$$
+(A - \lambda_{1} I) \cdot v_{1} = 0
+$$
+
+$$
+(A - 1 \cdot I) \cdot v_{1} = 0
+$$
 
 $$
 \begin{bmatrix}
@@ -159,8 +223,7 @@ $$
 \end{cases}\ \rightarrow\ x = y + z
 $$
 
-Now we can determine the **eigenspace** of
-$\lambda_{1} = 1$:
+Now we can determine the **eigenspace** of $\lambda_{1} = 1$:
 
 $$
 E_{\lambda_{1}} = \left( \begin{bmatrix}
@@ -170,8 +233,7 @@ E_{\lambda_{1}} = \left( \begin{bmatrix}
 \end{bmatrix}  |\ x, y, z \in \mathbb{K} \right)
 $$
 
-Substitute
-$x = y + z$:
+Substitute $x = y + z$:
 
 $$
 E_{\lambda_{1}} = \left( \begin{bmatrix}
@@ -193,7 +255,9 @@ E_{\lambda_{1}} = \left( y \cdot \begin{bmatrix}
 \end{bmatrix} |\ y, z \in \mathbb{K} \right)
 $$
 
-$$ \dim(E_{\lambda_{1}}) = 2 $$
+$$
+\dim(E_{\lambda_{1}}) = 2
+$$
 
 $$
 E_{\lambda_{1}} = \text{Span} \left( \begin{bmatrix}
@@ -221,16 +285,17 @@ v_{1} = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-There is no need to calculate for
-$\lambda_{2}$,
-because characteristic polynomial has a double root, which means that
-$\lambda_{1}$
-has a multiplicity of 2.
+There is no need to calculate for $\lambda_{2}$, because characteristic polynomial has a double root, which means that $\lambda_{1}$ has a multiplicity of 2.
 
-Second, calculate for
-$\lambda_{3} = 0$:
-$$ (A - \lambda_{3} I) \cdot v_{2} = 0 $$
-$$ (A - 0 \cdot I) \cdot v_{2} = 0 $$
+Second, calculate for $\lambda_{3} = 0$:
+
+$$
+(A - \lambda_{3} I) \cdot v_{2} = 0
+$$
+
+$$
+(A - 0 \cdot I) \cdot v_{2} = 0
+$$
 
 $$
 \begin{bmatrix}
@@ -297,7 +362,9 @@ E_{\lambda_{3}} = \left( z \cdot \begin{bmatrix}
 \end{bmatrix} |\ z \in \mathbb{K} \right)
 $$
 
-$$ \dim(E_{\lambda_{3}}) = 1 $$
+$$
+\dim(E_{\lambda_{3}}) = 1
+$$
 
 $$
 E_{\lambda_{3}} = \text{Span} \left( \begin{bmatrix}

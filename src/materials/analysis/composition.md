@@ -1,5 +1,5 @@
 ---
-title: \[A-1\] Function composition
+title: '[A-1] Function composition'
 ---
 
 # Function composition
@@ -52,6 +52,7 @@ $$
 find $f \circ g$, $g \circ f$, and their domains.
 
 #### Determining for $f \circ g$
+
 First, calculate the domain of $f \circ g$:
 
 $$
@@ -93,6 +94,7 @@ f \circ g = \sqrt{x^2 - 3x + 2} : (x \in (-\infty; 1] \cup [2; \infty))
 $$
 
 #### Determining for $g \circ f$
+
 First, calculate the domain of $g \circ f$:
 
 $$
@@ -140,6 +142,7 @@ $$
 find $f \circ g$, $g \circ f$, and their domains.
 
 #### Determining for $f \circ g$
+
 First, calculate the domain of $f \circ g$:
 
 $$
@@ -177,6 +180,7 @@ f \circ g = \frac{1}{x - 5} : (x \in [1; \infty) \setminus \{5\})
 $$
 
 #### Determining for $g \circ f$
+
 First, calculate the domain of $g \circ f$:
 
 $$
@@ -199,13 +203,13 @@ $$
 = \{\ x \in \mathbb{R} \setminus \{\pm 2\}\ |\ \frac{5 - x^2}{x^2 - 4} \geq 0\ \}
 $$
 
-*Sign table*
+_Sign table_
 
-| $x$ | $-\infty$ | | $-\sqrt{5}$ | | $-2$ | | $2$ | | $\sqrt{5}$ | | $+\infty$ |
-|-----|-----------|-|-------------|-|------|-|-----|-|------------|-|-----------|
-| $5 - x^2$ | - | - | 0 | + | + | + | + | + | 0 | - | - |
-| $x^2 - 4$ | + | + | + | + | 0 | - | 0 | + | + | + | + |
-| $\frac{5 - x^2}{x^2 - 4}$ | - | - | 0 | + | n\a | - | n\a | + | 0 | - | - |
+| $x$                       | $-\infty$ |     | $-\sqrt{5}$ |     | $-2$ |     | $2$ |     | $\sqrt{5}$ |     | $+\infty$ |
+| ------------------------- | --------- | --- | ----------- | --- | ---- | --- | --- | --- | ---------- | --- | --------- |
+| $5 - x^2$                 | -         | -   | 0           | +   | +    | +   | +   | +   | 0          | -   | -         |
+| $x^2 - 4$                 | +         | +   | +           | +   | 0    | -   | 0   | +   | +          | +   | +         |
+| $\frac{5 - x^2}{x^2 - 4}$ | -         | -   | 0           | +   | n\a  | -   | n\a | +   | 0          | -   | -         |
 
 Therefore
 

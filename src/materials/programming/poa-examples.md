@@ -1,5 +1,5 @@
 ---
-title: \[P\] Examples
+title: '[P] Examples'
 ---
 
 # Practical examples
@@ -17,7 +17,9 @@ Determine the smallest even number and the greatest odd number in an integer seq
 
 #### Input
 
-$$ numbers[1..] \in \mathbb{R}^n$$
+$$
+numbers[1..] \in \mathbb{R}^n
+$$
 
 #### Postcondition
 
@@ -29,10 +31,21 @@ cnt = \sum_{i=1}^{length(numbers)} \\
     \end{cases}
 $$
 
-$$even[1..cnt] = \{\ numbers[i]\ |\ numbers[i]\text{ is even}\ \}_{i=1}^{length(numbers)}$$
-$$odd[1..length(numbers) - cnt] = \{\ numbers[i]\ |\ numbers[i]\text{ is odd}\ \}_{i=1}^{length(numbers)}$$
-$$maxOdd = \max_{i=1}^{length(odd)} odd[i]$$
-$$minEven = \min_{i=1}^{length(even)} even[i]$$
+$$
+even[1..cnt] = \{\ numbers[i]\ |\ numbers[i]\text{ is even}\ \}_{i=1}^{length(numbers)}
+$$
+
+$$
+odd[1..length(numbers) - cnt] = \{\ numbers[i]\ |\ numbers[i]\text{ is odd}\ \}_{i=1}^{length(numbers)}
+$$
+
+$$
+maxOdd = \max_{i=1}^{length(odd)} odd[i]
+$$
+
+$$
+minEven = \min_{i=1}^{length(even)} even[i]
+$$
 
 #### Implementation
 
@@ -68,15 +81,23 @@ We know the birth year of N friends. Write an algorithm that gives how many of t
 
 ::: tip
 
-1. Count the number of friends born in each year. *Multiset transformation PoA*
-2. Find the maximum in the resulting multiset. *Maximum selection PoA*
+1. Count the number of friends born in each year. _Multiset transformation PoA_
+2. Find the maximum in the resulting multiset. _Maximum selection PoA_
    :::
 
 #### Input
 
-$$ T_{friend} = (name \times birthyear) $$
-$$ n \in \mathbb{N}^+ $$
-$$ friends[1..n] \in T_{friend}^n$$
+$$
+T_{friend} = (name \times birthyear)
+$$
+
+$$
+n \in \mathbb{N}^+
+$$
+
+$$
+friends[1..n] \in T_{friend}^n
+$$
 
 #### Postcondition
 
@@ -88,9 +109,15 @@ cnt = \sum_{i=1}^{length(friends)} \\
     \end{cases}
 $$
 
-$$ U[1..cnt] = \bigcup_{i=1}^{length(friends)} \{\ friends[i].birthyear\ |\ friends[i].birthyear \notin U\ \}$$
-Where U is a set of unique birth years. *After Set transformation PoA*
-$$ R[1..cnt].birthyear = U[1..cnt]$$
+$$
+U[1..cnt] = \bigcup_{i=1}^{length(friends)} \{\ friends[i].birthyear\ |\ friends[i].birthyear \notin U\ \}
+$$
+
+Where U is a set of unique birth years. _After Set transformation PoA_
+
+$$
+R[1..cnt].birthyear = U[1..cnt]
+$$
 
 $$
 R[1..cnt].count = \bigcup_{i=1}^{length(friends)} \{\ \sum_{j=1}^{length(friends)} \\
@@ -127,22 +154,35 @@ highest temperatures that mostly deviate from the average for the whole period.
 
 ::: tip
 
-1. Calculate the average temperature for the period. *Sequence calculation PoA*
-2. Transform the sequence into deviations from the average. *Copy PoA*
-3. Select maximum deviation. *Maximum selection PoA*
-4. Select days with maximum deviation. *Multiple item selection PoA*
+1. Calculate the average temperature for the period. _Sequence calculation PoA_
+2. Transform the sequence into deviations from the average. _Copy PoA_
+3. Select maximum deviation. _Maximum selection PoA_
+4. Select days with maximum deviation. _Multiple item selection PoA_
    :::
 
 #### Input
 
-$$ T_{measurement} = (loc \times day \times temp) $$
-$$ measurements[1..] \in T_{measurement}^{n}$$
+$$
+T_{measurement} = (loc \times day \times temp)
+$$
+
+$$
+measurements[1..] \in T_{measurement}^{n}
+$$
 
 #### Postcondition
 
-$$avg = \frac{\sum_{i=1}^{length(measurements)} measurements[i].temp}{length(measurements)}$$
-$$\forall i\ (1 \le i \le length(measurements)): deviations[i] = measurements[i].temp - avg$$
-$$maxDev = \max_{i=1}^{length(deviations)} deviations[i]$$
+$$
+avg = \frac{\sum_{i=1}^{length(measurements)} measurements[i].temp}{length(measurements)}
+$$
+
+$$
+\forall i\ (1 \le i \le length(measurements)): deviations[i] = measurements[i].temp - avg
+$$
+
+$$
+maxDev = \max_{i=1}^{length(deviations)} deviations[i]
+$$
 
 $$
 cnt = \sum_{i=1}^{length(deviations)} \\
@@ -152,7 +192,9 @@ cnt = \sum_{i=1}^{length(deviations)} \\
     \end{cases}
 $$
 
-$$days[1..cnt] = \bigcup_{i=1}^{length(deviations)} \{\ measurements[i].day\ |\ deviations[i] = maxDev\ \}$$
+$$
+days[1..cnt] = \bigcup_{i=1}^{length(deviations)} \{\ measurements[i].day\ |\ deviations[i] = maxDev\ \}
+$$
 
 #### Implementation
 

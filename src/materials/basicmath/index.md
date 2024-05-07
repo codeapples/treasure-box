@@ -1,5 +1,5 @@
 ---
-title: \[BM\] General
+title: '[BM] General'
 ---
 
 # Math topics<br>for test preparation

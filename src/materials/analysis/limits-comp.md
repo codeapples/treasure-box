@@ -1,5 +1,5 @@
 ---
-title: \[A-1\] Determining limits
+title: '[A-1] Determining limits'
 ---
 
 # Determining limits

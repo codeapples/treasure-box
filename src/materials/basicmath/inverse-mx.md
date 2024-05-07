@@ -1,5 +1,5 @@
 ---
-title: \[BM\] Matrices
+title: '[BM] Matrices'
 ---
 
 # Inversion of matrices
@@ -7,16 +7,27 @@ title: \[BM\] Matrices
 ## Introduction
 
 Square matrices
-$$ A \in \mathbb{K}^{n \times n} $$
+
+$$
+A \in \mathbb{K}^{n \times n}
+$$
+
 are invertible **if and only if** their determinant is **not zero**.
-$$\det(A) \neq 0 \Leftrightarrow A^{-1} \text{ exists}$$
 
-Matrices that are not invertible are called **singular** or *degenerate*.
+$$
+\det(A) \neq 0 \Leftrightarrow A^{-1} \text{ exists}
+$$
 
-Matrices that are invertible are called **regular** or *non-singular*.
+Matrices that are not invertible are called **singular** or _degenerate_.
+
+Matrices that are invertible are called **regular** or _non-singular_.
 
 The inverse of a matrix is a matrix that when multiplied with the original matrix produces the identity matrix.
-$$ I = A \cdot A^{-1} = A^{-1} \cdot A $$
+
+$$
+I = A \cdot A^{-1} = A^{-1} \cdot A
+$$
+
 Inverse matrix can be calculated using sub determinant matrixes.
 
 ## Inverse calculation
@@ -43,10 +54,12 @@ be a square matrix. The inverse of A is calculated using the following steps:
 ### Determinant
 
 The determinant of a matrix is calculated recursively using the following formula:
-$$ \det(A) = \sum_{i=1}^{n} (-1)^{i+j} \cdot a_{ij} \cdot \det(A_{ij}) $$
-where
-$A_{ij}$
-is the sub determinant matrix of A, which is calculated by removing the i-th row and the j-th column from A.
+
+$$
+\det(A) = \sum_{i=1}^{n} (-1)^{i+j} \cdot a_{ij} \cdot \det(A_{ij})
+$$
+
+where $A_{ij}$ is the sub determinant matrix of $A$, which is calculated by removing the i-th row and the j-th column from $A$.
 
 ### Sub determinant matrices
 
@@ -66,7 +79,11 @@ C = \begin{bmatrix}
 $$
 
 where
-$$ c*{ij} = (-1)^{i+j} \cdot \det(A*{ij}) $$
+
+$$
+c*{ij} = (-1)^{i+j} \cdot \det(A*{ij})
+$$
+
 is the cofactor of the i-th row and the j-th column.
 
 ### Adjugate matrix
@@ -87,9 +104,16 @@ The adjugate matrix is also called the classical adjoint matrix or the adjugate 
 ### Inverse matrix
 
 The inverse matrix is calculated using the following formula:
-$$ A^{-1} = \frac{1}{\det(A)} \cdot A^{*} $$
+
+$$
+A^{-1} = \frac{1}{\det(A)} \cdot A^{*}
+$$
+
 The result is checked by multiplying the original matrix with the inverse matrix.
-$$ A \cdot A^{-1} = I $$
+
+$$
+A \cdot A^{-1} = I
+$$
 
 ### Notes
 
@@ -125,15 +149,24 @@ $$
 \end{bmatrix} =
 $$
 
-$$ = 3 \cdot (5 \cdot 8 - 6 \cdot 4) - 1 \cdot (2 \cdot 8 - 6 \cdot 1) - 4 \cdot (2 \cdot 4 - 5 \cdot 1) =$$
-$$= 3 \cdot (40 - 24) - 1 \cdot (16 - 6) - 4 \cdot (8 - 5) =$$
-$$= 3 \cdot 16 - 1 \cdot 10 - 4 \cdot 3 = 48 - 22 = 26$$
+$$
+= 3 \cdot (5 \cdot 8 - 6 \cdot 4) - 1 \cdot (2 \cdot 8 - 6 \cdot 1) - 4 \cdot (2 \cdot 4 - 5 \cdot 1) =
+$$
+
+$$
+= 3 \cdot (40 - 24) - 1 \cdot (16 - 6) - 4 \cdot (8 - 5) =
+$$
+
+$$
+= 3 \cdot 16 - 1 \cdot 10 - 4 \cdot 3 = 48 - 22 = 26
+$$
 
 Determinant of A is 26. Since the determinant is not zero, the inverse matrix exists.
 
 ### Sub determinant matrices
 
-$A_{11} = \begin{bmatrix}
+$$
+A_{11} = \begin{bmatrix}
     5 & 6 \\
     4 & 8
 \end{bmatrix}\ A_{12} = \begin{bmatrix}
@@ -142,9 +175,11 @@ $A_{11} = \begin{bmatrix}
 \end{bmatrix}\ A_{13} = \begin{bmatrix}
     2 & 5 \\
     1 & 4
-\end{bmatrix}$
+\end{bmatrix}
+$$
 
-$A_{21} = \begin{bmatrix}
+$$
+A_{21} = \begin{bmatrix}
     1 & -4 \\
     4 & 8
 \end{bmatrix}\ A_{22} = \begin{bmatrix}
@@ -153,9 +188,11 @@ $A_{21} = \begin{bmatrix}
 \end{bmatrix}\ A_{23} = \begin{bmatrix}
     3 & 1 \\
     1 & 4
-\end{bmatrix}$
+\end{bmatrix}
+$$
 
-$A_{31} = \begin{bmatrix}
+$$
+A_{31} = \begin{bmatrix}
     1 & -4 \\
     5 & 6
 \end{bmatrix}\ A_{32} = \begin{bmatrix}
@@ -164,7 +201,8 @@ $A_{31} = \begin{bmatrix}
 \end{bmatrix}\ A_{33} = \begin{bmatrix}
     3 & 1 \\
     2 & 5
-\end{bmatrix}$
+\end{bmatrix}
+$$
 
 Sub determinants:
 
