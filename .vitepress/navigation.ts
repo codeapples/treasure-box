@@ -76,16 +76,30 @@ const sidebar: DefaultTheme.Sidebar = {
             { text: '[A-1] Function composition', link: '/materials/analysis/composition.md' },
             { text: '[A-1] Bounded sets', link: '/materials/analysis/bounded.md' },
             {
-              text: '[A-1] Limits: proving by definition',
+              text: '[A-1] Limits: proving by definition Vol. 1',
               link: '/materials/analysis/limits-def.md',
             },
             {
-              text: '[A-1] Limits: determining limits',
-              link: '/materials/analysis/limits-comp.md',
+              text: '[A-1] Limits: evaluating limits Vol. 1',
+              link: '/materials/analysis/limits-eval.md',
             },
             {
               text: '[A-1] Limits: recursive sequences',
               link: '/materials/analysis/limits-rs.md',
+            },
+            { text: '[A-1] Convergence of series', link: '/materials/analysis/series-conv.md' },
+            { text: '[A-1] Determining sums of series', link: '/materials/analysis/series.md' },
+            {
+              text: '[A-1] Radius of convergence of power series',
+              link: '/materials/analysis/ps-radius.md',
+            },
+            {
+              text: '[A-1] Limits: proving by definition Vol. 2',
+              link: '/materials/analysis/limits-def2.md',
+            },
+            {
+              text: '[A-1] Limits: evaluating limits Vol. 2',
+              link: '/materials/analysis/limits-eval2.md',
             },
           ],
         },
