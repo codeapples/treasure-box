@@ -211,8 +211,8 @@ Therefore
 $$
 S =
 \begin{cases}
-  [0, 2] & \text{- if $p \ge 1$} \\
-  [0, 2) & \text{- if $0 \le p \leq 1$} \\
+  [0, 2] & \text{- if $p > 1$} \\
+  [0, 2) & \text{- if $0 < p \leq 1$} \\
   (0, 2) & \text{- if $p \leq 0$}
 \end{cases}
 $$
