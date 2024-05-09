@@ -1,8 +1,8 @@
 ---
-title: '[A-1] Determining limits'
+title: '[A-1] Evaluating limits I'
 ---
 
-# Determining limits
+# Evaluating limits I
 
 ## Properties of infinity and zero
 

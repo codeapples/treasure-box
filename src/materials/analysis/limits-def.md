@@ -1,8 +1,8 @@
 ---
-title: '[A-1] Proving limits by definition'
+title: '[A-1] Proving limits by definition I'
 ---
 
-# Proving limits by definition
+# Proving limits by definition I
 
 ## Limit definition for convergent sequences
 
