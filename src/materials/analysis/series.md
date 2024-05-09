@@ -46,10 +46,10 @@ $$
 \sum_{n=1}^{\infty} (a_n + b_n) = \sum_{n=1}^{\infty} a_n + \sum_{n=1}^{\infty} b_n
 $$
 
-Linearity of the sum of series:
+Can also be written as
 
 $$
-\sum_{n=1}^{\infty} (c \cdot a_n + d \cdot b_n)
+\sum_{n=1}^{\infty} (c \cdot a_n + d \cdot b_n) = c \cdot \sum_{n=1}^{\infty} a_n + d \cdot \sum_{n=1}^{\infty} b_n
 $$
 
 where $c, d \in \mathbb{R}$.
