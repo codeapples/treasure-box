@@ -88,7 +88,7 @@ const sidebar: DefaultTheme.Sidebar = {
               link: '/materials/analysis/limits-rs.md',
             },
             { text: '[A-1] Convergence of series', link: '/materials/analysis/series-conv.md' },
-            { text: '[A-1] Determining sums of series', link: '/materials/analysis/series.md' },
+            { text: '[A-1] Evaluating sums of series', link: '/materials/analysis/series.md' },
             {
               text: '[A-1] Radius of convergence of power series',
               link: '/materials/analysis/ps-radius.md',

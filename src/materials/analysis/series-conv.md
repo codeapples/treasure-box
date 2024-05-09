@@ -31,7 +31,7 @@ The series $\sum_{n=1}^{\infty} a_n$ is called convergent if it's partial sum se
 A geometric series is a series of the form:
 
 $$
-\sum_{n=p}^{\infty} q^n = q^p + q^{p+1} + q^{p+2} + \cdots = q^p \cdot (1 + q + q^2 + \cdots) = \frac{q^p}{1 - q}
+\sum_{n=p}^{\infty} q^n = q^p + q^{p+1} + q^{p+2} + \cdots
 $$
 
 #### Convergence of geometric series
