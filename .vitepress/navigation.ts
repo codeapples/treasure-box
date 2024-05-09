@@ -90,7 +90,7 @@ const sidebar: DefaultTheme.Sidebar = {
             { text: '[A-1] Convergence of series', link: '/materials/analysis/series-conv.md' },
             { text: '[A-1] Evaluating sums of series', link: '/materials/analysis/series.md' },
             {
-              text: '[A-1] Radius of convergence of power series',
+              text: '[A-1] Power series and radius of convergence',
               link: '/materials/analysis/ps-radius.md',
             },
             {

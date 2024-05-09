@@ -26,7 +26,7 @@ The materials intent to cover analysis topics that you are expected to know and 
 
 - [Convergence of series](/materials/analysis/series-conv.md)
 - [Evaluating sums of series](/materials/analysis/series.md)
-- [Radius of convergence of power series](/materials/analysis/ps-radius.md)
+- [Power series and radius of convergence](/materials/analysis/ps-radius.md)
 - [Limits: prove by definition Vol. 2](/materials/analysis/limits-def2.md)
 - [Limits: evaluating limits Vol. 2](/materials/analysis/limits-eval2.md)
 

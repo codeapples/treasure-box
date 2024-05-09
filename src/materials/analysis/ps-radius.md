@@ -1,8 +1,8 @@
 ---
-title: '[A-1] Radius of convergence of power series'
+title: '[A-1] Power series and radius of convergence'
 ---
 
-# Radius of convergence of power series
+# Power series and radius of convergence
 
 ## Power series
 
@@ -165,8 +165,6 @@ $$
 S = (-1, 1)
 $$
 
-The power series defines an analytical function on the interval $D_f = (-1, 1)$.
-
 ## Example 2
 
 Determine the radius of convergence and the convergence set of the power series.
@@ -219,8 +217,6 @@ S =
 \end{cases}
 $$
 
-The power series defines an analytical function on the interval $D_f = S$.
-
 ## Example 3
 
 Determine the radius of convergence and the convergence set of the power series.
@@ -271,4 +267,116 @@ So we need to identify the convergence set and check boundary points.
   = \lim_{n \to \infty} \frac{4n + 4}{4n + 2} = \frac{n(4 + \frac{4}{n})}{n(4 + \frac{2}{n})} = 1 \implies \text{inconclusive}
   $$
 
-  Since $b_n = \frac{(n!)^2 \cdot 4^n}{(2n)!}$ is not an alternating sequence and since in ratio test nominator was marginally bigger than the denominator, we can deduct that $b_n$ is increasing, so we can try to prove that $b_n < b_{n+1}$ which would mean that the series is divergent.
+  Since $b_n = \frac{(n!)^2 \cdot 4^n}{(2n)!}$ is not an alternating sequence and since in ratio test nominator was marginally bigger than the denominator, we can deduce that $b_n$ is increasing, but the margin of increse is small enough for ratio test to not show it. Therefore we can try to solve inequality $b_n < b_{n+1}$ to see if the sequence is increasing (making the series divergent).
+
+  $$
+  b_n < b_{n+1}
+  $$
+
+  $$
+  \frac{(n!)^2 \cdot 4^n}{(2n)!} < \frac{(n+1)!^2 \cdot 4^{n+1}}{(2n+2)!}
+  $$
+
+  $$
+  \frac{(n!)^2 \cdot 4^n}{(2n)!} < \frac{(n+1)^2 \cdot (n!)^2 \cdot 4 \cdot 4^n}{(2n+2)(2n+1) \cdot (2n)!}
+  $$
+
+  $$
+  1 < \frac{(n+1)^2 \cdot 4}{2(n+1)(2n+1)}
+  $$
+
+  $$
+  1 < \frac{4n + 4}{4n + 2}
+  $$
+
+  $$
+  4n + 2 < 4n + 4
+  $$
+
+  $$
+  2 < 4 \implies b_n < b_{n+1} \quad \text{always}
+  $$
+
+  Therefore the series is divergent at $x = 2$.
+
+- $x = -6$ see if $\sum_{n=0}^{\infty} \frac{(n!)^2 \cdot (-6)^n}{(2n)!}$ is convergent
+
+  First simplify
+
+  $$
+  \sum_{n=0}^{\infty} \frac{(n!)^2 \cdot (-6)^n}{(2n)!} = \sum_{n=0}^{\infty} (-1)^n \cdot \frac{(n!)^2 \cdot 6^n}{(2n)!}
+  $$
+
+  We just proved than $b_n = \frac{(n!)^2 \cdot 4^n}{(2n)!}$ is increasing, so $c_n = \frac{(n!)^2 \cdot 6^n}{(2n)!}$ is also increasing (nominator is bigger). And for alternating series $\sum_{n=0}^{\infty} (-1)^n c_n$ to be convergent, $c_n$ should be decreasing. Which means the series is divergent at $x = -6$.
+
+Therefore
+
+$$
+S = (-6, 2)
+$$
+
+## Example 4
+
+Determine the radius of convergence and the convergence set of the power series.
+
+If the radius of convergence is positive, give the domain of the corresponding analytical function.
+
+$$
+\sum_{n=0}^{\infty} \frac{4^n + (-3)^n}{n + 1} \cdot x^n
+$$
+
+$$
+a_n = \frac{4^n + (-3)^n}{n + 1} \quad \text{and} \quad x_0 = 0
+$$
+
+First, find the radius of convergence $R$, using root test.
+
+$$
+L = \lim_{n \to \infty} \sqrt[n]{\left| \frac{4^n + (-3)^n}{n + 1} \right|} = \lim_{n \to \infty} \frac{\sqrt[n]{4^n(1 + \left( -\frac{3}{4} \right)^n)}}{\sqrt[n]n \cdot \sqrt[n]{1 + \frac{1}{n}}} =
+$$
+
+$$
+= \lim_{n \to \infty} \frac{4 \cdot \sqrt[n]{1 + \left( -\frac{3}{4} \right)^n}}{\sqrt[n]n \cdot \sqrt[n]{1 + \frac{1}{n}}} = \frac{4}{1} = 4 \implies R = \frac{1}{4}
+$$
+
+So we need to identify the convergence set and check boundary points.
+
+- $|x - 0| < \frac{1}{4} \Leftrightarrow -\frac{1}{4} < x < \frac{1}{4}$ the power series is abs. convergent
+- $|x - 0| > \frac{1}{4} \Leftrightarrow x < -\frac{1}{4} \lor x > \frac{1}{4}$ the power series is divergent
+- $x = \frac{1}{4}$ see if $\sum_{n=0}^{\infty} \frac{4^n + (-3)^n}{n + 1} \cdot \left( \frac{1}{4} \right)^n$ is convergent
+
+  Simplify first
+
+  $$
+  \sum_{n=0}^{\infty} \frac{4^n + (-3)^n}{n + 1} \cdot \left( \frac{1}{4} \right)^n = \sum_{n=0}^{\infty} \frac{1 + \left( -\frac{3}{4} \right)^n}{n + 1} =
+  $$
+
+  $$
+  = \sum_{n=0}^{\infty} \frac{1}{n + 1} + \frac{\left( -\frac{3}{4} \right)^n}{n + 1} = \sum_{n=0}^{\infty} \frac{1}{n + 1} + \sum_{n=0}^{\infty} \frac{\left( -\frac{3}{4} \right)^n}{n + 1}
+  $$
+
+  Sum of two series can only be convergent if both are convergent. First series $\sum_{n=0}^{\infty} \frac{1}{n + 1}$ is harmonic series and is divergent. So even if the second series is converged, the sum of two series will be divergent. Which means the series $\sum_{n=0}^{\infty} \frac{4^n + (-3)^n}{n + 1} \cdot x^n$ is divergent at $x = \frac{1}{4}$.
+
+- $x = -\frac{1}{4}$ see if $\sum_{n=0}^{\infty} \frac{4^n + (-3)^n}{n + 1} \cdot \left( -\frac{1}{4} \right)^n$ is convergent
+
+  Simplify first
+
+  $$
+  \sum_{n=0}^{\infty} \frac{4^n + (-3)^n}{n + 1} \cdot \left( -\frac{1}{4} \right)^n = \sum_{n=0}^{\infty} \frac{(-1)^n + \left( \frac{3}{4} \right)^n}{n + 1} =
+  $$
+
+  $$
+  = \sum_{n=0}^{\infty} \frac{(-1)^n}{n + 1} + \frac{\left( \frac{3}{4} \right)^n}{n + 1} = \sum_{n=0}^{\infty} \frac{(-1)^n}{n + 1} + \sum_{n=0}^{\infty} \frac{\left( \frac{3}{4} \right)^n}{n + 1}
+  $$
+
+  $\sum_{n=0}^{\infty} \frac{(-1)^n}{n + 1}$ is a Leibniz type series and is convergent.
+
+  $\sum_{n=0}^{\infty} \frac{\left( \frac{3}{4} \right)^n}{n + 1}$ is a geometric series and is convergent.
+
+  Which means the sum of the series is also convergent and the series $\sum_{n=0}^{\infty} \frac{4^n + (-3)^n}{n + 1} \cdot x^n$ is convergent at $x = -\frac{1}{4}$.
+
+Therefore
+
+$$
+S = \left[ -\frac{1}{4}, \frac{1}{4} \right)
+$$
