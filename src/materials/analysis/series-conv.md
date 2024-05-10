@@ -254,10 +254,10 @@ Depending on whether our assumption is series being convergent or divergent, we 
 Here we need to find OPU.
 
 $$
-\frac{n}{n^3 + n + 5} \leq \frac{n}{n^3 + n^3 + 5n^3} = \frac{n}{7n^3} = \frac{1}{7n^2}
+\frac{n}{n^3 + n + 5} \leq \frac{n}{n^3} = \frac{1}{n^2}
 $$
 
-$\sum_{n=1}^{\infty} \frac{1}{7n^2} = \frac{1}{7} \sum_{n=1}^{\infty} \frac{1}{n^2}$ is a hyperharmonic series with $p = 2 > 1$ which is convergent.
+$\sum_{n=1}^{\infty} \frac{1}{n^2}$ is a hyperharmonic series with $p = 2 > 1$ which is convergent.
 
 Therefore, we found that
 
