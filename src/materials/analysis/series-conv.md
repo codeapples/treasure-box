@@ -6,7 +6,7 @@ title: '[A-1] Convergence of series'
 
 ## Infinite series
 
-An infinite series is the sum of the terms of an infinite sequence. The sum of the terms of a sequence is called a series. If the sequence of partial sums converges to a limit, the series is said to be convergent. If the sequence of partial sums does not converge, the series is said to be divergent.
+The sum of the terms of a sequence is called a series. An infinite series is the sum of the terms of an infinite sequence.
 
 For $(a_n): \mathbb{N} \to \mathbb{R}$, the series is denoted as:
 
@@ -25,6 +25,8 @@ $$
 #### Convergence of infinite series
 
 The series $\sum_{n=1}^{\infty} a_n$ is called convergent if it's partial sum sequence $(S_n)$ is convergent.
+
+If the partial sum sequence does not converge, the series is said to be divergent.
 
 ## Geometric series
 
@@ -181,6 +183,8 @@ $$
 
 where $a_n > 0 \quad (n \in \mathbb{N})$ and $a_{n + 1} \leq a_n$ (Leibniz type)
 
+In case those conditions are satisfied, the series is **convergent**.
+
 ## Example 1
 
 Determine whether the following series is convergent or not:
@@ -197,17 +201,19 @@ $$
 
 Zero test is inconclusive.
 
-We can conclude that (for large enough $n$) $\frac{n}{2n^2 + n + 5} \approx \frac{n}{2n^2} = \frac{1}{2n}$.
-
-$\sum_{n=1}^{\infty} \frac{1}{2n} = \sum_{n=1}^{\infty} \frac{1}{n}$ is a harmonic sequence which is divergent.
-
-Therefore, we assume that $\sum_{n=1}^{\infty} \frac{n}{2n^2 + n + 5}$ is also divergent. But we need to prove our assumption with comparison test.
+Do a quick approximation for large enough $n$:
 
 $$
-0 \leq a_n \leq \frac{n}{2n^2 + n + 5} \leq \frac{1}{2n}
+\frac{n}{2n^2 + n + 5} \approx \frac{n}{2n^2} = \frac{1}{2n}
 $$
 
-We need $a_n$, so let's find OPL.
+$\sum_{n=1}^{\infty} \frac{1}{2n} = \frac{1}{2}\sum_{n=1}^{\infty} \frac{1}{n}$ is a harmonic sequence which is divergent.
+
+Based on that we can assume that $\sum_{n=1}^{\infty} \frac{n}{2n^2 + n + 5}$ is also divergent.
+
+Depending on whether our assumption is series being convergent or divergent, we need to find OPU or OPL respectively, to prove assumption with comparison test.
+
+Here we need to find OPL.
 
 $$
 \frac{n}{2n^2 + n + 5} \geq \frac{n}{2n^2 + n^ + 5n^2} = \frac{n}{8n^2} = \frac{1}{8n}
@@ -215,10 +221,10 @@ $$
 
 $\sum_{n=1}^{\infty} \frac{1}{8n} = \frac{1}{8} \sum_{n=1}^{\infty} \frac{1}{n}$ is a harmonic sequence which is divergent.
 
-Therefore we have
+Therefore, we found that
 
 $$
-0 \leq \frac{1}{8n} \leq \frac{n}{2n^2 + n + 5} \leq \frac{1}{2n}
+0 \leq \frac{1}{8n} \leq \frac{n}{2n^2 + n + 5}
 $$
 
 Now, by comparison test we can conclude that, because $\sum_{n=1}^{\infty} \frac{1}{8n}$ is divergent, $\sum_{n=1}^{\infty} \frac{n}{2n^2 + n + 5}$ is also divergent.
@@ -233,7 +239,7 @@ $$
 
 Zero test gives zero, so inconclusive.
 
-For large enough $n$
+Do a quick approximation for large enough $n$:
 
 $$
 \frac{n}{n^3 + n + 5} \approx \frac{n}{n^3} = \frac{1}{n^2}
@@ -241,10 +247,22 @@ $$
 
 $\sum_{n=1}^{\infty} \frac{1}{n^2}$ is a hyperharmonic series with $p = 2 > 1$ which is convergent.
 
-Therefore
+Based on that we can assume that $\sum_{n=1}^{\infty} \frac{n}{n^3 + n + 5}$ is also convergent.
+
+Depending on whether our assumption is series being convergent or divergent, we need to find OPU or OPL respectively, to prove assumption with comparison test.
+
+Here we need to find OPU.
 
 $$
-0 \leq \frac{n}{n^3 + n + 5} \leq \frac{1}{n^2}
+\frac{n}{n^3 + n + 5} \leq \frac{n}{n^3 + n^3 + 5n^3} = \frac{n}{7n^3} = \frac{1}{7n^2}
+$$
+
+$\sum_{n=1}^{\infty} \frac{1}{7n^2} = \frac{1}{7} \sum_{n=1}^{\infty} \frac{1}{n^2}$ is a hyperharmonic series with $p = 2 > 1$ which is convergent.
+
+Therefore, we found that
+
+$$
+0 \leq \frac{n}{n^3 + n + 5} \leq \frac{1}{7n^2}
 $$
 
 So, by comparison test, we proved that $\sum_{n=1}^{\infty} \frac{n}{n^3 + n + 5}$ is convergent.
@@ -279,21 +297,27 @@ $$
 \lim_{n \to \infty} (\sqrt{n + 1} - \sqrt{n}) = \lim_{n \to \infty} \frac{1}{\sqrt{n + 1} + \sqrt{n}} = 0
 $$
 
-For large enough $n$
+Do a quick approximation for large enough $n$:
 
 $$
 \frac{1}{\sqrt{n + 1} + \sqrt{n}} \approx \frac{1}{\sqrt{n} + \sqrt{n}} = \frac{1}{2\sqrt{n}} = \frac{1}{2} \cdot \frac{1}{n^{1/2}}
 $$
 
-$\frac{1}{2}\sum_{n=1}^{\infty} \frac{1}{n^{1/2}}$ is a p-series with $p = 1/2 \leq 1$ which is divergent.
+$\frac{1}{2}\sum_{n=1}^{\infty} \frac{1}{n^{1/2}}$ is a p-series with $p = \frac{1}{2} \leq 1$ which is divergent.
 
-Therefore
+Based on that we can assume that $\sum_{n=1}^{\infty} (\sqrt{n + 1} - \sqrt{n})$ is also divergent.
+
+Depending on whether our assumption is series being convergent or divergent, we need to find OPU or OPL respectively, to prove assumption with comparison test.
+
+Here we need to find OPL.
 
 $$
-0 \leq \frac{1}{2\sqrt{n}} \leq \sqrt{n + 1} - \sqrt{n}
+\frac{1}{\sqrt{n + 1} + \sqrt{n}} \geq \frac{1}{\sqrt{n + n} + \sqrt{n}} = \frac{1}{3\sqrt{n}} = \frac{1}{3} \cdot \frac{1}{n^{1/2}}
 $$
 
-By comparison test, we can conclude that $\sum_{n=1}^{\infty} (\sqrt{n + 1} - \sqrt{n})$ is divergent.
+$\frac{1}{3}\sum_{n=1}^{\infty} \frac{1}{n^{1/2}}$ is a p-series with $p = \frac{1}{2} \leq 1$ which is divergent.
+
+By comparison test, we can conclude that $\sum_{n=1}^{\infty} (\sqrt{n + 1} - \sqrt{n})$ is also divergent.
 
 ## Example 5
 
@@ -321,7 +345,7 @@ $$
 
 Zero test is inconclusive.
 
-For large enough $n$
+Do a quick approximation for large enough $n$:
 
 $$
 \frac{1}{\sqrt{n (1 + n^2)}} = \frac{1}{\sqrt{n^3 + n}} \approx \frac{1}{\sqrt{n^3}} = \frac{1}{n^{3/2}}
@@ -329,10 +353,22 @@ $$
 
 $\sum_{n=1}^{\infty} \frac{1}{n^{3/2}}$ is a p-series with $p = \frac{3}{2} > 1$ which is convergent.
 
-Therefore
+Based on that we can assume that $\sum_{n=1}^{\infty} \frac{1}{\sqrt{n (1 + n^2)}}$ is also convergent.
+
+Depending on whether our assumption is series being convergent or divergent, we need to find OPU or OPL respectively, to prove assumption with comparison test.
+
+Here we need to find OPU.
 
 $$
-0 \leq \frac{1}{\sqrt{n (1 + n^2)}} \leq \frac{1}{n^{3/2}}
+\frac{1}{\sqrt{n (1 + n^2)}} \leq \frac{1}{\sqrt{n(n^2 + n^2)}} = \frac{1}{\sqrt{2n^3}} = \frac{1}{\sqrt{2}} \cdot \frac{1}{n^{3/2}}
+$$
+
+$\frac{1}{\sqrt{2}}\sum_{n=1}^{\infty} \frac{1}{n^{3/2}}$ is a p-series with $p = \frac{3}{2} > 1$ which is convergent.
+
+Therefore, we found that
+
+$$
+0 \leq \frac{1}{\sqrt{n (1 + n^2)}} \leq \frac{1}{\sqrt{2}} \cdot \frac{1}{n^{3/2}}
 $$
 
 By comparison test, we can conclude that $\sum_{n=1}^{\infty} \frac{1}{\sqrt{n (1 + n^2)}}$ is convergent.
@@ -347,7 +383,7 @@ $$
 
 Zero test is inconclusive.
 
-For large enough $n$
+Do a quick approximation for large enough $n$:
 
 $$
 \frac{1}{\sqrt{n(n + 3)}} = \frac{1}{\sqrt{n^2 + 3n}} \approx \frac{1}{\sqrt{n^2}} = \frac{1}{n}
@@ -355,24 +391,22 @@ $$
 
 $\sum_{n=1}^{\infty} \frac{1}{n}$ is a harmonic series which is divergent.
 
-Therefore
+Based on that we can assume that $\sum_{n=1}^{\infty} \frac{1}{\sqrt{n(n + 3)}}$ is also divergent.
+
+Depending on whether our assumption is series being convergent or divergent, we need to find OPU or OPL respectively, to prove assumption with comparison test.
+
+We need to find OPL.
 
 $$
-0 \leq a_n \leq \frac{1}{\sqrt{n(n + 3)}} \leq \frac{1}{n}
+\frac{1}{\sqrt{n(n + 3)}} \geq \frac{1}{\sqrt{n(n + 3n)}} = \frac{1}{\sqrt{4n^2}} = \frac{1}{2n}
 $$
 
-We need $a_n$, so let's find OPL.
+$\sum_{n=1}^{\infty} \frac{1}{2n} = \frac{1}{2}\sum_{n=1}^{\infty} \frac{1}{n}$ is a harmonic series which is divergent.
+
+Therefore, we found that
 
 $$
-\frac{1}{\sqrt{n(n + 3)}} = \frac{1}{\sqrt{n^2 + 3n}} \geq \frac{1}{\sqrt{4n^2}} = \frac{1}{2n}
-$$
-
-$\sum_{n=1}^{\infty} \frac{1}{2n} = \frac{1}{2} \sum_{n=1}^{\infty} \frac{1}{n}$ is a harmonic series which is divergent.
-
-Therefore we have
-
-$$
-0 \leq \frac{1}{2n} \leq \frac{1}{\sqrt{n(n + 3)}} \leq \frac{1}{n}
+0 \leq \frac{1}{2n} \leq \frac{1}{\sqrt{n(n + 3)}}
 $$
 
 Now, by comparison test we can conclude that, because $\sum_{n=1}^{\infty} \frac{1}{2n}$ is divergent, $\sum_{n=1}^{\infty} \frac{1}{\sqrt{n(n + 3)}}$ is also divergent.
