@@ -193,11 +193,11 @@ $$
 |x| \cdot \frac{1}{|1 + x|} < \delta \cdot \underbrace{\frac{1}{|1 + x|}}_{g(x)}
 $$
 
-But we cannot make $\delta$ be dependant on $x$, since delta is always a function of $\varepsilon$ only.
+But we cannot make $\delta$ dependant on $x$, since delta is always a function of $\varepsilon$ only.
 
 Therefore, if we can find some constant $C$ such that $\frac{1}{|1 + x|} < C$ then $\delta \leq \frac{\varepsilon}{C}$ would work.
 
-Since $\delta$ is going to be close to $0$ (since $x \to 0$), $\frac{1}{|1 + x|}$ cannot be arbitrarily large, so we can find such $C$.
+Since we choose $\delta$ and $|x - 0| < \delta \implies \frac{1}{|1 + x|}$ cannot be arbitrarily large, so we can find such $C$.
 
 So let's put an arbitrary small restriction on $\delta$ and say that $\delta \leq \frac{1}{2}$. (We would usually choose $1$ for simplicity, but since $-1$ is not in the domain, let's take a smaller number).
 
@@ -236,7 +236,7 @@ We need delta to satisfy two conditions:
 - $\delta \leq \frac{1}{2}$
 - $\delta \leq \frac{\varepsilon}{2}$
 
-So we can just choose $\delta = \min\left\{\frac{1}{2}, \frac{\varepsilon}{2}\right\}$.
+Easiest way to do it is to just choose $\delta = \min\left\{\frac{1}{2}, \frac{\varepsilon}{2}\right\}$.
 
 And now we can finally state that
 
