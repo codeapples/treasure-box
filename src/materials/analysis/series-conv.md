@@ -262,7 +262,7 @@ $\sum_{n=1}^{\infty} \frac{1}{n^2}$ is a hyperharmonic series with $p = 2 > 1$ w
 Therefore, we found that
 
 $$
-0 \leq \frac{n}{n^3 + n + 5} \leq \frac{1}{7n^2}
+0 \leq \frac{n}{n^3 + n + 5} \leq \frac{1}{n^2}
 $$
 
 So, by comparison test, we proved that $\sum_{n=1}^{\infty} \frac{n}{n^3 + n + 5}$ is convergent.
