@@ -68,9 +68,9 @@ $\cos -x = \cos x$
 
 $\cosh -x = \cosh x$
 
-$e^x = \cos x + \sin x$
+$e^x = \cosh x + \sinh x$
 
-$e^{-x} = \cos x - \sin x$
+$e^{-x} = \cosh x - \sinh x$
 
 $e^x + e^{-x} = 2 \cosh x$
 
