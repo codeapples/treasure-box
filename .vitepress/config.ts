@@ -94,6 +94,7 @@ export default withMermaid({
   outDir: 'dist',
 
   cleanUrls: true,
+  ignoreDeadLinks: true,
 
   sitemap: {
     hostname: 'https://pdkom.web.elte.hu',
