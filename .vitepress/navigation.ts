@@ -108,6 +108,18 @@ const sidebar: DefaultTheme.Sidebar = {
             },
           ],
         },
+        {
+          text: 'Analysis Theory [A1-T]',
+          collapsed: true,
+          items: [
+            { text: '[A1-T] General', link: '/materials/analysis-theory/' },
+            { text: '[A1-T] Sets', link: '/materials/analysis-theory/sets.md' },
+            { text: '[A1-T] Inequalities', link: '/materials/analysis-theory/inequalities.md' },
+            { text: '[A1-T] Sequences', link: '/materials/analysis-theory/sequences.md' },
+            { text: '[A1-T] Series', link: '/materials/analysis-theory/series.md' },
+            { text: '[A1-T] Round 1 questions', link: '/materials/analysis-theory/round1.md' },
+          ],
+        },
       ],
     },
   ],
