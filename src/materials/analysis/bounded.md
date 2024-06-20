@@ -1,5 +1,5 @@
 ---
-title: '[A-1] Bounded sets'
+title: '[A1] Bounded sets'
 ---
 
 # Bounded sets

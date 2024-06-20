@@ -1,5 +1,5 @@
 ---
-title: '[A-1] Evaluating limits I'
+title: '[A1] Evaluating limits I'
 ---
 
 # Evaluating limits I

@@ -1,0 +1,111 @@
+---
+title: '[A1-T] Questions for round 1'
+---
+
+# Questions for round 1
+
+- [State the the Binomial Theorem]()
+- [State the Triangle Inequalities in K](/materials/analysis-theory/inequalities#triangle-inequalities)
+- [State the theorem about the Inequality between the Arithmetic and the Geometric means](/materials/analysis-theory/inequalities#inequality-of-arithmetic-and-geometric-means)
+- [Define the upper bound and the lower bound of a set in R](/materials/analysis-theory/sets#definition)
+- [Define the following concepts: ”a set is bounded above”, ”a set is bounded below”](/materials/analysis-theory/sets#set-boundedness)
+- [Define the minimal element of a set and the maximal element of a set](/materials/analysis-theory/sets#minimal-and-maximal-elements-of-a-set)
+- [Define the least upper bound (sup) of a set. What is the least upper bound of a set which is not bounded above?](/materials/analysis-theory/sets#supremum-and-infimum-of-a-set)
+- [Define the greatest lower bound (inf) of a set. What is the greatest lower bound of a set which is not bounded below?](/materials/analysis-theory/sets#supremum-and-infimum-of-a-set)
+- [Define the index-sequence and the subsequence. Give an example for them.](/materials/analysis-theory/sequences)
+- [Define the neighborhood (environment) of a number in K. What does it mean geometrically in R and in C?](/materials/analysis-theory/sequences#neighborhood-environment)
+- [Define the concept of convergence of a sequence with neighborhoods, and define the limit of a convergent sequence.](/materials/analysis-theory/sequences#convergence-of-a-sequence)
+- [Define the concept of convergence of a sequence with inequalities, and define the limit of a convergent sequence.](/materials/analysis-theory/sequences#convergence-of-a-sequence)
+- [Define the concept: a sequence is bounded](/materials/analysis-theory/sequences#boundedness-of-a-sequence)
+- [State and the theorem about the connection between the convergent and the bounded sequences](/materials/analysis-theory/sequences#boundedness-of-a-sequence)
+- [State the theorem about the connection between the convergence and the ordering relations](/materials/analysis-theory/sequences#convergency-and-ordering)
+- [Define the zero-sequence](/materials/analysis-theory/sequences#zero-sequences)
+- [State the five theorems in connection with zero sequences](/materials/analysis-theory/sequences#zero-sequences)
+- [State the theorem about the operations with convergent sequences](/materials/analysis-theory/sequences#operations-with-convergent-sequences)
+- [State the Sandwich Theorem](/materials/analysis-theory/sequences#sandwich-theorem)
+- [Define the geometric sequence. State the theorem about the convergence of geometric sequences](/materials/analysis-theory/sequences#geometric-sequence)
+- [State the theorem about the convergence of $\sqrt[n]{a}$ and of $\sqrt[n]{n}$ sequences](/materials/analysis-theory/sequences#other-important-convergent-sequences)
+- [State the theorem about the convergence of $n^k \cdot q^n$ and of $\frac{n^k}{a^n}$ sequences](/materials/analysis-theory/sequences#other-important-convergent-sequences)
+- [State and prove the theorem about the convergence of $\frac{x^n}{n!}$ sequence](/materials/analysis-theory/sequences#other-important-convergent-sequences)
+- [Define the monotonic sequences (i.e. the different types of monotonicity)](/materials/analysis-theory/sequences#monotone-sequences)
+- [State the theorem about the convergence of a monotonically increasing sequence](/materials/analysis-theory/sequences#monotone-sequences)
+- [State the theorem about the convergence of a monotonically decreasing sequence](/materials/analysis-theory/sequences#monotone-sequences)
+- [State that sequence $((1 + \frac{1}{n})^n)$ is convergent and define the Euler’s number](/materials/analysis-theory/sequences#euler-s-number)
+- [State the theorem about the existence of monotonic subsequence](/materials/analysis-theory/sequences#theorem-monotone-subsequence)
+- [State the Bolzano-Weierstrass Theorem](/materials/analysis-theory/sequences#bolzano-weierstrass-theorem)
+- [Define the Cauchy-sequence](/materials/analysis-theory/sequences#cauchy-s-sequence)
+- [State the Cauchy’s Convergence Test](/materials/analysis-theory/sequences#cauchy-s-sequence)
+- [Define $\lim_{n \to \infty} a_n = +\infty$ and $\lim_{n \to \infty} a_n = -\infty$](/materials/analysis-theory/sequences#infinite-limits-of-real-number-sequences)
+- [State the theorem about the limit of a monotonically increasing unbounded sequence](/materials/analysis-theory/sequences#theorem-limit-of-monotone-increasing-sequence)
+- [Give an example of not monotonically increasing sequence, such that it's limit is $+\infty$](/materials/analysis-theory/sequences#example-of-non-monotone-sequence-with-infinite-limit)
+- [State the theorem about the connection between the addition and the infinite limit. Give the table of addition in R](/materials/analysis-theory/sequences#the-table-of-addition-in)
+- [Why $(+\infty) + (-\infty)$ is not defined? Make it clear via some examples](/materials/analysis-theory/sequences#the-table-of-addition-in)
+- [State the theorem about the connection between the multiplication and the infinite limit.](/materials/analysis-theory/sequences#theorem-multiplication-1)
+- [Define the concept of series and its partial sum](/materials/analysis-theory/series#numerical-series)
+- [Define the convergence and the sum of a numerical series, and define the divergence of a numerical series](/materials/analysis-theory/series#numerical-series)
+- [State the theorem about the addition and scalar multiplication of convergent series](/materials/analysis-theory/series#theorem-sum-of-two-convergent-series)
+- [State the theorem about the convergence and the sum of the geometric series](/materials/analysis-theory/series#geometric-series)
+- [State the Zero-sequence Test](/materials/analysis-theory/series#zero-sequence-test)
+- [Give an example for a divergent series whose terms tend to zero]()
+- [State the Cauchy’s Convergence Test for series]()
+- [Define the positive term series. What is an important property of their partial sums?]()
+- [State the theorem about the Comparison Tests (Majorant Criterion, Minorant Criterion)]()
+- [Define the hyperharmonic series. State the theorem about its convergence]()
+- [State the theorem about the alternating series (Leibniz’s Test)]()
+- [Define the absolute and the conditional convergence of a series. Give examples for them]()
+- [State the theorem about the connection between the convergence and the absolute convergence]()
+- [Define the rearrangement of a series. State (without proof) the theorem about it]()
+- [State the Root Test. Give some examples for the indeterminate case]()
+- [State the Ratio Test. Give some examples for the indeterminate case]()
+- [Define the Cauchy’s Product of two series]()
+- [State the theorems about the Cauchy’s Product of two absolutely convergent series]()
+- [Define the power series and give an example for it]()
+- [Define the convergence set of a power series]()
+- [State the theorem about the convergence set of a power series (using Root Test)]()
+- [Define the Radius of Convergence of a power series]()
+- [Define the exponential function (exp) (with power series)]()
+- [Define the cosine (cos) function (with power series)]()
+- [Define the sine (sin) function (with power series)]()
+- [Define the hyperbolic cosine (cosh) function (with power series)]()
+- [Define the hyperbolic sine (sinh) function (with power series)]()
+- [Write the simple properties of exp, cos, sin, cosh, sinh]()
+- [State the Addition Theorem of the exponential function]()
+- [State the Addition Theorems of cos, sin, cosh, sinh]()
+- [State some important consequences of the Addition Theorems of cos, sin]()
+- [State some important consequences of the Addition Theorems of cosh, sinh]()
+- [State the theorem about the value of exp(1)]()
+- [State the estimation of error for the series of e = exp(1).]()
+- [The statement about e ∈ Q or e /∈ Q.]()
+- [Define the neighborhoods (environments) in R (B(a, r), B(+∞, r), B(−∞, r))]()
+- [Define the concept of accumulation point and of isolated point]()
+- [Define the limit of a function using environments]()
+- [Define the finite limit at a finite place using inequalities]()
+- [Define the +∞ limit at a finite place using inequalities]()
+- [Define the −∞ limit at a finite place using inequalities]()
+- [Define the finite limit at +∞ using inequalities]()
+- [Define the +∞ limit at +∞ using inequalities]()
+- [Define the −∞ limit at +∞ using inequalities]()
+- [Define the finite limit at −∞ using inequalities]()
+- [Define the +∞ limit at −∞ using inequalities]()
+- [Define the −∞ limit at −∞ using inequalities]()
+- [State the theorem about the Transference Principle for limit]()
+- [Define the left-hand side limit]()
+- [Define the right-hand side limit]()
+- [Define the monotonically increasing and the monotonically decreasing function]()
+- [Define the strictly monotonically increasing and the strictly monotonically decreasing function]()
+- [State the theorem about the one-sided limits of a monotonically increasing function]()
+- State the results about the basic limits limx→0
+  sin x
+  x
+  , limx→0
+  1 − cos x
+  x
+  2
+  , limx→0
+  e
+  x − 1
+  x 90. Define the continuity of a function at a point using environments 91. Define the continuity of a function at a point using inequalities 92. State the theorem about Transference Principle for continuity 93. Define the concept: continuous function 94. Define the types of discontinuities 95. Define the following concepts: interior point, exterior point, boundary point 96. Define intH, extH, ∂H 97. Define the concept of open set and of closed set 98. State the theorem about the characterization of the closeness of a set with sequences 99. Define the compact set in R 100. State the theorem about the connection between the compact sets and the closed and
+  bounded sets 101. State the theorem about the minimal and maximal elements of a compact set 102. State the theorem about the compactness of the image 103. State the minimax theorem of Weierstrass 104. Define the uniform continuity of a function 105. Give an example for a continuous but not uniformly continuous function 106. State the theorem about uniform continuity (Heine’s Theorem) 107. State the Intermediate Value Theorem (Bolzano’s Theorem) 108. State the corollary about the continuous map of an interval 109. State the theorem about the continuous and monotonically increasing map of an interval 110. Define the natural logarithm function and define the functions a
+  x
+  , loga x and x
+  µ

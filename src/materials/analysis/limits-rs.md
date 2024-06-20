@@ -1,5 +1,5 @@
 ---
-title: '[A-1] Limits of recursive sequences'
+title: '[A1] Limits of recursive sequences'
 ---
 
 # Limits of recursive sequences

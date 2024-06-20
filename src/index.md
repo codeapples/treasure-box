@@ -24,7 +24,7 @@ features:
   - title: Basic Mathematics [BM]
     details: Materials for basic mathematics course (1st Semester)
     link: /materials/basicmath/
-  - title: Analysis I [A-1]
+  - title: Analysis I [A1]
     details: Materials for analysis course (2nd Semester)
     link: /materials/analysis/
   #- title: Feature C

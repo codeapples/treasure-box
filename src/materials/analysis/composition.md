@@ -1,5 +1,5 @@
 ---
-title: '[A-1] Function composition'
+title: '[A1] Function composition'
 ---
 
 # Function composition

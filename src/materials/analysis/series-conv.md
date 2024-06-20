@@ -1,5 +1,5 @@
 ---
-title: '[A-1] Convergence of series'
+title: '[A1] Convergence of series'
 ---
 
 # Convergence of series

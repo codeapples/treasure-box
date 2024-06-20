@@ -1,5 +1,5 @@
 ---
-title: '[A-1] Invertable functions'
+title: '[A1] Invertable functions'
 ---
 
 # Invertable functions

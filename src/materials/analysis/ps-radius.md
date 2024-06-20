@@ -1,5 +1,5 @@
 ---
-title: '[A-1] Power series and radius of convergence'
+title: '[A1] Power series and radius of convergence'
 ---
 
 # Power series and radius of convergence

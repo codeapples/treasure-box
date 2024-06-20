@@ -1,5 +1,5 @@
 ---
-title: '[A-1] Evaluating sum of series'
+title: '[A1] Evaluating sum of series'
 ---
 
 # Evaluating sum of series

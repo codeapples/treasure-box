@@ -12,7 +12,12 @@ const nav: DefaultTheme.NavItem[] = [
           { text: 'Basic Mathematics', link: '/materials/basicmath/' },
         ],
       },
-      { text: 'Semester 2', items: [{ text: 'Analysis', link: '/materials/analysis/' }] },
+      {
+        text: 'Semester 2', items: [
+          { text: 'Analysis', link: '/materials/analysis/' },
+          { text: 'Analysis Theory', link: '/materials/analysis-theory/'}
+        ],
+      },
     ],
   },
   /* { text: 'Posts', link: '/posts/' }, */
@@ -68,37 +73,37 @@ const sidebar: DefaultTheme.Sidebar = {
       collapsed: false,
       items: [
         {
-          text: 'Analysis I [A-1]',
+          text: 'Analysis I [A1]',
           collapsed: true,
           items: [
-            { text: '[A-1] General', link: '/materials/analysis/' },
-            { text: '[A-1] Invertable functions', link: '/materials/analysis/invertable.md' },
-            { text: '[A-1] Function composition', link: '/materials/analysis/composition.md' },
-            { text: '[A-1] Bounded sets', link: '/materials/analysis/bounded.md' },
+            { text: '[A1] General', link: '/materials/analysis/' },
+            { text: '[A1] Invertable functions', link: '/materials/analysis/invertable.md' },
+            { text: '[A1] Function composition', link: '/materials/analysis/composition.md' },
+            { text: '[A1] Bounded sets', link: '/materials/analysis/bounded.md' },
             {
-              text: '[A-1] Limits: proving by definition Vol. 1',
+              text: '[A1] Limits: proving by definition Vol. 1',
               link: '/materials/analysis/limits-def.md',
             },
             {
-              text: '[A-1] Limits: evaluating limits Vol. 1',
+              text: '[A1] Limits: evaluating limits Vol. 1',
               link: '/materials/analysis/limits-eval.md',
             },
             {
-              text: '[A-1] Limits: recursive sequences',
+              text: '[A1] Limits: recursive sequences',
               link: '/materials/analysis/limits-rs.md',
             },
-            { text: '[A-1] Convergence of series', link: '/materials/analysis/series-conv.md' },
-            { text: '[A-1] Evaluating sums of series', link: '/materials/analysis/series.md' },
+            { text: '[A1] Convergence of series', link: '/materials/analysis/series-conv.md' },
+            { text: '[A1] Evaluating sums of series', link: '/materials/analysis/series.md' },
             {
-              text: '[A-1] Power series and radius of convergence',
+              text: '[A1] Power series and radius of convergence',
               link: '/materials/analysis/ps-radius.md',
             },
             {
-              text: '[A-1] Limits: proving by definition Vol. 2',
+              text: '[A1] Limits: proving by definition Vol. 2',
               link: '/materials/analysis/limits-def2.md',
             },
             {
-              text: '[A-1] Limits: evaluating limits Vol. 2',
+              text: '[A1] Limits: evaluating limits Vol. 2',
               link: '/materials/analysis/limits-eval2.md',
             },
           ],

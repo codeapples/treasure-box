@@ -1,5 +1,5 @@
 ---
-title: '[A-1] General'
+title: '[A1] General'
 ---
 
 # Analysis I<br>for test preparation

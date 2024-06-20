@@ -1,5 +1,5 @@
 ---
-title: '[A-1] Proving limits by definition I'
+title: '[A1] Proving limits by definition I'
 ---
 
 # Proving limits by definition I
