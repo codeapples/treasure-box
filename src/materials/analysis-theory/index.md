@@ -14,11 +14,11 @@ Non-exhaustive list of topics for theoretical analysis exam.
 - [Series](/materials/analysis-theory/series.md)
 - [Functions](/materials/analysis-theory/functions.md)
 
-## Theorem statements and definitions (Round 1)
+## Round 1 - theorem statements and definitions
 
 [List of round 1 questions with links](/materials/analysis-theory/round1.md)
 
-## Theorems with proofs (Round 2)
+## Round 2 - theorems with proofs
 
 - [Triangle inequalities](/materials/analysis-theory/triangle-ineq.md)
 - [Connection between convergency and ordering relations](/materials/analysis-theory/convergency-order.md)
