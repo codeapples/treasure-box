@@ -337,3 +337,72 @@ R = \begin{cases}
   +\infty & \text{if } L = 0
 \end{cases}
 $$
+
+## Analytical functions
+
+### Definition
+
+Suppose that the radius of convergence of a power series is positive. Then it's sum function is called analytical function.
+
+### Exponential function
+
+The function $exp : \mathbb{K} \to \mathbb{K}$, defined as
+
+$$
+exp(x) = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots = \sum_{n=0}^{\infty} \frac{x^n}{n!} \quad (x \in \mathbb{K})
+$$
+
+is called the exponential function.
+
+### Sine function
+
+The function $sin : \mathbb{K} \to \mathbb{K}$, defined as
+
+$$
+sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \ldots = \sum_{n=0}^{\infty} (-1)^n \cdot \frac{x^{2n+1}}{(2n+1)!} \quad (x \in \mathbb{K})
+$$
+
+is called the sine function.
+
+### Cosine function
+
+The function $cos : \mathbb{K} \to \mathbb{K}$, defined as
+
+$$
+cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \ldots = \sum_{n=0}^{\infty} (-1)^n \cdot \frac{x^{2n}}{(2n)!} \quad (x \in \mathbb{K})
+$$
+
+is called the cosine function.
+
+### Hyperbolic sine function
+
+The function $sinh : \mathbb{K} \to \mathbb{K}$, defined as
+
+$$
+sinh(x) = x + \frac{x^3}{3!} + \frac{x^5}{5!} + \ldots = \sum_{n=0}^{\infty} \frac{x^{2n+1}}{(2n+1)!} \quad (x \in \mathbb{K})
+$$
+
+is called the hyperbolic sine function.
+
+### Hyperbolic cosine function
+
+The function $cosh : \mathbb{K} \to \mathbb{K}$, defined as
+
+$$
+cosh(x) = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \ldots = \sum_{n=0}^{\infty} \frac{x^{2n}}{(2n)!} \quad (x \in \mathbb{K})
+$$
+
+is called the hyperbolic cosine function.
+
+### Simple properties of the functions above
+
+1. $exp(0) = 1$, $sin(0) = 0$, $cos(0) = 1$, $sinh(0) = 0$, $cosh(0) = 1$
+2. For all $x \in \mathbb{K}$,
+
+$$
+sin(-x) = -sin(x),\ cos(-x) = cos(x)
+$$
+
+$$
+sinh(-x) = -sinh(x),\ cosh(-x) = cosh(x)
+$$
