@@ -12,6 +12,7 @@ Non-exhaustive list of topics for theoretical analysis exam.
 - [Inequalities](/materials/analysis-theory/inequalities.md)
 - [Sequences](/materials/analysis-theory/sequences.md)
 - [Series](/materials/analysis-theory/series.md)
+- [Functions](/materials/analysis-theory/functions.md)
 
 ## Theorem statements and definitions (Round 1)
 

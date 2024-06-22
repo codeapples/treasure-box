@@ -396,8 +396,8 @@ is called the hyperbolic cosine function.
 
 ### Simple properties of the functions above
 
-1. $exp(0) = 1$, $sin(0) = 0$, $cos(0) = 1$, $sinh(0) = 0$, $cosh(0) = 1$
-2. For all $x \in \mathbb{K}$,
+- $exp(0) = 1$, $sin(0) = 0$, $cos(0) = 1$, $sinh(0) = 0$, $cosh(0) = 1$
+- For all $x \in \mathbb{K}$,
 
 $$
 sin(-x) = -sin(x),\ cos(-x) = cos(x)
@@ -406,3 +406,72 @@ $$
 $$
 sinh(-x) = -sinh(x),\ cosh(-x) = cosh(x)
 $$
+
+### Theorem (addition of exponential functions)
+
+For all $x, y \in \mathbb{K}$,
+
+$$
+\exp(x + y) = \exp(x) \cdot \exp(y)
+$$
+
+### Theorem (addition of $\sin$,$\cos$,$\cosh$,$\sinh$ functions)
+
+For all $x, y \in \mathbb{K}$,
+
+$$
+\begin{aligned}
+  sin(x + y) &= sin(x) \cdot cos(y) + cos(x) \cdot sin(y) \\
+  cos(x + y) &= cos(x) \cdot cos(y) - sin(x) \cdot sin(y) \\
+  sinh(x + y) &= sinh(x) \cdot cosh(y) + cosh(x) \cdot sinh(y) \\
+  cosh(x + y) &= cosh(x) \cdot cosh(y) + sinh(x) \cdot sinh(y)
+\end{aligned}
+$$
+
+#### Corollary for $\sin$ and $\cos$
+
+If we apply the above theorem for $x = y$, we get
+
+$$
+\begin{aligned}
+  sin(2x) &= 2 \cdot sin(x) \cdot cos(x) \\
+  cos(2x) &= cos^2(x) - sin^2(x)
+\end{aligned}
+$$
+
+If we apply the above theorem for $x = -y$, we get
+
+$$
+1 = cos^2(x) + sin^2(x)
+$$
+
+#### Corollary for $\sinh$ and $\cosh$
+
+If we apply the above theorem for $x = y$, we get
+
+$$
+\begin{aligned}
+  sinh(2x) &= 2 \cdot sinh(x) \cdot cosh(x) \\
+  cosh(2x) &= cosh^2(x) + sinh^2(x)
+\end{aligned}
+$$
+
+If we apply the above theorem for $x = -y$, we get
+
+$$
+1 = cosh^2(x) - sinh^2(x)
+$$
+
+### Theorem (value of $\exp(1)$)
+
+By the definition of the exponential function
+
+$$
+exp(1) = \sum_{n=0}^{\infty} \frac{1}{n!} = e
+$$
+
+where $e$ is the Euler's number.
+
+### Theorem (irrationality of $e$)
+
+The Euler's number $e$ is irrational.
