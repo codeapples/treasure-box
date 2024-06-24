@@ -20,4 +20,4 @@ Non-exhaustive list of topics for theoretical analysis exam.
 
 ## Round 2 - theorems with proofs
 
-[List of round 2 questions with links](/materials/analysis-theory/round1.md)
+[List of round 2 questions with links](/materials/analysis-theory/round2.md)
