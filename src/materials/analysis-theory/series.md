@@ -279,7 +279,7 @@ The alternating hyperharmonic series $\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n^p}
 
 ### Theorem
 
-Let $a_n \in \mathbb{K}\ (n \in \mathbb{N})$, and $p : \mathbb{N} \to \mathbb{N}$ be a bijection. If the series $\sum_{n=1}^{\infty} a_n$, then the series
+Let $a_n \in \mathbb{K}\ (n \in \mathbb{N})$, and $p : \mathbb{N} \to \mathbb{N}$ be a bijection. If the series $\sum_{n=1}^{\infty} a_n$ is absolutely convergent, then the series
 
 $$
 \sum_{n=1}^{\infty} a_{p(i)}
