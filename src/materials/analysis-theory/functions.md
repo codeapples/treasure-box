@@ -139,6 +139,42 @@ $$
 
 is called **allowed sequence** (allowed sequence of $f$ with respect to $a$).
 
+#### Proof
+
+Assume $\lim_{x \to a} f = A$.
+
+Let $(x_n) be an allowed sequence and let $\varepsilon > 0$. Then by $\lim_{x \to a} f(x) = A$ we have
+
+$$
+\exists \delta > 0\ \forall x \in B(a, \delta) \cap D_f : f(x) \in B(A, \varepsilon)
+$$
+
+Since $\lim_{n \to \infty} x_n = a$, then $\delta > 0$
+
+$$
+\exists N \in \mathbb{N}\ \forall n \in \mathbb{N} : f(x_n) \in B(A, \varepsilon)
+$$
+
+Hence follows that $\lim f(x_n) = A$.
+
+Ro prove the opposite direction, suppose indirectly that $\lim_{x \to a} f(x) = A$ is false. Then
+
+$$
+\exists \varepsilon_0 > 0\ \forall \delta > 0\ \exists x \in (B(a, \delta) \setminus \{a\}) \cap D_f : f(x) \notin B(A, \varepsilon_0)
+$$
+
+Apply this statement with choosing $\delta = \frac{1}{n}\ (n \in \mathbb{N})$. The $x$ according to $n$ will be denoted $x_n$. Then $(x_n)$ is an allowed sequence, because
+
+$$
+x_n \in D_f \setminus \{a\},\ (n \in \mathbb{N}), \text{ and by } |x_n - a| < \frac{1}{n} \to 0 \quad (n \to \infty)
+$$
+
+holds $\lim_{n \to \infty} x_n = a$. Using the assumption of this direction of the theorem follows that $\lim f(x_n) = A$, which is a contradiction, because by
+
+$$
+f(x_n) \notin B(A, \varepsilon_0) \quad (n \in \mathbb{N})
+$$
+
 ## One-sided limits
 
 In many cases the variable $x$ approaches the number $a \in \mathbb{R}$ only from one direction, namely
@@ -222,16 +258,62 @@ $$
 \lim_{x \to 0} \frac{sin(x)}{x} = 1
 $$
 
+#### Proof
+
+Applying power series expansion of $sin(x)$ for any $x \neq 0$:
+
+$$
+\frac{\sin x}{x} = \frac{x - \frac{x^3}{3!} + \frac{x^5}{5!} - \ldots}{x} = 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \ldots
+$$
+
+This power series is absolutely convergent for any $x \in \mathbb{K}$. Denote by $g : \mathbb{K} \to \mathbb{K}$ its sum function. The functions $x \mapsto \frac{\sin x}{x}$ and $x \mapsto g(x)$ differ only in point $x = 0$, but it does not affect their limits as $0$.
+
+$$
+\lim_{x \to 0} \frac{\sin x}{x} = \lim_{x \to 0} g(x) = g(0) = 1 - \frac{0^2}{3!} + \frac{0^4}{5!} - \ldots = 1
+$$
+
 ### Limit of $\frac{1 - cos(x)}{x}$
 
 $$
 \lim_{x \to 0} \frac{1 - cos(x)}{x^2} = \frac{1}{2}
 $$
 
+#### Proof
+
+Applying power series expansion of $cos(x)$ for any $x \neq 0$:
+
+$$
+\frac{1 - \cos x}{x^2} = \frac{1 - (1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \ldots)}{x^2} = \frac{\frac{x^2}{2!} - \frac{x^4}{4!} + \ldots}{x^2} =
+$$
+
+$$
+= \frac{1}{2!} - \frac{x^2}{4!} + \frac{x^4}{6!} - \ldots
+$$
+
+This power series is absolutely convergent for any $x \in \mathbb{K}$. Denote by $g : \mathbb{K} \to \mathbb{K}$ its sum function. The functions $x \mapsto \frac{1 - \cos x}{x^2}$ and $x \mapsto g(x)$ differ only in point $x = 0$, but it does not affect their limits as $0$. Hence
+
+$$
+\lim_{x \to 0} \frac{1 - \cos x}{x^2} = \lim_{x \to 0} g(x) = g(0) = \frac{1}{2!} - \frac{0^2}{4!} + \frac{0^4}{6!} - \ldots = \frac{1}{2}
+$$
+
 ### Limit of $\frac{e^x - 1}{x}$
 
 $$
 \lim_{x \to 0} \frac{e^x - 1}{x} = 1
+$$
+
+#### Proof
+
+Applying power series expansion of $\exp x$ for any $x \neq 0$:
+
+$$
+\frac{e^x - 1}{x} = \frac{1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots - 1}{x} = 1 + \frac{x}{2!} + \frac{x^2}{3!} + \ldots
+$$
+
+This power series is absolutely convergent for any $x \in \mathbb{K}$. Denote by $g : \mathbb{K} \to \mathbb{K}$ its sum function. The functions $x \mapsto \frac{e^x - 1}{x}$ and $x \mapsto g(x)$ differ only in point $x = 0$, but it does not affect their limits as $0$. Hence
+
+$$
+\lim_{x \to 0} \frac{e^x - 1}{x} = \lim_{x \to 0} g(x) = g(0) = 1 + \frac{0}{2!} + \frac{0^2}{3!} + \ldots = 1
 $$
 
 ## Continuity of functions

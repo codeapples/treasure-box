@@ -86,6 +86,16 @@ $$
 ||x| - |y|| \leq |x - y|
 $$
 
+## Bernoulli's inequality
+
+### Theorem
+
+Let $n \in \mathbb{N}$, $h \in \mathbb{R}$ and $h > -1$. Then
+
+$$
+(1 + h)^n \geq 1 + nh
+$$
+
 ## Inequality of arithmetic and geometric means
 
 ### Definitions
