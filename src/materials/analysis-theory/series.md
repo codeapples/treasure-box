@@ -68,7 +68,7 @@ is called a **geometric series** (with base $q$ or with quotient $q$).
 
 ### Theorem (convergence of geometric series)
 
-The geometric series $\sum_{n=p}^{\infty} q^n$ is **convergent** if $|q| < 1$ and **divergent** if $|q| \geq 1$.
+The geometric series $\sum_{n=1}^{\infty} q^n$ is **convergent** if $|q| < 1$ and **divergent** if $|q| \geq 1$.
 
 If the geometric series is convergent, the sum of the series is
 

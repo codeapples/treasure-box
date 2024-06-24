@@ -585,7 +585,7 @@ The sequence on the right obviously tends to 1. Using the [sandwich theorem](#sa
 
 ### Theorem (convergence of $n^k \cdot q^n$)
 
-Let $q \in \mathbb{R}$ and $k \in \mathbb{N}$ be _fixed_. Then
+Let $q \in \mathbb{R}$, $|q| < 1$ and $k \in \mathbb{N}$ be _fixed_. Then
 
 $$
 \lim_{n \to \infty} n^k \cdot q^n = 0
