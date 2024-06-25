@@ -143,7 +143,7 @@ is called **allowed sequence** (allowed sequence of $f$ with respect to $a$).
 
 Assume $\lim_{x \to a} f = A$.
 
-Let $(x_n) be an allowed sequence and let $\varepsilon > 0$. Then by $\lim_{x \to a} f(x) = A$ we have
+Let $(x_n)$ be an allowed sequence and let $\varepsilon > 0$. Then by $\lim_{x \to a} f(x) = A$ we have
 
 $$
 \exists \delta > 0\ \forall x \in B(a, \delta) \cap D_f : f(x) \in B(A, \varepsilon)
