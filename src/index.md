@@ -30,6 +30,9 @@ features:
   - title: Analysis I Theory [A1-T]
     details: Materials for analysis course (2nd Semester)
     link: /materials/analysis-theory/
+  - title: Analysis II [A2]
+    details: Materials for analysis course (3rd Semester)
+    link: /materials/analysis2/
   #- title: Feature C
   #  details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---

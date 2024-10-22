@@ -14,8 +14,13 @@ const nav: DefaultTheme.NavItem[] = [
       },
       {
         text: 'Semester 2', items: [
-          { text: 'Analysis', link: '/materials/analysis/' },
-          { text: 'Analysis Theory', link: '/materials/analysis-theory/'}
+          { text: 'Analysis I', link: '/materials/analysis/' },
+          { text: 'Analysis I Theory', link: '/materials/analysis-theory/'}
+        ],
+      },
+      {
+        text: 'Semester 3', items: [
+          { text: 'Analysis II', link: '/materials/analysis2/' },
         ],
       },
     ],
@@ -122,6 +127,19 @@ const sidebar: DefaultTheme.Sidebar = {
             { text: '[A1-T] Round 2 questions', link: '/materials/analysis-theory/round2.md' },
           ],
         },
+        {
+          text: 'Analysis II [A2]',
+          collapsed: true,
+          items: [
+            { text: '[A2] General', link: '/materials/analysis2/' },
+            { text: '[A2] Continuity', link: '/materials/analysis2/continuity.md' },
+            { text: '[A2] Differentiation', link: '/materials/analysis2/differentiation.md' },
+            /* { text: '[A2] Integrals', link: '/materials/analysis2/integrals.md' },
+            { text: '[A2] Taylor series', link: '/materials/analysis2/taylor.md' },
+            { text: '[A2] Round 1 questions', link: '/materials/analysis2/round1.md' },
+            { text: '[A2] Round 2 questions', link: '/materials/analysis2/round2.md' }, */
+          ]
+        }
       ],
     },
   ],
