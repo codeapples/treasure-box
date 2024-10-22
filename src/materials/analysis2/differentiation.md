@@ -163,6 +163,20 @@ x^2 & \text{if} \quad x \geq 0 \\
 \end{cases}
 $$
 
+If $x \in (0, +\infty)$
+
+$$
+f(x) = x^2 \implies f'(x) = 2x \quad f \in D(x)
+$$
+
+If $x \in (-\infty, 0)$
+
+$$
+f(x) = -x^2 \implies f'(x) = -2x \quad f \in D(x)
+$$
+
+If $x = 0$
+
 Is it continuous at $x = 0$?
 
 $$
@@ -174,11 +188,117 @@ $$
 
 So $f$ is continuous at $x = 0 \implies f \in C(0)$.
 
-Is it differentiable ("smooth")?
+Is it differentiable ("smooth") at $x = 0$?
 
 $$
 \begin{aligned}
-  x \in (0, +\infty)&: \quad f \in D(x),\ f'(x) = 2x\\
-  x \in (-\infty, 0)&: \quad f \in D(x),\ f'(x) = -2x\\
+  \lim_{x \to 0+0} \frac{f(x) - f(0)}{x - 0} &= \lim_{x \to 0+0} \frac{x^2 - 0}{x} = 0\\
+  \lim_{x \to 0-0} \frac{f(x) - f(0)}{x - 0} &= \lim_{x \to 0-0} \frac{-x^2 - 0}{x} = 0
 \end{aligned}
 $$
+
+So
+
+$$
+f'_+\left(0\right) =f'_-\left(0\right) = 0 \implies f \in D(0),\ f'(0) = 0
+$$
+
+## Example 5 (differentiability)
+
+Discuss the differentiability of the following function (in $c$).
+
+$$
+f(x) =
+\begin{cases}
+1 - x & \text{if} \quad x < 0 \\
+e^{-x} & \text{if} \quad x \geq 0
+\end{cases}
+$$
+
+#### Solution
+
+If $x \in (0, +\infty)$
+
+$$
+f(x) = e^{-x} \implies f'(x) = -e^{-x} \quad f \in D(x)
+$$
+
+If $x \in (-\infty, 0)$
+
+$$
+f(x) = 1 - x \implies f'(x) = -1 \quad f \in D(x)
+$$
+
+If $x = 0$
+
+Is it continuous at $x = 0$?
+
+$$
+\begin{aligned}
+  \lim_{x \to 0+0} f(x) &= \lim_{x \to 0+0} e^{-x} = e^0 = 1 \\
+  \lim_{x \to 0-0} f(x) &= \lim_{x \to 0-0} 1 - x = 1 - 0 = 1
+\end{aligned}
+$$
+
+So $f$ is continuous at $x = 0 \implies f \in C(0)$.
+
+Is it differentiable ("smooth") at $x = 0$?
+
+$$
+\begin{aligned}
+  f'_+\left(0\right) &= -e^{-x} \Big|_{x = 0} = -1 \\
+  f'_-\left(0\right) &= -1
+\end{aligned}
+
+\quad \implies f \in D(0),\ f'(0) = -1
+$$
+
+## Example 6 (differentiability)
+
+Discuss the differentiability of the following function (in $c$) $\alpha$ is a real parameter.
+
+$$
+f(x) =
+\begin{cases}
+\alpha x + x^2 & \text{if} \quad x < 0 \\
+x - x^2 & \text{if} \quad x \geq 0
+\end{cases}
+$$
+
+#### Solution
+
+If $x \in (0, +\infty)$
+
+$$
+f(x) = x - x^2 \implies f'(x) = 1 - 2x \quad f \in D(x)
+$$
+
+If $x \in (-\infty, 0)$
+
+$$
+f(x) = \alpha x + x^2 \implies f'(x) = \alpha + 2x \quad f \in D(x)
+$$
+
+If $x = 0$
+
+Is it continuous at $x = 0$?
+
+$$
+\begin{aligned}
+  \lim_{x \to 0+0} f(x) &= \lim_{x \to 0+0} x - x^2 = 0 \\
+  \lim_{x \to 0-0} f(x) &= \lim_{x \to 0-0} \alpha x + x^2 = 0
+\end{aligned}
+$$
+
+So $f$ is continuous at $x = 0 \implies f \in C(0)$.
+
+Is it differentiable ("smooth") at $x = 0$?
+
+$$
+\begin{aligned}
+  f'_+\left(0\right) &= 1 - 2 \cdot 0 = 1 \\
+  f'_-\left(0\right) &= \alpha + 2 \cdot 0 = \alpha
+\end{aligned}
+$$
+
+So $f \in D(0) \iff \alpha = 1$.

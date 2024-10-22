@@ -9,6 +9,7 @@ The materials intent to cover analysis topics that you are expected to know and 
 ## Midterm topics
 
 - [Continuity](/materials/analysis2/continuity.md)
+- [Differentiation](/materials/analysis2/differentiation.md)
 
 ## Midterm samples
 
