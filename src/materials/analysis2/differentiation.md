@@ -58,6 +58,9 @@ $$
 10. $f(x) = \ln x \implies f'(x) = \frac{1}{x}$
 11. $f(x) = \log_a x \implies f'(x) = \frac{1}{x \ln a}$
 12. $f(x) = a^x \implies f'(x) = a^x \ln a$
+13. $f(x) = \arcsin x \implies f'(x) = \frac{1}{\sqrt{1 - x^2}}$
+14. $f(x) = \arccos x \implies f'(x) = -\frac{1}{\sqrt{1 - x^2}}$
+15. $f(x) = \arctan x \implies f'(x) = \frac{1}{1 + x^2}$
 
 ## Rules of differentiation
 
@@ -89,6 +92,16 @@ $$
 
 $$
 (f^{-1})'(x) = \frac{1}{f'(f^{-1}(x))}
+$$
+
+## Equation of tangent line
+
+Let $f \in \mathbb{R} \to \mathbb{R}$, $a \in int D_f$ and $f \in D(a)$.
+
+The equation of the tangent line to the curve $y = f(x)$ at the point $(a, f(a))$ is
+
+$$
+y = f(a) + f'(a) \cdot (x - a)
 $$
 
 ## Example 1 (derivative by definition)
@@ -302,3 +315,299 @@ $$
 $$
 
 So $f \in D(0) \iff \alpha = 1$.
+
+## Example 7 (determine derivative)
+
+Determine the derivative of the following function.
+
+$$
+f(x) = 4x^5 - 3x^4 + 2x^3 - 7x^2 + 6x + 7
+$$
+
+#### Solution
+
+$$
+\begin{aligned}
+f'(x) &= 4 \cdot 5x^4 - 3 \cdot 4x^3 + 2 \cdot 3x^2 - 7 \cdot 2x + 6 =\\
+&= 20x^4 - 12x^3 + 6x^2 - 14x + 6
+\end{aligned}
+$$
+
+## Example 8 (determine derivative)
+
+Determine the derivative of the following function.
+
+$$
+f(x) = x^2 \cdot \sqrt[3]{x}
+$$
+
+#### Solution
+
+$$
+\begin{aligned}
+f(x) &= x^2 \cdot x^{\frac{1}{3}} = x^{\frac{7}{3}} \implies f'(x) = \frac{7}{3}x^{\frac{4}{3}}
+\end{aligned}
+$$
+
+## Example 9 (determine derivative)
+
+Determine the derivative of the following function.
+
+$$
+f(x) = \sqrt{x \cdot \sqrt[3]{x}}
+$$
+
+#### Solution
+
+$$
+\begin{aligned}
+f(x) &= \sqrt{x \cdot x^{\frac{1}{3}}} = \left(x^{\frac{4}{3}}\right)^{\frac{1}{2}} = x^{\frac{2}{3}} \implies f'(x) = \frac{2}{3}x^{-\frac{1}{3}}
+\end{aligned}
+$$
+
+## Example 10 (determine derivative)
+
+Determine the derivative of the following function.
+
+$$
+f(x) = e^x \cdot \sin x
+$$
+
+#### Solution
+
+$$
+\begin{aligned}
+f'(x) &= e^x \cdot \cos x + e^x \cdot \sin x = e^x \cdot (\cos x + \sin x)
+\end{aligned}
+$$
+
+## Example 11 (determine derivative)
+
+Determine the derivative of the following function.
+
+$$
+f(x) = (x^3 + \ln x) \cdot \cos x
+$$
+
+#### Solution
+
+$$
+\begin{aligned}
+f'(x) &= (3x^2 + \frac{1}{x}) \cdot \cos x - (x^3 + \ln x) \cdot \sin x
+\end{aligned}
+$$
+
+## Example 12 (determine derivative)
+
+Determine the derivative of the following function.
+
+$$
+f(x) = \frac{2x^2 + 3x + 1}{x^3 + x^2 + x + 1}
+$$
+
+#### Solution
+
+$$
+\begin{aligned}
+f'(x) &= \frac{(2x^2 + 3x + 1)'(x^3 + x^2 + x + 1) - (2x^2 + 3x + 1)(x^3 + x^2 + x + 1)'}{(x^3 + x^2 + x + 1)^2} =\\
+&= \frac{(4x + 3)(x^3 + x^2 + x + 1) - (2x^2 + 3x + 1)(3x^2 + 2x + 1)}{(x^3 + x^2 + x + 1)^2}
+\end{aligned}
+$$
+
+## Example 13 (determine derivative)
+
+Determine the derivative of the following function.
+
+$$
+f(x) = \sin(x^3 + \ln x)
+$$
+
+#### Solution
+
+$$
+\begin{aligned}
+f'(x) &= \cos(x^3 + \ln x) \cdot (3x^2 + \frac{1}{x})
+\end{aligned}
+$$
+
+## Example 14 (determine derivative)
+
+Determine the derivative of the following function.
+
+$$
+f(x) = e^{\sin^3 x}
+$$
+
+#### Solution
+
+$$
+\begin{aligned}
+f'(x) &= e^{\sin^3 x} \cdot 3\sin^2 x \cdot \cos x
+\end{aligned}
+$$
+
+## Example 15 (determine derivative)
+
+Determine the derivative of the following function.
+
+$$
+f(x) = \frac{1}{\sqrt[3]{x + \sqrt{x}}}
+$$
+
+#### Solution
+
+$$
+\begin{aligned}
+f(x) &= (x + x^{\frac{1}{2}})^{-\frac{1}{3}} \implies f'(x) = -\frac{1}{3}(x + x^{\frac{1}{2}})^{-\frac{4}{3}} \cdot (1 + \frac{1}{2}x^{-\frac{1}{2}})
+\end{aligned}
+$$
+
+## Example 16 (determine derivative)
+
+Determine the derivative of the following function.
+
+$$
+f(x) = x^x
+$$
+
+#### Solution
+
+$$
+\begin{aligned}
+f(x) &= e^{\ln x^x} = e^{x \ln x} \implies\\
+f'(x) &= e^{x \ln x} \cdot (x \cdot \ln x)' =\\
+&= e^{x \ln x} \cdot (\ln x + x \cdot \frac{1}{x}) = x^x \cdot (\ln x + 1)
+\end{aligned}
+$$
+
+## Example 17 (determine derivative)
+
+Determine the derivative of the following function.
+
+$$
+f(x) = (\sin x)^{\cos \sqrt{x}}
+$$
+
+#### Solution
+
+$$
+\begin{aligned}
+f(x) &= e^{\ln(\sin x)^{\cos \sqrt{x}}} = e^{\cos x^{\frac{1}{2}} \cdot \ln \sin x} \implies\\
+f'(x) &= e^{\cos x^{\frac{1}{2}} \cdot \ln \sin x} \cdot (\cos x^{\frac{1}{2}} \cdot \ln \sin x)' =\\
+&= e^{\cos x^{\frac{1}{2}} \cdot \ln \sin x} \cdot (-\sin x \cdot \frac{1}{2} x^{-\frac{1}{2}} \cdot \ln \sin x + \cos x^{\frac{1}{2}} \cdot \frac{1}{\sin x} \cdot \cos x)
+\end{aligned}
+$$
+
+## Example 18 (determine derivative)
+
+Determine the derivative of the following function.
+
+$$
+f(x) = \arcsin (2x^2 - \sqrt{x})
+$$
+
+#### Solution
+
+$$
+\begin{aligned}
+f(x) &= \arcsin (2x^2 - x^{\frac{1}{2}}) \implies f'(x) = \frac{1}{\sqrt{1 - (2x^2 - x^{\frac{1}{2}})^2}} \cdot (4x - \frac{1}{2}x^{-\frac{1}{2}})
+\end{aligned}
+$$
+
+## Example 19 (determine derivative)
+
+Determine the derivative of the following function.
+
+$$
+f(x) = \frac{\arcsin x}{\arctan x}
+$$
+
+#### Solution
+
+$$
+\begin{aligned}
+f'(x) = \frac{\arctan x \cdot \frac{1}{\sqrt{1 - x^2}} - \arcsin x \cdot \frac{1}{1 + x^2}}{(\arctan x)^2}
+\end{aligned}
+$$
+
+## Example 20 (equation of tangent line)
+
+Determine the equation of the tangent line to the following curves at the given points.
+
+$$
+y = \frac{x}{x^2 - 2} \quad x_0 = 2
+$$
+
+#### Solution
+
+$$
+\begin{aligned}
+f'(x) &= \frac{(x)'(x^2 - 2) - x(x^2 - 2)'}{(x^2 - 2)^2} = \frac{x^2 - 2 - x(2x)}{(x^2 - 2)^2} = \frac{-x^2 - 2}{(x^2 - 2)^2}\\
+f'(2) &= \frac{-2^2 - 2}{(2^2 - 2)^2} = -\frac{6}{4} = -\frac{3}{2}\\
+f(2) &= \frac{2}{2^2 - 2} = \frac{2}{2} = 1
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+y &= f(2) + f'(2) \cdot (x - 2) = 1 - \frac{3}{2} \cdot (x - 2) =\\
+&= 1 - \frac{3}{2}x + 3 = 4 - \frac{3}{2}x
+\end{aligned}
+$$
+
+## Example 21 (equation of tangent line)
+
+Determine the equation of the tangent line to the following curves at the given points.
+
+$$
+y = e^x + e^{2x} \quad x_0 = 0
+$$
+
+#### Solution
+
+$$
+\begin{aligned}
+f'(x) &= e^x + 2e^{2x}\\
+f'(0) &= e^0 + 2e^0 = 1 + 2 = 3\\
+f(0) &= e^0 + e^{2 \cdot 0} = 1 + 1 = 2
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+y &= f(0) + f'(0) \cdot (x - 0) = 2 + 3 \cdot x = 3x + 2
+\end{aligned}
+$$
+
+## Example 22 (equation of tangent line)
+
+Determine the equation of the tangent line to the following curves at the given points.
+
+$$
+x^2y = 2y + x^{x + 1} \quad P_0 = (1, -1)
+$$
+
+#### Solution
+
+$$
+x^2y = 2y + x^{x + 1} \implies y = \frac{x^{x + 1}}{x^2 - 2}
+$$
+
+$$
+x^{x + 1} = e^{(x + 1) \ln x} \implies (x^{x + 1})' = x^{x + 1} \cdot (\ln x + \frac{x + 1}{x})
+$$
+
+$$
+\begin{aligned}
+f(x) &= \frac{x^{x + 1}}{x^2 - 2} \quad x_0 = 1,\ f(1) = -1\\
+f'(x) &= \frac{(x^{x + 1})'(x^2 - 2) - x^{x + 1}(x^2 - 2)'}{(x^2 - 2)^2} =\\
+&= \frac{x^{x + 1} \cdot (\ln x + \frac{x + 1}{x}) \cdot (x^2 - 2) - x^{x + 1} \cdot 2x}{(x^2 - 2)^2}\\
+f'(1) &= \frac{1 \cdot (0 + 2) \cdot (1 - 2) - 1 \cdot 2}{1^2 - 2 \cdot 1 \cdot 2 + 2^2} = \frac{-2 - 2}{1 - 4 + 4} = -4
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+y &= f(1) + f'(1) \cdot (x - 1) = -1 - 4 \cdot (x - 1) = -4x + 3
+\end{aligned}
+$$
