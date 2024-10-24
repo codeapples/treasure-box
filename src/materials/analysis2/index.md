@@ -11,6 +11,8 @@ The materials intent to cover analysis topics that you are expected to know and 
 - [Continuity](/materials/analysis2/continuity.md)
 - [Differentiation](/materials/analysis2/differentiation.md)
 - [Extreme values of functions](/materials/analysis2/extremes.md)
+- [L'Hôpital's rule](/materials/analysis2/LH.md)
+- [Taylor polynomials](/materials/analysis2/taylor.md)
 
 ## Midterm samples
 

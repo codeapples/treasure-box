@@ -135,9 +135,8 @@ const sidebar: DefaultTheme.Sidebar = {
             { text: '[A2] Continuity', link: '/materials/analysis2/continuity.md' },
             { text: '[A2] Differentiation', link: '/materials/analysis2/differentiation.md' },
             { text: '[A2] Extreme values of functions', link: '/materials/analysis2/extremes.md' },
-            /* { text: '[A2] Taylor series', link: '/materials/analysis2/taylor.md' },
-            { text: '[A2] Round 1 questions', link: '/materials/analysis2/round1.md' },
-            { text: '[A2] Round 2 questions', link: '/materials/analysis2/round2.md' }, */
+            { text: `[A2] L'Hôpital's rule`, link: '/materials/analysis2/LH.md' },
+            { text: '[A2] Taylor polynomials', link: '/materials/analysis2/taylor.md' },
           ]
         }
       ],
