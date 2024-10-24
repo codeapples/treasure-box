@@ -137,6 +137,7 @@ const sidebar: DefaultTheme.Sidebar = {
             { text: '[A2] Extreme values of functions', link: '/materials/analysis2/extremes.md' },
             { text: `[A2] L'Hôpital's rule`, link: '/materials/analysis2/LH.md' },
             { text: '[A2] Taylor polynomials', link: '/materials/analysis2/taylor.md' },
+            { text: '[A2] Function analysis', link: '/materials/analysis2/analysis.md' },
           ]
         }
       ],

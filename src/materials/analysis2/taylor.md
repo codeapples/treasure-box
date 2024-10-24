@@ -94,3 +94,76 @@ T_3(x) &= f(-\frac{1}{2}) + f'(-\frac{1}{2})(x + \frac{1}{2}) + \frac{f''(-\frac
 &= 0 + 0 + 0 + 8(x + \frac{1}{2})^3
 \end{aligned}
 $$
+
+## Example 2
+
+Let
+
+$$
+f(x) = \ln(1 + x) \quad (x > -1)
+$$
+
+$(a)$ Find the second Taylor polynomial of $f$ at $a = 0$.
+
+$(b)$ Estimate the error of the approximation of $f(x) \approx T_2(x)$ for $x > 0$ and for $-1 < x < 0$.
+
+$(c)$ Approximate $\ln 2$ by means of $T_2(1)$, and estimate the error.
+
+### Solution
+
+$(a)$
+
+$$
+\begin{aligned}
+f'(x) &= \frac{1}{1 + x} \implies f'(0) = 1\\
+f''(x) &= -\frac{1}{(1 + x)^2} \implies f''(0) = -1\\
+f'''(x) &= \frac{2}{(1 + x)^3} \implies f'''(c) = \frac{2}{(1 + c)^3}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+T_2(x) &= f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 =\\
+&= 0 + x - \frac{x^2}{2} = x - \frac{1}{2} x^2 \quad (x \in \mathbb{R})
+\end{aligned}
+$$
+
+$(b)$
+
+$$
+|f(x) - T_2(x)| = \left|\frac{f'''(c)}{3!}x^3\right| = \frac{1}{6} \cdot \frac{2}{|(1 + c)^3|}|x|^3
+$$
+
+With $c$ between $0$ and $x$.
+
+So if $x > 0 \implies 0 < c < x$
+
+$$
+|f(x) - T_2(x)| \leq \frac{1}{3} \cdot \frac{1}{(1 + 0)^3} \cdot |x|^3 = \frac{1}{3}x^3
+$$
+
+If $-1 < x < c < 0$
+
+$$
+|f(x) - T_2(x)| \leq \frac{1}{3} \cdot \frac{1}{(\underbrace{1 + x}_{+})^3} \cdot \overbrace{|x|^3}^{< 1} < \frac{1}{3(1 + x)^3}
+$$
+
+$(c)$
+
+$$
+\ln 2 = \ln(1 + 1) \implies x = 1
+$$
+
+$$
+\ln 2 = f(1) \approx T_2(1) = 1 - \frac{1}{2} = \frac{1}{2}
+$$
+
+To estimate error let $a = 0,\ x = 1 \implies 0 < c < 1$
+
+$$
+|f(x) - T_2(x)| = \frac{1}{6} \cdot \frac{2}{(1 + c)^3} \cdot 1^3 = \frac{1}{3(1 + c)^3}
+$$
+
+$$
+\frac{1}{6} \cdot \frac{2}{(1 + c)^3} \leq \frac{1}{6} \cdot \frac{2}{(1 + 0)^3} = \frac{1}{3}
+$$
