@@ -6,12 +6,13 @@ title: '[A2] Function analysis'
 
 ## General steps
 
-1. Domain of the function
+1. Initial (domain, oddness/evenness, etc)
 2. Intersections with the axes
-3. Concavity and inflection points
-4. Limits and asymptotes
-5. Information table
-6. Graph
+3. Monotonicity and extreme values
+4. Convexity and inflection points
+5. Limits and asymptotes
+6. Information table
+7. Graph
 
 ## Example 1
 
@@ -35,6 +36,14 @@ $$
 f(0) = 2,\ f(x) = 0 ?
 $$
 
+Easy to see that
+
+If $f(0) = 2$ and $f(1) = -1 \implies$ by $IVT$ the function intersects the $x$-axis in the interval $(0, 1)$.
+
+If $f(-1) = -1$ and $f(-2) = 2 \implies$ by $IVT$ the function intersects the $x$-axis in the interval $(-2, -1)$.
+
+3. Monotonicity and extreme values
+
 $$
 f'(x) = -4x - 3x^2 = -x(4 + 3x) \implies x = 0 \text{ and } x = -\frac{4}{3}
 $$
@@ -49,13 +58,7 @@ x \in (-\frac{4}{3}, 0)&: f'(x) > 0
 \end{aligned}
 $$
 
-Easy to see that
-
-If $f(0) = 2$ and $f(1) = -1 \implies$ by $IVT$ the function intersects the $x$-axis in the interval $(0, 1)$.
-
-If $f(-1) = -1$ and $f(-2) = 2 \implies$ by $IVT$ the function intersects the $x$-axis in the interval $(-2, -1)$.
-
-3. Concavity and inflection points
+4. Concavity and inflection points
 
 $$
 f''(x) = -4 - 6x = -2(2 + 3x) \implies x = -\frac{2}{3}
@@ -72,7 +75,7 @@ $$
 
 Therefore $x = -\frac{2}{3}$ is an inflection point, and the function is concave up on $(-\infty, -\frac{2}{3})$ and concave down on $(-\frac{2}{3}, \infty)$.
 
-4. Limits and asymptotes
+5. Limits and asymptotes
 
 $$
 \lim_{x \to \infty} f(x) = -\infty
@@ -82,16 +85,16 @@ $$
 \lim_{x \to -\infty} f(x) = +\infty
 $$
 
-5. Information table
+6. Information table
 
 | Interval  | $(-\infty, -\frac{4}{3})$ | $(-\frac{4}{3}, -\frac{2}{3})$ | $(-\frac{2}{3}, 0)$ | $(0, \infty)$ |
 | --------- | ------------------------- | ------------------------------ | ------------------- | ------------- |
 | $f'(x)$   | $-$                       | $-$                            | $+$                 | $-$           |
 | $f''(x)$  | $+$                       | $+$                            | $-$                 | $-$           |
 | $f(x)$    | $\searrow$                | $\searrow$                     | $\nearrow$          | $\searrow$    |
-| Concavity | $\cup$                    | $\cup$                         | $\cap$              | $\cap$        |
+| convexity | $\cup$                    | $\cup$                         | $\cap$              | $\cap$        |
 
-6. Graph
+7. Graph
 
 TODO: make markdown render functions :\
 
