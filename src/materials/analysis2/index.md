@@ -25,6 +25,7 @@ The materials intent to cover analysis topics that you are expected to know and 
 ## Endterm
 
 #### Topics
+
 - WIP
 
 #### Samples
@@ -34,7 +35,7 @@ The materials intent to cover analysis topics that you are expected to know and 
 
 #### Extra materials
 
-- [Indefinite integrals](/materials/analysis/01_indefenite_integrals.pdf)
-- [Applications of integration](/materials/analysis/02_applications_of_integration.pdf)
-- [Differentiation of multivariable functions](/materials/analysis/03_differentiation_of_multivariable_functions.pdf)
-- [Integration of multivariable functions](/materials/analysis/04_integration_of_multivariable_functions.pdf)
+- [Indefinite integrals](/extra/analysis2/01_indefenite_integrals.pdf)
+- [Applications of integration](/extra/analysis2/02_applications_of_integration.pdf)
+- [Differentiation of multivariable functions](/extra/analysis2/03_differentiation_of_multivariable_functions.pdf)
+- [Integration of multivariable functions](/extra/analysis2/04_integration_of_multivariable_functions.pdf)
