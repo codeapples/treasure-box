@@ -463,7 +463,7 @@ $$
 \begin{aligned}
 \int \frac{1}{4x^2 - 4x + 2} \, dx &= \int \frac{1}{(4x^2 - 4x + 1) + 1} \, dx =\\
 &= \int \frac{1}{1 + (2x - 1)^2} \, dx \overset{(a = 2,\ b = -1)}{=}\\
-&= \frac{\arcsin (2x - 1)}{2} + C
+&= \frac{\arctan (2x - 1)}{2} + C
 \end{aligned}
 $$
 
