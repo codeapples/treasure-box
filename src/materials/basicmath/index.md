@@ -8,11 +8,15 @@ The materials intent to cover basic math topics that you are expected to know an
 
 **Work in progress!**
 
-## Math topics for Test #2
+## Test 2
+
+#### Topics
 
 - [Inverse of matrices](/materials/basicmath/inverse-mx.md)
 
-## Math topics for Test #3
+## Test 3
+
+#### Topics
 
 - [Inverse of matrices using Gauss-Jordan elimination](/materials/basicmath/inverse-mx-gj.md)
 - [Eigenvalues and eigenvectors](/materials/basicmath/eigen.md)
@@ -20,3 +24,13 @@ The materials intent to cover basic math topics that you are expected to know an
 - [Orthogonal and orthonormal basis](/materials/basicmath/ortho.md)
 - [Inverse functions](/materials/basicmath/inverse-fn.md)
 - [Proving limits by definition](/materials/basicmath/limits.md)
+
+#### Samples
+
+- [Sample 2018_1](/samples/basicmath/test3/2018_1.pdf)
+- [Sample 2019_1](/samples/basicmath/test3/2019_1.pdf)
+- [Sample 2020_1](/samples/basicmath/test3/2020_1.pdf)
+- [Sample 2021_1](/samples/basicmath/test3/2021_1.pdf)
+- [Sample 2022_1](/samples/basicmath/test3/2022_1.pdf)
+- [Sample 2022_2](/samples/basicmath/test3/2022_2.pdf)
+- [Sample 2022_3](/samples/basicmath/test3/2022_3.pdf)

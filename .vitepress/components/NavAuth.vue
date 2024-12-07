@@ -18,9 +18,6 @@ const toggleAuth = () => {
         ml-5px
         @click="toggleAuth"
       />
-      <!-- i-iconoir-key -->
-      <!-- i-lucide-key-round -->
-      <!-- i-clarity-key-line -->
     </div>
   </ClientOnly>
 </template>

@@ -6,7 +6,9 @@ title: '[A1] General'
 
 The materials intent to cover analysis topics that you are expected to know and understand before certain tests.
 
-## Midterm topics
+## Midterm
+
+#### Topics
 
 - [Invertable functions](/materials/analysis/invertable.md)
 - [Function composition](/materials/analysis/composition.md)
@@ -15,14 +17,16 @@ The materials intent to cover analysis topics that you are expected to know and 
 - [Limits: evaluating limits Vol. 1](/materials/analysis/limits-eval.md)
 - [Limits: recursive sequences](/materials/analysis/limits-rs.md)
 
-## Midterm samples
+#### Samples
 
 - [Sample 1](/samples/analysis/midterm/1.pdf)
 - [Sample 2](/samples/analysis/midterm/2.pdf)
 - [Sample 3](/samples/analysis/midterm/3.pdf)
 - [Sample 4](/samples/analysis/midterm/4.pdf)
 
-## Endterm topics
+## Endterm
+
+#### Topics
 
 - [Convergence of series](/materials/analysis/series-conv.md)
 - [Evaluating sums of series](/materials/analysis/series.md)
@@ -30,7 +34,7 @@ The materials intent to cover analysis topics that you are expected to know and 
 - [Limits: prove by definition Vol. 2](/materials/analysis/limits-def2.md)
 - [Limits: evaluating limits Vol. 2](/materials/analysis/limits-eval2.md)
 
-## Endterm samples
+#### Samples
 
 - [Sample 1](/samples/analysis/endterm/1.pdf)
 - [Sample 2](/samples/analysis/endterm/2.pdf)
