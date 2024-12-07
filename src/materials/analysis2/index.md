@@ -26,7 +26,8 @@ The materials intent to cover analysis topics that you are expected to know and 
 
 #### Topics
 
-- WIP
+- [Indefinite integrals I](/materials/analysis2/integrals-indefinite-1.md)
+- [Indefinite integrals II](/materials/analysis2/integrals-indefinite-2.md)
 
 #### Samples
 

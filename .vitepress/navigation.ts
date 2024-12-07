@@ -138,6 +138,8 @@ const sidebar: DefaultTheme.Sidebar = {
             { text: `[A2] L'Hôpital's rule`, link: '/materials/analysis2/LH.md' },
             { text: '[A2] Taylor polynomials', link: '/materials/analysis2/taylor.md' },
             { text: '[A2] Function analysis', link: '/materials/analysis2/analysis.md' },
+            { text: '[A2] Indefinite integrals I', link: '/materials/analysis2/integrals-indefinite-1.md' },
+            { text: '[A2] Indefinite integrals II', link: '/materials/analysis2/integrals-indefinite-2.md' },
           ]
         }
       ],
