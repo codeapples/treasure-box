@@ -126,7 +126,13 @@ const sidebar: DefaultTheme.Sidebar = {
             { text: '[A1-T] Round 1 questions', link: '/materials/analysis-theory/round1.md' },
             { text: '[A1-T] Round 2 questions', link: '/materials/analysis-theory/round2.md' },
           ],
-        },
+        }
+      ],
+    },
+    {
+      text: 'Semester 3',
+      collapsed: false,
+      items: [
         {
           text: 'Analysis II [A2]',
           collapsed: true,
@@ -140,6 +146,7 @@ const sidebar: DefaultTheme.Sidebar = {
             { text: '[A2] Function analysis', link: '/materials/analysis2/analysis.md' },
             { text: '[A2] Indefinite integrals I', link: '/materials/analysis2/integrals-indefinite-1.md' },
             { text: '[A2] Indefinite integrals II', link: '/materials/analysis2/integrals-indefinite-2.md' },
+            { text: '[A2] Definite integrals', link: '/materials/analysis2/integrals-definite.md' },
           ]
         }
       ],

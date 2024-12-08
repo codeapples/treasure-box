@@ -192,6 +192,10 @@ $$
 
 ## Reverse of differentiation of composite functions
 
+$$
+\int f(g(x)) \cdot g'(x) \, dx = F(g(x)) + C
+$$
+
 ### Linear substitution
 
 $$
