@@ -413,7 +413,7 @@ $$
 
 #### Solution
 
-Integral is not bounded at $x = 1$, but it is continuous on $(1, 2]$, so it is integrable on $[t, 2]\ \forall t \in (1, 2)$.
+Integrand is not bounded on a right neighborhood of $1$, but it is continuous on $(1, 2]$, so it is integrable on $[t, 2]\ \forall t \in (1, 2)$.
 
 Then
 
@@ -436,7 +436,7 @@ $$
 
 #### Solution
 
-Integral is continuous on $[0, \infty)$, so it is integrable on $[0, t]\ \forall t \in (0, \infty)$.
+Integrand is continuous on $[0, \infty)$, so it is integrable on $[0, t]\ \forall t \in (0, \infty)$.
 
 But to solve the integral we need to use integration by parts:
 
@@ -474,9 +474,11 @@ $$
 
 #### Solution
 
-Since the integral is not bounded at $x = 0$ and $x = 2$, we need to split the integral into two parts.
+Since the integrand is not bounded on a right neighborhood of $0$ and on a left neighborhood of $2$, but it is continuous on $(0,2)$, so we need to split the integral into two parts.
 
 Let's select a convenient point within the interval $(0, 2)$, for example $1$.
+
+We can see that it is integrable on $[t, 1]$ for all $0 < t < 1$ and it is also integrable on $[1, t]$ for all $1 < t < 2$.
 
 Then
 
@@ -486,7 +488,7 @@ $$
 \end{aligned}
 $$
 
-The first integral is not bounded at $x = 0$, but it is continuous on $(0, 1]$, so it is integrable on $[t, 1]\ \forall t \in (0, 1)$.
+Let's solve the first integral.
 
 $$
 \begin{aligned}
@@ -499,7 +501,7 @@ $$
 \end{aligned}
 $$
 
-The second integral is not bounded at $x = 2$, but it is continuous on $[1, 2)$, so it is integrable on $[1, t]\ \forall t \in (1, 2)$.
+Let's solve the second integral.
 
 $$
 \begin{aligned}
@@ -531,7 +533,7 @@ $$
 
 #### Solution
 
-Integral is not bounded at $x = 0$, but it is continuous on $(0, 1]$, so it is integrable on $[t, 1]\ \forall t \in (0, 1)$.
+Integrand is not bounded in the neighborhood of $0$, but it is continuous on $(0, 1]$, so it is integrable on $[t, 1]\ \forall t \in (0, 1)$.
 
 Using [integration by parts](/materials/analysis2/integrals-indefinite-2#integration-by-parts)
 
@@ -631,7 +633,7 @@ $$
 \end{aligned}
 $$
 
-At $x = 2$ the integral is not bounded, but it is continuous on $[0, t]\ \forall t \in (0, 2)$.
+Integrand is not bounded on the left neighborhood of $2$, but it is continuous on $(0, 2)$, so it is integrable on $[0, t]\ \forall t \in (0, 2)$.
 
 $$
 \begin{aligned}
