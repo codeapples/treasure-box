@@ -147,6 +147,8 @@ const sidebar: DefaultTheme.Sidebar = {
             { text: '[A2] Indefinite integrals I', link: '/materials/analysis2/integrals-indefinite-1.md' },
             { text: '[A2] Indefinite integrals II', link: '/materials/analysis2/integrals-indefinite-2.md' },
             { text: '[A2] Definite integrals', link: '/materials/analysis2/integrals-definite.md' },
+            { text: '[A2] Multivariable function differentiation', link: '/materials/analysis2/multivariate-differentiation.md' },
+            { text: '[A2] Multivariable function integration', link: '/materials/analysis2/multivariate-integration.md' },
           ]
         }
       ],
