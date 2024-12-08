@@ -567,3 +567,113 @@ $$
 $$
 
 ## Example 13 (area)
+
+Determine the area bounded by the curves $y = x^2$ and $y = 1 - x^2$.
+
+#### Solution
+
+First we need to find the points of intersection of the two curves:
+
+$$
+\begin{aligned}
+x^2 &= 1 - x^2 \implies 2x^2 = 1 \implies x^2 = \frac{1}{2} \implies x = \pm \frac{\sqrt{2}}{2}
+\end{aligned}
+$$
+
+Since the curves are symmetric with respect to the $y$-axis, we can consider only the positive part of the $x$-axis.
+
+Let $f(x) = 1 - x^2$ and $g(x) = x^2$.
+
+For all $x \in \left[ 0, \frac{\sqrt{2}}{2} \right]$ we have $f(x) \geq g(x)$.
+
+Then the area is given by the following definite integral:
+
+$$
+\begin{aligned}
+\text{Area} &= 2\int_0^{\frac{\sqrt{2}}{2}} (1 - x^2 - x^2) \, dx = 2\int_0^{\frac{\sqrt{2}}{2}} (1 - 2x^2) \, dx =\\
+&= 2\left[ x - \frac{2}{3}x^3 \right]_0^{\frac{\sqrt{2}}{2}} = 2\left( \frac{\sqrt{2}}{2} - \frac{4\sqrt{2}}{24} \right) =\\
+&= 2\left( \frac{\sqrt{2}}{2} - \frac{\sqrt{2}}{6} \right) = 2\left( \frac{3\sqrt{2} - \sqrt{2}}{6} \right) = \frac{2\sqrt{2}}{3}
+\end{aligned}
+$$
+
+## Example 14 (length of a curve)
+
+Compute the arc length of the graph of the function $f(x) = \sqrt{4 - x^2}$ bounded by the points $(0, 2)$ and $(2, 0)$.
+
+#### Solution
+
+From the equation of the curve we can tell that it is symmetric with respect to the $y$-axis, so we can consider only the positive part of the $x$-axis.
+
+The arc length of the curve is given by the following definite integral:
+
+$$
+\begin{aligned}
+\text{Length} &= 2 \int_0^2 \sqrt{1 + (f'(x))^2} \, dx
+\end{aligned}
+$$
+
+First we need to find the derivative of the function:
+
+$$
+\begin{aligned}
+f'(x) &= \frac{-x}{\sqrt{4 - x^2}}\\
+(f'(x))^2 &= \frac{x^2}{4 - x^2}
+\end{aligned}
+$$
+
+Then
+
+$$
+\begin{aligned}
+\text{Length} &= 2 \int_0^2 \sqrt{1 + \frac{x^2}{4 - x^2}} \, dx = 2 \int_0^2 \sqrt{\frac{4 - x^2 + x^2}{4 - x^2}} \, dx =\\
+&= 2 \int_0^2 \sqrt{\frac{4}{4 - x^2}} \, dx = 2 \int_0^2 \frac{2}{\sqrt{4 - x^2}} \, dx =\\
+&= \int_0^2 \frac{1}{\sqrt{1 - \left( \frac{x}{2} \right)^2}} \, dx
+\end{aligned}
+$$
+
+At $x = 2$ the integral is not bounded, but it is continuous on $[0, t]\ \forall t \in (0, 2)$.
+
+$$
+\begin{aligned}
+&\int_0^2 \frac{1}{\sqrt{1 - \left( \frac{x}{2} \right)^2}} \, dx =\\
+&= \lim_{t \to 2^-} \int_0^t \frac{1}{\sqrt{1 - \left( \frac{x}{2} \right)^2}} \, dx =\\
+&= \lim_{t \to 2^-} 2\left[ \arcsin \left( \frac{x}{2} \right) \right]_0^t =\\
+&= \lim_{t \to 2^-} 2\left( \arcsin \left( \frac{t}{2} \right) - \arcsin 0 \right) =\\
+&= 2\left( \arcsin 1 - \arcsin 0 \right) = 2\left( \frac{\pi}{2} - 0 \right) = \pi
+\end{aligned}
+$$
+
+## Example 15 (volume of a solid of revolution)
+
+Revolve the curve
+
+$$
+y = \sin x \quad (0 \leq x \leq \pi)
+$$
+
+around the $x$-axis and compute the volume of the solid.
+
+#### Solution
+
+The volume of the solid is given by the following definite integral:
+
+$$
+\begin{aligned}
+\text{Volume} &= \pi \int_0^{\pi} (\sin x)^2 \, dx = \pi \int_0^{\pi} \sin^2 x \, dx
+\end{aligned}
+$$
+
+Using the trigonometric identity
+
+$$
+\sin^2 x = \frac{1 - \cos 2x}{2}
+$$
+
+we have
+
+$$
+\begin{aligned}
+\text{Volume} &= \frac{\pi}{2} \int_0^{\pi} (1 - \cos 2x) \, dx = \frac{\pi}{2} \left[ x - \frac{1}{2} \sin 2x \right]_0^{\pi} =\\
+&= \frac{\pi}{2} \left( \pi - \frac{1}{2} \sin 2\pi - 0 + \frac{1}{2} \sin 0 \right) = \frac{\pi^2}{2}
+\end{aligned}
+$$
