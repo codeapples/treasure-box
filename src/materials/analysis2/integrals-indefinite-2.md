@@ -88,6 +88,40 @@ Then we compute the integral $\int f(g(t)) \cdot g'(t) \, dt$ with respect to th
 
 Finally, we replace the variable $t$ with the expression $g^{-1}(x)$ to obtain the result.
 
+#### Trigonometric substitution
+
+Advisable to watch this [video](https://www.youtube.com/watch?v=t3rzxSgvZZk) or similar, for a better understanding of trigonometric substitution.
+
+1. **Integrals of the form**
+
+$$
+\int R(x, \sqrt{a^2 - x^2}) \, dx
+$$
+
+where $R$ is a rational function and $a > 0$.
+
+In this case we choose $x = a \sin t$.
+
+2. **Integrals of the form**
+
+$$
+\int R(x, \sqrt{x^2 + a^2}) \, dx
+$$
+
+where $R$ is a rational function and $a > 0$.
+
+In this case we choose $x = a \tan t$.
+
+3. **Integrals of the form**
+
+$$
+\int R(x, \sqrt{x^2 - a^2}) \, dx
+$$
+
+where $R$ is a rational function and $a > 0$.
+
+In this case we choose $x = a \sec t$.
+
 ## Example 1 (integration by parts)
 
 Evaluate the following indefinite integral:
