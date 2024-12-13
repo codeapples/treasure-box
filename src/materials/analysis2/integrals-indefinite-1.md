@@ -708,7 +708,10 @@ $$
 
 $$
 \begin{aligned}
-\int \sin^2 x \cos^3 x \, dx &= \int \cos^2 x \sin x - \cos^4 x \sin x \, dx =\\
-&= -\frac{\cos^3 x}{3} + \frac{\cos^5 x}{5} + C
+\int \sin^2 x \cos^3 x \, dx &= \int \sin^2 x \cos^2 x \cos x \, dx =\\
+&= \int \sin^2 x (1 - \sin^2 x) \cos x \, dx =\\
+&= \int (\sin^2 x - \sin^4 x) \cos x \, dx =\\
+&= \int \sin^2 x \cos x \, dx - \int \sin^4 x \cos x \, dx =\\
+&= \frac{\sin^3 x}{3} - \frac{\sin^5 x}{5} + C
 \end{aligned}
 $$

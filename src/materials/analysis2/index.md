@@ -40,7 +40,6 @@ The materials intent to cover analysis topics that you are expected to know and 
 
 - [Sample 1](/samples/analysis2/endterm/01.pdf)
 - [Sample 2](/samples/analysis2/endterm/02.pdf)
-- [Sample 3](/samples/analysis2/endterm/03.pdf)
 
 #### Extra materials
 
