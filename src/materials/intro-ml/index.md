@@ -10,7 +10,7 @@ The materials intent to cover topics required for the exam in Introduction to Ma
 
 #### Topics
 
-- [List of topics for the exam](/extra/analysis2/topic_list.pdf)
+- [List of topics for the exam](/extra/intro-ml/topic_list.pdf)
 
 #### Materials
 
