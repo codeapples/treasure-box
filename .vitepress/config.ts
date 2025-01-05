@@ -1,12 +1,12 @@
 import { withMermaid } from 'vitepress-plugin-mermaid'
-import { align } from '@mdit/plugin-align'
+// import { align } from '@mdit/plugin-align'
 /* import { imgLazyload } from '@mdit/plugin-img-lazyload' */
-import { imgMark } from '@mdit/plugin-img-mark'
-import { imgSize, obsidianImageSize } from '@mdit/plugin-img-size'
-import { include } from '@mdit/plugin-include'
-import { figure } from '@mdit/plugin-figure'
-import { sub } from '@mdit/plugin-sub'
-import { sup } from '@mdit/plugin-sup'
+// import { imgMark } from '@mdit/plugin-img-mark'
+// import { imgSize, obsidianImageSize } from '@mdit/plugin-img-size'
+// import { include } from '@mdit/plugin-include'
+// import { figure } from '@mdit/plugin-figure'
+// import { sub } from '@mdit/plugin-sub'
+// import { sup } from '@mdit/plugin-sup'
 /* import Container from 'markdown-it-container' */
 import { nav, sidebar } from './navigation'
 import 'dotenv/config'
@@ -50,37 +50,37 @@ export default withMermaid({
     math: {
       // TODO: figure out how to use latex macros in mathjax
     },
-    config(md) {
-      md.use(align)
-      md.use(sub)
-      md.use(sup)
-      md.use(figure)
-      md.use(imgMark)
-      /* md.use(imgLazyload) */
-      md.use(imgSize)
-      md.use(obsidianImageSize)
-      md.use(include, {
-        // your options, currentPath is required
-        currentPath: (env) => env.filePath,
-        deep: true,
-      })
-      /* md.use(Container, 'card', {
-        render: (tokens, idx) => {
-          const token = tokens[idx]
+    // config(md) {
+    //   md.use(align)
+    //   md.use(sub)
+    //   md.use(sup)
+    //   md.use(figure)
+    //   md.use(imgMark)
+    //   md.use(imgLazyload)
+    //   md.use(imgSize)
+    //   md.use(obsidianImageSize)
+    //   md.use(include, {
+    //     // your options, currentPath is required
+    //     currentPath: (env) => env.filePath,
+    //     deep: true,
+    //   })
+    //   md.use(Container, 'card', {
+    //     render: (tokens, idx) => {
+    //       const token = tokens[idx]
 
-          const title = token.info.trim().slice(5).trim()
+    //       const title = token.info.trim().slice(5).trim()
 
-          const isCardBordered = token.attrs && token.attrs.some(([key]) => key === 'bordered')
+    //       const isCardBordered = token.attrs && token.attrs.some(([key]) => key === 'bordered')
 
-          const titleHtml = md.render(`## ${title}`)
-          const demoContent = title ? `<template #title>${titleHtml}</template>` : ''
+    //       const titleHtml = md.render(`## ${title}`)
+    //       const demoContent = title ? `<template #title>${titleHtml}</template>` : ''
 
-          return token.nesting === 1
-            ? `<Demo :class="[${isCardBordered} && 'vp-demo-bordered']">${demoContent}`
-            : '</Demo>\n'
-        },
-      }) */
-    },
+    //       return token.nesting === 1
+    //         ? `<Demo :class="[${isCardBordered} && 'vp-demo-bordered']">${demoContent}`
+    //         : '</Demo>\n'
+    //     },
+    //   })
+    // },
   },
 
   vite: { configFile: '.vitepress/vite.config.ts' },

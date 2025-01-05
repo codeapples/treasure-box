@@ -1,0 +1,30 @@
+diff --git a/dist/client/theme-default/components/VPSidebarItem.vue b/dist/client/theme-default/components/VPSidebarItem.vue
+index 1ce78da6eb005995c54c7f44fa2c770bc66e0dcf..9f37b43a3ea23576647c655377996939368c103d 100644
+--- a/dist/client/theme-default/components/VPSidebarItem.vue
++++ b/dist/client/theme-default/components/VPSidebarItem.vue
+@@ -109,10 +109,6 @@ function onCaretClick() {
+ 
+ <style scoped>
+ .VPSidebarItem.level-0 {
+-  padding-bottom: 24px;
+-}
+-
+-.VPSidebarItem.collapsed.level-0 {
+   padding-bottom: 10px;
+ }
+ 
+diff --git a/dist/client/theme-default/styles/base.css b/dist/client/theme-default/styles/base.css
+index 8041b6bc37a2022dcd22c015611ac7fbb9405b13..84104efcc533949eb55c59bcda3b27d7c6026475 100644
+--- a/dist/client/theme-default/styles/base.css
++++ b/dist/client/theme-default/styles/base.css
+@@ -241,10 +241,6 @@ vite-error-overlay {
+   z-index: 9999;
+ }
+ 
+-mjx-container {
+-  overflow-x: auto;
+-}
+-
+ mjx-container > svg {
+   display: inline-block;
+   margin: auto;

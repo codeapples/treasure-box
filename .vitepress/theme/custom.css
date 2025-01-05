@@ -10,3 +10,11 @@
 
   background-color: var(--vp-c-gray-3);
 }
+
+.vp-doc th {
+  text-align: center;
+}
+
+.vp-doc th, .vp-doc td {
+  padding: 6px 10px;
+}

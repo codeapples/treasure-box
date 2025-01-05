@@ -23,9 +23,14 @@ const nav: DefaultTheme.NavItem[] = [
           { text: 'Analysis II', link: '/materials/analysis2/' },
         ],
       },
+      {
+        text: 'Electives', items: [
+          { text: 'Introduction to ML', link: '/materials/intro-ml/' },
+        ],
+      },
     ],
   },
-  /* { text: 'Posts', link: '/posts/' }, */
+  // { text: 'Posts', link: '/posts/' },
   { text: 'Contributors', link: '' },
 ]
 
@@ -149,6 +154,23 @@ const sidebar: DefaultTheme.Sidebar = {
             { text: '[A2] Definite integrals', link: '/materials/analysis2/integrals-definite.md' },
             { text: '[A2] Multivariable function differentiation', link: '/materials/analysis2/multivariate-differentiation.md' },
             { text: '[A2] Multivariable function integration', link: '/materials/analysis2/multivariate-integration.md' },
+          ]
+        }
+      ],
+    },
+    {
+      text: 'Electives',
+      collapsed: false,
+      items: [
+        {
+          text: 'Introduction to Machine Learning [IML]',
+          collapsed: true,
+          items: [
+            { text: '[IML] General', link: '/materials/intro-ml/' },
+            { text: '[IML] Topics 1 - 6', link: '/materials/intro-ml/01-06.md' },
+            { text: '[IML] Topics 7 - 12', link: '/materials/intro-ml/07-12.md' },
+            { text: '[IML] Topics 13 - 18', link: '/materials/intro-ml/13-18.md' },
+            { text: '[IML] Topics 19 - 24', link: '/materials/intro-ml/19-24.md' },
           ]
         }
       ],
