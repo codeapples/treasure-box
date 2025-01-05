@@ -33,6 +33,9 @@ features:
   - title: Analysis II [A2]
     details: Materials for analysis course (3rd Semester)
     link: /materials/analysis2/
+  - title: Intro to Machine Learning [IML]
+    details: Materials for Introduction to ML course (Electives)
+    link: /materials/intro-ml/
   #- title: Feature C
   #  details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
