@@ -32,12 +32,12 @@ The materials intent to cover topics required for the exam in Introduction to Ma
 16. [The basic concept of evolutionary algorithms](/materials/intro-ml/13-18#_16-the-basic-concept-of-evolutionary-algorithms)
 17. [Optimization by genetic algorithm](/materials/intro-ml/13-18#_17-optimization-by-genetic-algorithm)
 18. [The basic concept of genetic programming. Differences compared to genetic algorithms](/materials/intro-ml/13-18#_18-the-basic-concept-of-genetic-programming-differences-compared-to-genetic-algorithms)
-19. The basic concept of swarm intelligence.
-20. Optimization by Particle Swarm Optimization.
-21. More recent swarm intelligence techniques. The firefly algorithm.
-22. The basics of neural networks.
-23. Perceptron. Perceptron training.
-24. The basic concept of CRISP-DM
+19. [The basic concept of swarm intelligence](/materials/intro-ml/19-24#_19-the-basic-concept-of-swarm-intelligence)
+20. [Optimization by Particle Swarm Optimization](/materials/intro-ml/19-24#_20-optimization-by-particle-swarm-optimization)
+21. [More recent swarm intelligence techniques. The firefly algorithm](/materials/intro-ml/19-24#_21-more-recent-swarm-intelligence-techniques-the-firefly-algorithm)
+22. [The basics of neural networks](/materials/intro-ml/19-24#_22-the-basics-of-neural-networks)
+23. [Perceptron. Perceptron training](/materials/intro-ml/19-24#_23-perceptron-perceptron-training)
+24. [The basic concept of CRISP-DM](/materials/intro-ml/19-24#_24-the-basic-concept-of-crisp-dm)
 
 #### Samples
 
