@@ -26,12 +26,12 @@ The materials intent to cover topics required for the exam in Introduction to Ma
 10. [The basic concept of unsupervised learning](/materials/intro-ml/07-12#_10-the-basic-concept-of-unsupervised-learning)
 11. [The working mechanism of k-means algorithm](/materials/intro-ml/07-12#_11-the-working-mechanism-of-k-means-algorithm)
 12. [The mechanism of reinforcement learning](/materials/intro-ml/07-12#_12-the-mechanism-of-reinforcement-learning)
-13. The Q-learning method.
-14. Deep Learning methods. Value learning and policy learning.
-15. The policy gradient algorithm.
-16. The basic concept of evolutionary algorithms.
-17. Optimization by genetic algorithm.
-18. The basic concept of genetic programming. Differences compared to genetic algorithms.
+13. [The Q-learning method](/materials/intro-ml/13-18#_13-the-q-learning-method)
+14. [Deep Learning methods. Value learning and policy learning](/materials/intro-ml/13-18#_14-deep-learning-methods-value-learning-and-policy-learning)
+15. [The policy gradient algorithm](/materials/intro-ml/13-18#_15-the-policy-gradient-algorithm)
+16. [The basic concept of evolutionary algorithms](/materials/intro-ml/13-18#_16-the-basic-concept-of-evolutionary-algorithms)
+17. [Optimization by genetic algorithm](/materials/intro-ml/13-18#_17-optimization-by-genetic-algorithm)
+18. [The basic concept of genetic programming. Differences compared to genetic algorithms](/materials/intro-ml/13-18#_18-the-basic-concept-of-genetic-programming-differences-compared-to-genetic-algorithms)
 19. The basic concept of swarm intelligence.
 20. Optimization by Particle Swarm Optimization.
 21. More recent swarm intelligence techniques. The firefly algorithm.
