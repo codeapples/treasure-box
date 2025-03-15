@@ -24,6 +24,11 @@ const nav: DefaultTheme.NavItem[] = [
         ],
       },
       {
+        text: 'Semester 5', items: [
+          { text: 'Probability and Statistics', link: '/materials/probability-statistics/' },
+        ],
+      },
+      {
         text: 'Electives', items: [
           { text: 'Introduction to ML', link: '/materials/intro-ml/' },
         ],
@@ -156,6 +161,21 @@ const sidebar: DefaultTheme.Sidebar = {
             { text: '[A2] Multivariable function integration', link: '/materials/analysis2/multivariate-integration.md' },
           ]
         }
+      ],
+    },
+    {
+      text: 'Semester 5',
+      collapsed: false,
+      items: [
+        {
+          text: 'Introduction to Probability and Statistics [IPS]',
+          collapsed: true,
+          items: [
+            { text: '[IP] General', link: '/materials/probability-statistics/' },
+            { text: '[IP] Basic Probability', link: '/materials/probability-statistics/basic-probability.md' },
+          ],
+        },
+        {}
       ],
     },
     {
