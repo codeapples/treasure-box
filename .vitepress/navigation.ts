@@ -171,8 +171,9 @@ const sidebar: DefaultTheme.Sidebar = {
           text: 'Introduction to Probability and Statistics [IPS]',
           collapsed: true,
           items: [
-            { text: '[IP] General', link: '/materials/probability-statistics/' },
-            { text: '[IP] Basic Probability', link: '/materials/probability-statistics/basic-probability.md' },
+            { text: '[ISP] General', link: '/materials/probability-statistics/' },
+            { text: '[ISP] Basic Probability', link: '/materials/probability-statistics/basic-probability.md' },
+            { text: '[ISP] Types of Distribution', link: '/materials/probability-statistics/types-of-distribution.md' },
           ],
         },
         {}
