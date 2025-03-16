@@ -1,8 +1,8 @@
 ---
-title: '[ISP] Types of Distribution'
+title: '[ISP] Types of distributions'
 ---
 
-# Types of Distribution
+# Types of distributions
 
 ## Random variable
 
@@ -21,7 +21,7 @@ A random variable is discrete if its range is finite or countably infinite.
 The expectation of a discrete random variable is defined by
 
 $$
-\mathbb{E}(X) = \sum_{j=1}^{\infty} x_j \cdot \mathbb{P}(X = x_j), \text{ provided that } \sum_{j=1}^{\infty} |x_j| \cdot \mathbb{P}(X = x_j) < \infty
+E(X) = \sum_{j=1}^{\infty} x_j \cdot P(X = x_j), \text{ provided that } \sum_{j=1}^{\infty} |x_j| \cdot P(X = x_j) < \infty
 $$
 
 where $x_1, x_2, \ldots$ are the possible values of $X$.
@@ -31,10 +31,10 @@ where $x_1, x_2, \ldots$ are the possible values of $X$.
 The variance of a random variable is defined by
 
 $$
-\text{Var}(X) = \mathbb{E}((X - \mathbb{E}(X))^2) = \mathbb{E}(X^2) - (\mathbb{E}(X))^2,
+\text{Var}(X) = E((X - E(X))^2) = E(X^2) - (E(X))^2,
 $$
 
-provided that $\mathbb{E}(X^2)$ is finite (there exist random variables with finite expectation but not well-defined variance).
+provided that $E(X^2)$ is finite (there exist random variables with finite expectation but not well-defined variance).
 
 The square root of $\text{Var}(X)$ is called the standard deviation.
 
@@ -43,7 +43,7 @@ The square root of $\text{Var}(X)$ is called the standard deviation.
 A random variable has binomial distribution with parameters $n \geq 1$ and $0 < p < 1$, if
 
 $$
-\mathbb{P}(X = k) = \binom{n}{k} p^k (1 - p)^{n-k} \quad \text{for all } k = 0, 1, \ldots, n.
+P(X = k) = \binom{n}{k} p^k (1 - p)^{n-k} \quad \text{for all } k = 0, 1, \ldots, n.
 $$
 
 Then the expectation of $X$ is $np$, and its variance is $np(1 - p)$.
@@ -63,10 +63,10 @@ Example: Number of heads in 10 coin flips.
 A random variable has Poisson distribution with parameter $\lambda > 0$, if
 
 $$
-\mathbb{P}(X = k) = \frac{\lambda^k}{k!} e^{-\lambda} \quad \text{for all } k = 0, 1, 2, \ldots
+P(X = k) = \frac{\lambda^k}{k!} e^{-\lambda} \quad \text{for all } k = 0, 1, 2, \ldots
 $$
 
-Then $\mathbb{E}(X) = \text{Var}(X) = \lambda$.
+Then $E(X) = \text{Var}(X) = \lambda$.
 
 Key Characteristics:
 - Events occur in a fixed interval of time or space (e.g., hours, area).
@@ -91,13 +91,13 @@ number of participants.
 Let X be the number of guests. The expectation is as follows by definition:
 
 $$
-\mathbb{E}(X) = 8 \cdot \frac{1}{4} + 9 \cdot \frac{1}{3} + 10 \cdot \frac{5}{12} = 9.17
+E(X) = 8 \cdot \frac{1}{4} + 9 \cdot \frac{1}{3} + 10 \cdot \frac{5}{12} = 9.17
 $$
 
 The variance is as follows:
 
 $$
-\mathbb{E}(X^2) − \mathbb{E}(X)^2 = \frac{1}{4} · 8^2 + \frac{1}{3} · 9^2 + \frac{5}{12} · 10^2 − 9.17^2 = 84.67 − 9.17^2 = 0.58
+E(X^2) − E(X)^2 = \frac{1}{4} · 8^2 + \frac{1}{3} · 9^2 + \frac{5}{12} · 10^2 − 9.17^2 = 84.67 − 9.17^2 = 0.58
 $$
 
 The standard deviation: $\sqrt{0.58} = 0.76$
@@ -119,7 +119,7 @@ are 0 downloads within this hour?
 
 a) By the definition of the Poisson distribution, we have
 
-$$\mathbb{P}(X = 0) = e^{-\lambda} \Rightarrow \lambda = 2$$
+$$P(X = 0) = e^{-\lambda} \Rightarrow \lambda = 2$$
 
 By the properties of the Poisson distribution, we have $Var(X) = \lambda = 2$.
 

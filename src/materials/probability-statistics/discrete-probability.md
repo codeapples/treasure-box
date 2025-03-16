@@ -1,28 +1,28 @@
 ---
-title: '[ISP] Basic Probability'
+title: '[ISP] Discrete Probability'
 ---
 
-# Basic Probability
+# Discrete Probability
 
 $\Omega$ - Set of all outcomes ($\Omega$ = 1)
 
 $A$ - Event $A$ ($A \in \mathcal{A}$)
 
-$\mathbb{P} : \mathcal{A} \mapsto [0, 1]$ - Probability function
+$P : \mathcal{A} \mapsto [0, 1]$ - Probability function
 
-The triple $(\Omega, \mathcal{A}, \mathbb{P})$ is a **probability field** if:
+The triple $(\Omega, \mathcal{A}, P)$ is a **probability field** if:
 
 - The **sample set** $\Omega$ is a non-empty set.
 - $\mathcal{A} \subseteq \mathcal{P}(\Omega)$ (where $\mathcal{P}(\Omega)$ is the power set of $\Omega$) is the set of **events** (or **$\sigma$-algebra of events**), meaning:
   - (i) $\Omega \in \mathcal{A}$
   - (ii) If $A_1, A_2, \ldots \in \mathcal{A}$, then $\bigcup_{n=1}^{\infty} A_n \in \mathcal{A}$ (closed under countable unions)
   - (iii) If $A \in \mathcal{A}$, then $\Omega \setminus A \in \mathcal{A}$ (closed under complements)
-- The **probability** $\mathbb{P}: \mathcal{A} \to [0,1]$ is a function such that:
-  - (i) $\mathbb{P}(\Omega) = 1$ (the probability of the entire sample space is 1)
+- The **probability** $P: \mathcal{A} \to [0,1]$ is a function such that:
+  - (i) $P(\Omega) = 1$ (the probability of the entire sample space is 1)
   - (ii) If $A_1, A_2, \ldots \in \mathcal{A}$ are pairwise disjoint (i.e., $A_i \cap A_j = \emptyset$ for all $1 \leq i < j$), then
 
 $$
-\mathbb{P}\left( \bigcup_{n=1}^{\infty} A_n \right) = \sum_{n=1}^{\infty} \mathbb{P}(A_n)
+P\left( \bigcup_{n=1}^{\infty} A_n \right) = \sum_{n=1}^{\infty} P(A_n)
 $$
 
 This means the probability of the union of countably many pairwise disjoint sets is the sum of their individual probabilities.
@@ -40,29 +40,29 @@ $$
 Events $A, B \in \mathcal{A}$ are independent if:
 
 $$
-\mathbb{P}(A \cap B) = \mathbb{P}(A) \cdot \mathbb{P}(B)
+P(A \cap B) = P(A) \cdot P(B)
 $$
 
 The events $A_1, A_2, \ldots, A_n \in \mathcal{A}$ are independent if for every $k \geq 1$ and $1 \leq i_1 < i_2 < \ldots < i_k \leq n$ we have:
 
 $$
-\mathbb{P}(A_{i_1} \cap A_{i_2} \cap \ldots \cap A_{i_k}) = \mathbb{P}(A_{i_1}) \mathbb{P}(A_{i_2}) \ldots \mathbb{P}(A_{i_k})
+P(A_{i_1} \cap A_{i_2} \cap \ldots \cap A_{i_k}) = P(A_{i_1}) P(A_{i_2}) \ldots P(A_{i_k})
 $$
 
 ## Conditional Probability
 
-For $A, B \in \mathcal{A}$ with $\mathbb{P}(B) > 0$
+For $A, B \in \mathcal{A}$ with $P(B) > 0$
 
 Given that $B$ occurs, what is the probability that $A$ also occurs?
 
 $$
-\mathbb{P}(A \mid B) = \frac{\text{probability of the intersection}}{\text{probability of condition}} = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)}
+P(A \mid B) = \frac{\text{probability of the intersection}}{\text{probability of condition}} = \frac{P(A \cap B)}{P(B)}
 $$
 
 If $A$ and $B$ are independent:
 
 $$
-\mathbb{P}(A \mid B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} = \frac{\mathbb{P}(A) \mathbb{P}(B)}{\mathbb{P}(B)} = \mathbb{P}(A)
+P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A) P(B)}{P(B)} = P(A)
 $$
 
 ## Law of Total Probability
@@ -70,15 +70,15 @@ $$
 For an event $A \in \mathcal{A}$ and a partition $B_1, B_2, \ldots, B_n$ of the sample space, we have:
 
 $$
-\mathbb{P}(A) = \mathbb{P}(A \mid B_1) \mathbb{P}(B_1) + \ldots + \mathbb{P}(A \mid B_n) \mathbb{P}(B_n) = \sum_{j=1}^n \mathbb{P}(A \mid B_j) \mathbb{P}(B_j).
+P(A) = P(A \mid B_1) P(B_1) + \ldots + P(A \mid B_n) P(B_n) = \sum_{j=1}^n P(A \mid B_j) P(B_j).
 $$
 
 ## Bayes' Theorem
 
-For an event $A \in \mathcal{A}$ with $\mathbb{P}(A) > 0$ and a partition $B_1, B_2, \ldots, B_n$:
+For an event $A \in \mathcal{A}$ with $P(A) > 0$ and a partition $B_1, B_2, \ldots, B_n$:
 
 $$
-\mathbb{P}(B_k \mid A) = \frac{\mathbb{P}(A \mid B_k) \mathbb{P}(B_k)}{\mathbb{P}(A \mid B_1) \mathbb{P}(B_1) + \cdots + \mathbb{P}(A \mid B_n) \mathbb{P}(B_n)} = \frac{\mathbb{P}(A \mid B_k) \mathbb{P}(B_k)}{\sum_{j=1}^n \mathbb{P}(A \mid B_j) \mathbb{P}(B_j)}.
+P(B_k \mid A) = \frac{P(A \mid B_k) P(B_k)}{P(A \mid B_1) P(B_1) + \cdots + P(A \mid B_n) P(B_n)} = \frac{P(A \mid B_k) P(B_k)}{\sum_{j=1}^n P(A \mid B_j) P(B_j)}.
 $$
 
 ## Inclusion-Exclusion Formula
@@ -86,20 +86,20 @@ $$
 For $n$ events $A_1, A_2, \ldots, A_n$:
 
 $$
-\mathbb{P}\left(\bigcup_{i=1}^n A_i\right) = \sum_{k=1}^n (-1)^{k+1} \sum_{1 \leq i_1 < i_2 < \ldots < i_k \leq n} \mathbb{P}(A_{i_1} \cap A_{i_2} \cap \ldots \cap A_{i_k})
+P\left(\bigcup_{i=1}^n A_i\right) = \sum_{k=1}^n (-1)^{k+1} \sum_{1 \leq i_1 < i_2 < \ldots < i_k \leq n} P(A_{i_1} \cap A_{i_2} \cap \ldots \cap A_{i_k})
 $$
 
 
 Example for two events $(n = 2)$: Probability that at least A or B occurs:
 
 $$
-\mathbb{P}(A \cup B) = \mathbb{P}(A) + \mathbb{P}(B) - \mathbb{P}(A \cap B)
+P(A \cup B) = P(A) + P(B) - P(A \cap B)
 $$
 
 Example for three events $(n = 3)$: Probability that at least A, B or C occurs:
 
 $$
-\mathbb{P}(A \cup B \cup C) = \mathbb{P}(A) + \mathbb{P}(B) + \mathbb{P}(C) - \mathbb{P}(A \cap B) - \mathbb{P}(A \cap C) - \mathbb{P}(B \cap C) + \mathbb{P}(A \cap B \cap C)
+P(A \cup B \cup C) = P(A) + P(B) + P(C) - P(A \cap B) - P(A \cap C) - P(B \cap C) + P(A \cap B \cap C)
 $$
 
 ## Example 1
@@ -177,7 +177,7 @@ T : the answer is true; A: Athens; M : Mycenae. S: Sparta
 By using Bayes's theorem for the partition A.M.S and the event T we obtain that
 
 $$
-\mathbb{P}(A \mid T) = \frac{\mathbb{P}(A \cap T)}{\mathbb{P}(T)} = \frac{\mathbb{P}(A) \cdot \mathbb{P}(T \mid A)}{\mathbb{P}(T)} = \frac{\frac{1}{3} \cdot \frac{1}{3}}{\frac{1}{3} \cdot \frac{1}{3} + \frac{1}{3} \cdot \frac{1}{2} + \frac{1}{3} \cdot 1} = 0.182
+P(A \mid T) = \frac{P(A \cap T)}{P(T)} = \frac{P(A) \cdot P(T \mid A)}{P(T)} = \frac{\frac{1}{3} \cdot \frac{1}{3}}{\frac{1}{3} \cdot \frac{1}{3} + \frac{1}{3} \cdot \frac{1}{2} + \frac{1}{3} \cdot 1} = 0.182
 $$
 
 ## Example 5
@@ -253,7 +253,7 @@ beginning. Then $\{B.\overline{B}\}$ is a partition of the sample space, with bo
 We apply the law of total probability:
 
 $$
-\mathbb{P}(A) = \mathbb{P}(A|B)\mathbb{P}(B) + \mathbb{P}(A|\overline{B})\mathbb{P}(\overline{B}) = 0 · \frac{1}{3} + 1 · \frac{2}{3} = \frac{2}{3}.
+P(A) = P(A|B)P(B) + P(A|\overline{B})P(\overline{B}) = 0 · \frac{1}{3} + 1 · \frac{2}{3} = \frac{2}{3}.
 $$
 
 $\frac{2}{3} > \frac{1}{3}$, therefore it is worth changing the door.
