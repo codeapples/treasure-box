@@ -16,42 +16,42 @@
   },
   "dependencies": {
     "@kinde-oss/kinde-auth-pkce-js": "^4.2.2",
-    "axios": "^1.7.9"
+    "axios": "^1.8.3"
   },
   "devDependencies": {
-    "@iconify-json/gravity-ui": "^1.2.2",
-    "@mdit/plugin-align": "^0.14.0",
-    "@mdit/plugin-figure": "^0.14.0",
-    "@mdit/plugin-img-lazyload": "^0.14.0",
-    "@mdit/plugin-img-mark": "^0.14.0",
-    "@mdit/plugin-img-size": "^0.14.0",
-    "@mdit/plugin-include": "^0.14.0",
-    "@mdit/plugin-sub": "^0.14.0",
-    "@mdit/plugin-sup": "^0.14.0",
-    "@sxzz/eslint-config": "^4.5.1",
+    "@iconify-json/gravity-ui": "^1.2.5",
+    "@mdit/plugin-align": "^0.16.0",
+    "@mdit/plugin-figure": "0.16.6-cjs.0",
+    "@mdit/plugin-img-lazyload": "^0.16.0",
+    "@mdit/plugin-img-mark": "^0.16.0",
+    "@mdit/plugin-img-size": "^0.16.0",
+    "@mdit/plugin-include": "^0.16.0",
+    "@mdit/plugin-sub": "^0.16.0",
+    "@mdit/plugin-sup": "^0.16.0",
+    "@sxzz/eslint-config": "^4.6.0",
     "@types/markdown-it": "^14.1.2",
     "@types/markdown-it-container": "^2.0.10",
-    "@types/node": "^20.12.11",
+    "@types/node": "^22.13.10",
     "dotenv": "^16.4.7",
     "eslint": "npm:eslint-ts-patch@9.8.0-1",
     "eslint-ts-patch": "9.8.0-1",
     "markdown-it-container": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
-    "mermaid": "^11.4.1",
-    "pinia": "^2.1.7",
-    "prettier": "^3.4.2",
-    "unocss": "^0.60.1",
-    "unplugin-vue-components": "^0.27.5",
-    "vitepress": "1.5.0",
-    "vitepress-markdown-timeline": "^1.2.1",
-    "vitepress-plugin-codeblocks-fold": "^1.2.28",
-    "vitepress-plugin-image-viewer": "^1.1.5",
+    "mermaid": "^11.5.0",
+    "pinia": "^3.0.1",
+    "prettier": "^3.5.3",
+    "unocss": "66.1.0-beta.6",
+    "unplugin-vue-components": "^28.4.1",
+    "vitepress": "1.6.3",
+    "vitepress-markdown-timeline": "^1.2.2",
+    "vitepress-plugin-codeblocks-fold": "^1.2.35",
+    "vitepress-plugin-image-viewer": "^1.1.6",
     "vitepress-plugin-mermaid": "^2.0.17",
     "vitepress-plugin-nprogress": "^0.0.4"
   },
   "pnpm": {
     "patchedDependencies": {
-      "vitepress@1.5.0": "patches/vitepress@1.5.0.patch"
+      "vitepress": "patches/vitepress@1.6.3.patch"
     }
   }
 }

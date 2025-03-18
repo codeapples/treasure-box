@@ -1,5 +1,5 @@
 diff --git a/dist/client/theme-default/components/VPSidebarItem.vue b/dist/client/theme-default/components/VPSidebarItem.vue
-index 1ce78da6eb005995c54c7f44fa2c770bc66e0dcf..9f37b43a3ea23576647c655377996939368c103d 100644
+index 022584e31d6e67a7f29e4ac4f9ccd52e1647cce7..635caad43bcdcdb46a93ca3dd2f78e7d3be3efb6 100644
 --- a/dist/client/theme-default/components/VPSidebarItem.vue
 +++ b/dist/client/theme-default/components/VPSidebarItem.vue
 @@ -109,10 +109,6 @@ function onCaretClick() {
