@@ -42,7 +42,7 @@
     "prettier": "^3.5.3",
     "unocss": "66.1.0-beta.6",
     "unplugin-vue-components": "^28.4.1",
-    "vitepress": "1.6.3",
+    "vitepress": "=1.6.3",
     "vitepress-markdown-timeline": "^1.2.2",
     "vitepress-plugin-codeblocks-fold": "^1.2.35",
     "vitepress-plugin-image-viewer": "^1.1.6",
