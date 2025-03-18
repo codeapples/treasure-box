@@ -24,6 +24,11 @@ const nav: DefaultTheme.NavItem[] = [
         ],
       },
       {
+        text: 'Semester 5', items: [
+          { text: 'Probability and Statistics', link: '/materials/probability-statistics/' },
+        ],
+      },
+      {
         text: 'Electives', items: [
           { text: 'Introduction to ML', link: '/materials/intro-ml/' },
         ],
@@ -156,6 +161,25 @@ const sidebar: DefaultTheme.Sidebar = {
             { text: '[A2] Multivariable function integration', link: '/materials/analysis2/multivariate-integration.md' },
           ]
         }
+      ],
+    },
+    {
+      text: 'Semester 5',
+      collapsed: false,
+      items: [
+        {
+          text: 'Introduction to Probability and Statistics [IPS]',
+          collapsed: true,
+          items: [
+            { text: '[ISP] General', link: '/materials/probability-statistics/' },
+            { text: '[ISP] Discrete Probability', link: '/materials/probability-statistics/discrete-probability.md' },
+            { text: '[ISP] Types of Distributions', link: '/materials/probability-statistics/types-of-distributions.md' },
+            { text: '[ISP] Continuous Probability', link: '/materials/probability-statistics/continuous-probability.md' },
+            { text: '[ISP] Normal Distribution', link: '/materials/probability-statistics/normal-distribution.md' },
+            { text: '[ISP] Covariance and Correlation Coefficient', link: '/materials/probability-statistics/covariance-and-correlation-coefficient.md' },
+          ],
+        },
+        {}
       ],
     },
     {

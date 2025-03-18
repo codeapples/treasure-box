@@ -33,6 +33,9 @@ features:
   - title: Analysis II [A2]
     details: Materials for analysis course (3rd Semester)
     link: /materials/analysis2/
+  - title: Probability and Statistics [IPS]
+    details: Materials for Probability and Statistics course (5th Semester)
+    link: /materials/probability-statistics/
   - title: Intro to Machine Learning [IML]
     details: Materials for Introduction to ML course (Electives)
     link: /materials/intro-ml/
