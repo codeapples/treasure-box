@@ -40,8 +40,6 @@ Easy to see that
 
 If $f(0) = 2$ and $f(1) = -1 \implies$ by $IVT$ the function intersects the $x$-axis in the interval $(0, 1)$.
 
-If $f(-1) = -1$ and $f(-2) = 2 \implies$ by $IVT$ the function intersects the $x$-axis in the interval $(-2, -1)$.
-
 3. Monotonicity and extreme values
 
 $$
