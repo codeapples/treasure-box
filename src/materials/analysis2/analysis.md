@@ -113,10 +113,12 @@ $$
     {
       "fn": "2 - 2x^2 - x^3",
       "graphType": "polyline",
-      "color": "blue",
       "derivative": {
         "fn": "-4x - 3x^2",
         "updateOnMouseMove": true
+      },
+      "attr": {
+        "data-fn": "2-2x^2-x^3"
       }
     },
     {
@@ -128,7 +130,8 @@ $$
       "attr": {
         "r": 4,
         "fill": "red",
-        "stroke": "red"
+        "stroke": "red",
+        "data-point": "(0,2)"
       }
     },
     {
@@ -148,7 +151,8 @@ $$
       "attr": {
         "r": 4,
         "fill": "red",
-        "stroke": "red"
+        "stroke": "red",
+        "data-point": "(-2/3,1.4)"
       }
     },
     {
@@ -168,7 +172,8 @@ $$
       "attr": {
         "r": 4,
         "fill": "red",
-        "stroke": "red"
+        "stroke": "red",
+        "data-point": "(-4/3,0.8)"
       }
     },
     {

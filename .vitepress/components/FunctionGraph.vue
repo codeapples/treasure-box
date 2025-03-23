@@ -1,5 +1,5 @@
 <template>
-  <div ref="container"></div>
+  <div class="dark:bg-dark dark:color-white" ref="container"></div>
 </template>
 
 <script setup>
@@ -26,3 +26,55 @@ onMounted(() => {
   })
 })
 </script>
+
+<style>
+/* Dark theme */
+.dark .fn-text {
+  fill: #fff;
+}
+
+.dark .x.origin,
+.dark .y.origin,
+.dark .domain,
+.dark line {
+  stroke: #fff;
+}
+
+.dark .graph [data-fn] {
+  stroke: #fff;
+}
+
+.dark .graph [data-point] {
+  fill: #e23838;
+}
+
+.dark .derivative path {
+  stroke: #00ffc8;
+}
+
+
+.dark .tip .inner-tip path,
+.dark .tip .inner-tip circle,
+.dark .tip .inner-tip text {
+  fill: #fff;
+}
+
+/* Light theme */
+.tip .inner-tip path,
+.tip .inner-tip circle,
+.tip .inner-tip text {
+  fill: #007BFF;
+}
+
+.graph [data-fn] {
+  stroke: #007BFF;
+}
+
+.graph [data-point] {
+  fill: #ff3232;
+}
+
+.derivative path {
+  stroke: #007BFF;
+}
+</style>
