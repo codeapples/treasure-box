@@ -35,6 +35,8 @@
     "dotenv": "^16.4.7",
     "eslint": "npm:eslint-ts-patch@9.8.0-1",
     "eslint-ts-patch": "9.8.0-1",
+    "function-plot": "^1.25.1",
+    "markdown-it": "^14.1.0",
     "markdown-it-container": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
     "mermaid": "^11.5.0",

@@ -10,6 +10,7 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 /* import Container from 'markdown-it-container' */
 import { nav, sidebar } from './navigation'
 import 'dotenv/config'
+import fnGraph from './plugins/fn-graph'
 
 const gID = process.env.GA_ID || 'XXXXXXXXXX'
 
@@ -49,6 +50,9 @@ export default withMermaid({
   markdown: {
     math: {
       // TODO: figure out how to use latex macros in mathjax
+    },
+    config(md) {
+      md.use(fnGraph)
     },
     // config(md) {
     //   md.use(align)

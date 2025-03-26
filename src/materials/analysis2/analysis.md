@@ -96,21 +96,92 @@ $$
 
 7. Graph
 
-TODO: make markdown render functions :\
-
 ```graph
 {
-  "title": "f(x) = 2 - 2x^2 - x^3",
-  "x-axis": true,
-  "y-axis": true,
-  "x-min": -3,
-  "x-max": 3,
-  "y-min": -3,
-  "y-max": 3,
+  "width": 700,
+  "height": 600,
+  "grid": true,
+  "disableZoom": "true",
+
+  "xAxis": {
+    "domain": [-3, 3]
+  },
+  "yAxis": {
+    "domain": [-3, 3]
+  },
   "data": [
     {
       "fn": "2 - 2x^2 - x^3",
-      "color": "red"
+      "graphType": "polyline",
+      "derivative": {
+        "fn": "-4x - 3x^2",
+        "updateOnMouseMove": true
+      },
+      "attr": {
+        "data-fn": "2-2x^2-x^3"
+      }
+    },
+    {
+      "fnType": "points",
+      "graphType": "scatter",
+      "points": [
+        [0, 2]
+      ],
+      "attr": {
+        "r": 4,
+        "fill": "red",
+        "stroke": "red",
+        "data-point": "(0,2)"
+      }
+    },
+    {
+      "fnType": "text",
+      "graphType": "text",
+      "location": [-0.9, 2.05],
+      "text": "local maximum",
+      "color": "#000"
+    },
+
+    {
+      "fnType": "points",
+      "graphType": "scatter",
+      "points": [
+        [-0.6666666667, 1.4074074074074074]
+      ],
+      "attr": {
+        "r": 4,
+        "fill": "red",
+        "stroke": "red",
+        "data-point": "(-2/3,1.4)"
+      }
+    },
+    {
+      "fnType": "text",
+      "graphType": "text",
+      "location": [-0.58, 1.37],
+      "text": "inflection point",
+      "color": "#000"
+    },
+
+    {
+      "fnType": "points",
+      "graphType": "scatter",
+      "points": [
+        [-1.3333333333, 0.8148148148148144]
+      ],
+      "attr": {
+        "r": 4,
+        "fill": "red",
+        "stroke": "red",
+        "data-point": "(-4/3,0.8)"
+      }
+    },
+    {
+      "fnType": "text",
+      "graphType": "text",
+      "location": [-1.5, 0.65],
+      "text": "local minimum",
+      "color": "#000"
     }
   ]
 }

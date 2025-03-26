@@ -17,4 +17,7 @@ export default defineConfig({
     }),
     UnoCSS(fileURLToPath(new URL('./uno.config.ts', import.meta.url))),
   ],
+  ssr: {
+    noExternal: ['function-plot', 'd3', /d3-[a-z-]+/],
+  },
 })

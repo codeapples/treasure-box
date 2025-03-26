@@ -9,6 +9,7 @@ import 'vitepress-plugin-codeblocks-fold/style/index.css'
 import './style.css'
 import './custom.css'
 import CustomLayout from '../components/CustomLayout.vue'
+import FunctionGraph from '../components/FunctionGraph.vue'
 
 const theme: Theme = {
   extends: DefaultTheme,
@@ -16,6 +17,7 @@ const theme: Theme = {
   enhanceApp(ctx) {
     vitepressNprogress(ctx)
     ctx.app.use(createPinia())
+    ctx.app.component('FunctionGraph', FunctionGraph)
   },
   setup() {
     // get frontmatter and route
