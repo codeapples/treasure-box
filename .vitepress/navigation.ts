@@ -24,6 +24,11 @@ const nav: DefaultTheme.NavItem[] = [
         ],
       },
       {
+        text: 'Semester 4', items: [
+          { text: 'Fundamentals of Theory of Computation', link: '/materials/fotoc/' },
+        ],
+      },
+      {
         text: 'Semester 5', items: [
           { text: 'Probability and Statistics', link: '/materials/probability-statistics/' },
         ],
@@ -159,6 +164,22 @@ const sidebar: DefaultTheme.Sidebar = {
             { text: '[A2] Definite integrals', link: '/materials/analysis2/integrals-definite.md' },
             { text: '[A2] Multivariable function differentiation', link: '/materials/analysis2/multivariate-differentiation.md' },
             { text: '[A2] Multivariable function integration', link: '/materials/analysis2/multivariate-integration.md' },
+          ]
+        }
+      ],
+    },
+    {
+      text: 'Semester 4',
+      collapsed: false,
+      items: [
+        {
+          text: 'Fundamentals of Theory of Computation [FOTOC]',
+          collapsed: true,
+          items: [
+            { text: '[FOTOC] General', link: '/materials/fotoc/' },
+            { text: '[FOTOC] Languages', link: '/materials/fotoc/languages.md' },
+            { text: '[FOTOC] Grammars', link: '/materials/fotoc/grammars.md' },
+            { text: '[FOTOC] Regular expressions', link: '/materials/fotoc/regex.md' },
           ]
         }
       ],

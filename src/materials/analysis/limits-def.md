@@ -343,11 +343,11 @@ $$
 Find order preserving lower bound (OPL) for $\frac{n^4 - 5n^3 + 8n + 3}{5n^3 + 3n^2 - 7}$:
 
 $$
-\frac{n^4 - 5n^3 + 8n + 3}{5n^3 + 3n^2 - 7} > \frac{\frac{1}{2}n^4 + \frac{1}{2}n^3(n - 10)}{8n^3} > \frac{n}{16} \text{ where } n \geq 10
+\frac{n^4 - 5n^3 + 8n + 3}{5n^3 + 3n^2 - 7} > \frac{\frac{1}{2}n^4 + \frac{1}{2}n^3(n - 10)}{8n^3} > \frac{n}{16} \quad \text{ where } n \geq 10
 $$
 
 $$
-\frac{n}{16} > -P\ \Leftrightarrow\ n > -16P \text{ where } n \geq 10
+\frac{n}{16} > -P\ \Leftrightarrow\ n > -16P \quad \text{ where } n \geq 10
 $$
 
 Now we can fix $N$, and since $N \in \mathbb{N}$ we need to take the integer part of $-16P$.
