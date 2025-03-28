@@ -15,6 +15,7 @@ The materials intent to cover analysis topics that you are expected to know and 
 - [Extreme values of functions](/materials/analysis2/extremes.md)
 - [L'Hôpital's rule](/materials/analysis2/LH.md)
 - [Taylor polynomials](/materials/analysis2/taylor.md)
+- [Function analysis](/materials/analysis2/analysis.md)
 
 #### Samples
 
