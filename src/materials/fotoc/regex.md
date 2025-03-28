@@ -158,10 +158,230 @@ Given a Type 3 grammar $G = (N, \Sigma, P, S)$, we can construct a grammar for i
 - **Explanation**: The new start symbol $S'$ can either produce $\varepsilon$ (for zero repetitions) or start a derivation with $S$. Each time $G$ produces a terminal string $u$, the modified rule $A \to u S$ allows restarting the derivation to produce another string, enabling zero or more repetitions. The rules are of Type 3 form, and the grammar remains Type 3.
 - **Language Generated**: $L(G_{\text{Kleene-star}}) = L(G)^*$.
 
-## Connection to the Chomsky Hierarchy
-
-Regular expressions are a formal tool for describing Type 3 (regular) languages in the Chomsky Hierarchy. The constructions above show that for any regular expression built using union, concatenation, and Kleene star, we can construct an equivalent Type 3 grammar. Conversely, every Type 3 grammar generates a regular language that can be described by a regular expression (this is a consequence of the Kleene Theorem, which states that regular languages are exactly those languages that can be described by regular expressions). Thus, regular expressions are both powerful and sufficient to describe all regular languages, answering the motivational question posed earlier.
-
 ### Computational Model
 
 Regular languages, as defined by regular expressions or Type 3 grammars, correspond to languages accepted by **finite automata** (the simplest computational model in the Chomsky Hierarchy). This connection makes regular expressions a practical tool for designing and understanding finite state machines in computer science applications.
+
+## Notable Regular Expressions
+
+- arbitrary string constructed with two symbols:
+
+$$
+(a + b)^*
+$$
+
+- arbitrary string constructed with three symbols, which doesn't allow certain substrings:
+
+$$
+\begin{align}
+ab &\nsubseteq (b + a^*c)^*a^*\\
+ac &\nsubseteq (c + a^*b)^*a^*\\
+aa &\nsubseteq (b + c + a(b + c))^*(a + \varepsilon)
+\end{align}
+$$
+
+- arbitrary string constructed with two symbols, with even number of $a$'s:
+
+$$
+(b^*ab^*a)^*b^*
+$$
+
+- arbitrary string constructed with two symbols, with odd number of $a$'s:
+
+$$
+(b^*ab^*a)^*b^*ab^*
+$$
+
+## Example 1
+
+Determine the language described by the following regular expression.
+
+$$
+0(0 + 1)^*1
+$$
+
+#### Solution
+
+**Break Down the Expression**:
+
+- $0$: The string must start with a $0$.
+- $(0 + 1)^*$: After the initial $0$, there can be any combination of $0$'s and $1$'s (including none).
+- $1$: The string must end with a $1$.
+
+**Language Generated**:
+
+$$
+L(0(0 + 1)^*1) = \{0w1 \mid w \in \{0, 1\}^*\}
+$$
+
+## Example 2
+
+Determine the language described by the following regular expression.
+
+$$
+((a + b)^*a(a + b)^*)^+
+$$
+
+#### Solution
+
+**Break Down the Expression**:
+
+- $((a + b)^*a(a + b)^*)^+$: The outer $^+$ indicates one or more repetitions of the inner expression.
+- $(a + b)^*$: Any combination of $a$'s and $b$'s (including none).
+- $a$: The string must contain at least one $a$.
+
+**Language Generated**:
+
+$$
+L(((a + b)^*a(a + b)^*)^+) = \{w \in \{a, b\}^* \mid N_a(w) \geq 1\}
+$$
+
+## Example 3
+
+Determine the language described by the following regular expression.
+
+$$
+(\varepsilon + 1)^*0^*001(111)*
+$$
+
+#### Solution
+
+**Break Down the Expression**:
+
+- $(\varepsilon + 1)^*$: The string can start with any number of $1$'s (including none).
+- $0^*$: After the $1$'s, there can be any number of $0$'s (including none).
+- $001$: The string must contain the substring $001$.
+- $(111)^*$: After $001$, there may be a number of $1$'s divisible by 3 (including none).
+
+**Language Generated**:
+
+$$
+L((\varepsilon + 1)^*0^*001(111)^*) = \{1^n0^m001(111)^l \mid n, m, l \in \mathbb{N}\}
+$$
+
+## Example 4
+
+Make regular expressions decribing the following languages.
+
+$$
+\{ u \in \{0, 1\}^* \mid u \text{ contains at least one } 1 \}
+$$
+
+#### Solution
+
+**Regular Expression**:
+
+$$
+(0^*10^*)^+
+$$
+
+**Explanation**: The expression captures strings that contain at least one $1$ surrounded by any number of $0$'s. The outer $^+$ ensures that there is at least one occurrence of the pattern.
+
+## Example 5
+
+Make regular expressions decribing the following languages.
+
+$$
+\{ u \in \{c, d\}^* \mid \text{ either the second letter of u is c, or u contains exactly two d's} \}
+$$
+
+#### Solution
+
+**Regular Expression**:
+
+$$
+(c + d)c(c + d)^* + c^*dc^*dc^*
+$$
+
+**Explanation**: The first part $(c + d)c(c + d)^*$ captures strings where the second letter is $c$, while the second part $c^*dc^*dc^*$ captures strings with exactly two $d$'s. The union of these two parts gives the desired language.
+
+## Example 6
+
+Make regular expressions decribing the following languages.
+
+$$
+\{ a^{2n+1}b \mid n \in \mathbb{N} \}
+$$
+
+#### Solution
+
+**Regular Expression**:
+
+$$
+(aa)^*a b
+$$
+
+**Explanation**: The expression captures strings with an odd number of $a$'s followed by a single $b$. The outer $(aa)^*$ ensures that there are pairs of $a$'s, and the final $a$ ensures that the total count is odd.
+
+## Example 7
+
+Make regular expressions decribing the following languages.
+
+$$
+\{ u \in \{0, 1\}^* \mid u \text{ contains an even number of 1's } \}
+$$
+
+#### Solution
+
+**Regular Expression**:
+
+$$
+(0^*10^*1)^*0^*
+$$
+
+**Explanation**: The expression captures strings with pairs of $1$'s, ensuring an even count. The outer $(0^*10^*1)^*$ allows for any number of pairs with $0$'s in between, and the final $0^*$ allows for any number of trailing $0$'s or $0$'s alone.
+
+## Example 8
+
+Make a type 3 grammar generating the language described by the regular expression.
+
+$$
+(\varepsilon + 1)^*0^*001(111)^*
+$$
+
+#### Solution
+
+**Type 3 Grammar**:
+
+$G = (N, \Sigma, P, S)$
+
+$\Sigma = \{0, 1\}$
+
+$P = \{S \to 1S \mid 0A, A \to 0A \mid 0B, B \to 1C, C \to 1C_1 \mid \varepsilon, C_1 \to 1C_2, C_2 \to 1C \}$
+
+$N = \{S, A, B, C, C_1, C_2\}$
+
+$S$ is the start symbol.
+
+** Explanation**: The grammar generates strings that start with any number of $1$'s (including none), followed by any number of $0$'s (including none), then the substring $001$, and finally any number of $111$'s (including none). The rules are of Type 3 form, ensuring the grammar is valid.
+
+## Example 9
+
+Make a type 3 grammar generating the language described by the regular expression.
+
+$$
+(ba(a + bb)^* + aa)^*ab^*
+$$
+
+#### Solution
+
+**Type 3 Grammar**:
+
+$G = (N, \Sigma, P, S)$
+
+$\Sigma = \{a, b\}$
+
+$\begin{align}
+P &= \{\\
+& S \to aA \mid bB \mid aE \\
+& A \to aS \\
+& B \to aC \mid aS \\
+& C \to aC \mid aS \mid bC \\
+& D \to bC \mid bS \\
+& E \to bE \mid \varepsilon \\
+\}
+\end{align}$
+
+$N = \{S, A, B, C, D, E\}$
+
+$S$ is the start symbol.
