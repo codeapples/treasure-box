@@ -42,6 +42,9 @@ features:
   - title: Intro to Machine Learning [IML]
     details: Materials for Introduction to ML course (Electives)
     link: /materials/intro-ml/
+  - title: Computer Graphics [CG]
+    details: Materials for Computer Graphics course (Electives)
+    link: /materials/computer-graphics/
   #- title: Feature C
   #  details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
