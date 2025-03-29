@@ -1,6 +1,6 @@
 # Computer Graphics Exam Questions
 
-## First set
+## First set (BSc_EA_02_Ell.pdf)
 
 1. [What is a point and a vector? What operations can be performed on points and vectors?](/materials/computer-graphics/first-set#_1-point-and-vector-definitions-and-operations)
 2. [What does a right-handed and a left-handed coordinate system look like in 3D space?](/materials/computer-graphics/first-set#_2-right-handed-and-left-handed-coordinate-systems)
@@ -27,3 +27,73 @@
 23. [Let a plane be given by its points $\begin{bmatrix} 3 \\ 3 \\ 2 \end{bmatrix}, \begin{bmatrix} 6 \\ 4 \\ 6 \end{bmatrix}, \begin{bmatrix} 2 \\ 9 \\ 5 \end{bmatrix}$. What will be a parametric equation of the plane with spanning vectors?](/materials/computer-graphics/first-set#_23-parametric-equation-of-a-plane)
 24. [Given the equation of a line in the plane. What is a normal vector of the line? Give one point of the line!](/materials/computer-graphics/first-set#_24-normal-vector-and-point-of-a-line)
 25. [Given the equation of a plane in space. What is a normal vector of the plane? Give one point of the plane!](/materials/computer-graphics/first-set#_25-normal-vector-and-point-of-a-plane)
+
+## Second set (BSc_EA_04_Ell.pdf)
+
+1. How does light propagate? Which of its steps depend on the wavelength of the incident light?
+2. Which photoreceptive nerve cells are found in the retina?
+3. What is the CFF (critical flicker frequency)? Why do we perceive a continuous image from a sequence of flashes that occur more frequently than this threshold?
+4. What is a tristimulus value?
+5. Describe the RGB color space!
+6. Describe the CMYK color space!
+7. Describe the HSL/HSV color models!
+8. In terms of light–material interactions, what types of surfaces have we considered?
+9. What is the BRDF? What components do we use to specify it? (Include a drawing!)
+10. What is ideal reflection? How can the direction of ideal reflection be calculated? Illustrate the quantities used with a diagram!
+11. Derive the calculation for the ideal refraction direction given the surface normal, the incident ray direction, and the relative refractive index!
+12. Describe specular reflection and the Phong model! Write down the BRDF and explain the coefficients that appear in the formula!
+13. Describe specular reflection and the Phong-Blinn model! Write down the BRDF and explain the coefficients that appear in the formula!
+14. What are the implicit, explicit, and parametric equations of the $y$-axis oriented parabola with focus $(0, p)$?
+15. What is the parametric equation of the ellipse with center $(4, 3)$, with axes along $\left(\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2}\right)$ and $\left(-\frac{\sqrt{2}}{2},-\frac{\sqrt{2}}{2}\right)$, and with semi-major axis $a = 4$ and semi-minor axis $b = 3$?
+16. Given a surface defined by $f(x,y,z)=x^2+y^2-z$, which of the following points lie on the surface: $(0,0,0)$, $(4,1,2)$, $(-2,2,0)$, $(-2,2,8)$, $(0,1,1)$?
+
+## Third set (BSc_EA_05_Ell.pdf)
+
+1. What is ray tracing? What is its purpose, how does it work, how does it follow the path of light, what components does it decompose into, and what types of rays are there?
+2. Describe the term in the simplified illumination equation solved during ray tracing that summarizes incoherent reflections. Explain the terms of the equation, what they represent, and what their parameters are!
+3. Write down the simplified illumination equation solved during ray tracing! In which terms can you find the light quantities coming from the emitted, ambient, light source, mirror, and refracted contributions?
+4. Derive the ray that originates from the pixel $(i,j)$ (its starting point and direction vector) used during ray tracing.
+5. Why and where is there a need for intersection tests in ray tracing?
+6. Describe in general the intersection of a ray with a surface given in its parametric form.
+7. Describe in general the intersection of a ray with a surface given in its implicit form.
+8. Derive the intersection point between a plane defined by the point $q_0$ and normal $n$, and a ray defined by the point $p_0$ and direction vector $v$.
+9. Derive the calculation for the intersection point of a sphere with center $c$ and radius $r$, and a ray defined by $(p_0, v)$.
+10. Our surface is intersected by a ray with direction
+   $v=\begin{pmatrix}0\\-1\\0\end{pmatrix},$
+   at a point where the surface normal has the direction
+   $\begin{pmatrix}1\\1\\0\end{pmatrix}.$
+   What is the direction vector $v_r$ of the ray launched in the ideal reflection direction?
+   (Note: In the 4th EA slide deck, the computation of ideal reflection was given, and there the surface normal was of unit length.)
+11. Given a sphere with center
+   $c=\begin{pmatrix}40\\0\end{pmatrix}$
+   and radius $r=2$, what is the intersection point of the ray originating from
+   $p_0=\begin{pmatrix}0\\1\end{pmatrix}$
+   with direction
+   $v=\begin{pmatrix}1\\0\end{pmatrix}$
+   with the sphere? How far apart are the ray's origin and the intersection point?
+12. Given a sphere with center
+   $c=\begin{pmatrix}40\\0\end{pmatrix}$
+   and radius $r=2$, what is the intersection point of the ray originating from
+   $p_0=\begin{pmatrix}44\\0\end{pmatrix}$
+   with direction
+   $v=\begin{pmatrix}0\\1\end{pmatrix}$
+   with the sphere? How far apart are the ray's origin and the intersection point?
+13. Given a ray and an object that has been transformed by a matrix $M$, how can the intersection point of the transformed object be computed using the transformed ray and the original, untransformed object?
+14. What is aliasing? How does it manifest itself in ray tracing?
+15. Which methods did we study to accelerate intersection tests (bounding volumes, space partitioning, etc.)? Briefly describe them! How are they used to speed up intersection testing?
+
+## Fourth set (BSc_EA_07_Ell.pdf)
+
+1. What is incremental image synthesis, and what related concepts did we discuss? Compare ray tracing and incremental image synthesis!
+2. What is the graphics pipeline? What are its inputs and outputs? What are its main steps based on transformations?
+3. What coordinate systems did we discuss in relation to the graphics pipeline? Briefly describe them!
+4. What transformations did we discuss in the graphics pipeline? Briefly describe them!
+5. What is the matrix for perspective projection onto a projection plane parallel to the XY-plane, located $d$ units along the Z-axis from the origin? Derive it! (Include diagrams and triangles, etc.)
+6. What is clipping? What is its purpose, in which coordinate system must it be performed, and why?
+7. What is rasterization? What is tessellation?
+8. What algorithms did we study for solving the hidden surface problem? Briefly describe them!
+9. What is trivial back-face culling? For what problem was it used?
+10. What is the painter’s algorithm? For what problem was it used?
+11. Explain the Z-buffer algorithm!
+12. What local illumination shading models did we study? Briefly describe them!
+13. What is Gouraud shading? What is Phong shading? Compare the two!
