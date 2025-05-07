@@ -90,7 +90,7 @@ export default withMermaid({
   vite: { configFile: '.vitepress/vite.config.ts' },
 
   title: 'Treasure box',
-  description: 'A collection of useful student materials.',
+  description: 'A collection of useful study materials.',
 
   scrollOffset: 'header',
 

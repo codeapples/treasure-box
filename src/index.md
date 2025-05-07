@@ -36,6 +36,9 @@ features:
   - title: Fundamentals of Theory of Computation [FOTOC]
     details: Materials for analysis course (4th Semester)
     link: /materials/fotoc/
+  - title: Operating Systems [OS]
+    details: Materials for operating systems course (4th Semester)
+    link: /materials/os/
   - title: Probability and Statistics [IPS]
     details: Materials for Probability and Statistics course (5th Semester)
     link: /materials/probability-statistics/

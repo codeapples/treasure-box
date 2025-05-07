@@ -26,6 +26,7 @@ const nav: DefaultTheme.NavItem[] = [
       {
         text: 'Semester 4', items: [
           { text: 'Fundamentals of Theory of Computation', link: '/materials/fotoc/' },
+          { text: 'Operating Systems', link: '/materials/os/' },
         ],
       },
       {
@@ -180,6 +181,16 @@ const sidebar: DefaultTheme.Sidebar = {
             { text: '[FOTOC] Languages', link: '/materials/fotoc/languages.md' },
             { text: '[FOTOC] Grammars', link: '/materials/fotoc/grammars.md' },
             { text: '[FOTOC] Regular expressions', link: '/materials/fotoc/regex.md' },
+          ]
+        },
+        {
+          text: 'Operating Systems [OS]',
+          collapsed: true,
+          items: [
+            { text: '[OS] General', link: '/materials/os/' },
+            { text: '[OS] C Language and POSIX API Reference', link: '/materials/os/reference.md' },
+            { text: '[OS] Running code on Windows', link: '/materials/os/wsl.md' },
+            { text: '[OS] Exam program skeleton', link: '/materials/os/exam-program-skeleton.md' },
           ]
         }
       ],
