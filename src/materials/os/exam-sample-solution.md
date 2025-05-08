@@ -79,14 +79,15 @@ void rest(const char* entity) {
 
   printf("%s takes a break...\n", entity);
 
-  stat_t st;
-  stat(state.argv[0], &st);
-  time_t start_time = st.st_mtime;
+  time_t start_time = time(NULL);
+  char   start_buf[32];
+  ctime_r(&start_time, start_buf);
 
-  sleep((rand() % 5) + 1);
+  sleep((rand() % 6) + 1);
 
-  stat(state.argv[0], &st);
-  time_t end_time = st.st_mtime;
+  time_t end_time = time(NULL);
+  char   end_buf[32];
+  ctime_r(&end_time, end_buf);
 
   int fd = open(state.time_log, O_WRONLY | O_CREAT | O_APPEND, S_IRUSR | S_IWUSR);
   if (fd == -1) {
@@ -96,8 +97,7 @@ void rest(const char* entity) {
 
   // write to file
   char buffer[256];
-  int  len = snprintf(buffer, sizeof(buffer), "%s takes a break from %s to %s\n", entity, ctime(&start_time),
-                      ctime(&end_time));
+  int  len = snprintf(buffer, sizeof(buffer), "%s takes a break\n from %s to %s\n", entity, start_buf, end_buf);
   write(fd, buffer, len);
 
   close(fd);
