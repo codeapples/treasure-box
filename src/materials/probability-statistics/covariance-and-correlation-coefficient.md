@@ -1,10 +1,11 @@
 ---
-title: '[ISP] Covariance and Correlation Coefficient'
+title: '[IPS] Covariance and Correlation Coefficient'
 ---
 
 # Covariance and Correlation Coefficient
 
 ## Markov-inequality
+
 Let $g : \mathbb{R} \rightarrow \mathbb{R}$ be a monotonically increasing, positive function, $X \geq 0$ a random variable, for which $E(X) < \infty$ and $\epsilon > 0$. Then
 
 $$ P(X \geq \epsilon) \leq \frac{E(g(X))}{g(\epsilon)}. $$
@@ -14,6 +15,7 @@ Especially, if $g(x) = x$, then
 $$ P(X \geq \epsilon) \leq \frac{E(X)}{\epsilon}. $$
 
 ## Chebyshev-inequality
+
 Let $X$ be an arbitrary random variable, for which $Var(X) < \infty$ and $\epsilon > 0$. Then
 
 $$ P(|X - E(X)| \geq \epsilon) \leq \frac{Var(X)}{\epsilon^2}. $$
@@ -30,7 +32,7 @@ $$ P(X \in A) = \int_A f(x, y) \, dx \, dy. $$
 
 Calculation of covariance if the joint density function is $f(x, y)$:
 
-$$ \text{cov}(X, Y) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} xy \cdot f(x, y) \, dx \, dy - \left( \int_{-\infty}^{\infty} x \cdot f_X(x) \, dx \right) \cdot \left( \int_{-\infty}^{\infty} y \cdot f_Y(y) \, dy \right), $$
+$$ \text{cov}(X, Y) = \int*{-\infty}^{\infty} \int*{-\infty}^{\infty} xy \cdot f(x, y) \, dx \, dy - \left( \int*{-\infty}^{\infty} x \cdot f_X(x) \, dx \right) \cdot \left( \int*{-\infty}^{\infty} y \cdot f_Y(y) \, dy \right), $$
 
 where $f_X(x)$ and $f_Y(y)$ are the marginal densities that can be computed as $f_X(x) = \int_{-\infty}^{\infty} f(x, y) \, dy$ and $f_Y(y) = \int_{-\infty}^{\infty} f(x, y) \, dx$.
 

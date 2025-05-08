@@ -1,5 +1,5 @@
 ---
-title: '[ISP] General'
+title: '[IPS] General'
 ---
 
 # Probability and Statistics

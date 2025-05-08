@@ -191,6 +191,7 @@ const sidebar: DefaultTheme.Sidebar = {
             { text: '[OS] C Language and POSIX API Reference', link: '/materials/os/reference.md' },
             { text: '[OS] Running code on Windows', link: '/materials/os/wsl.md' },
             { text: '[OS] Exam program skeleton', link: '/materials/os/exam-program-skeleton.md' },
+            { text: '[OS] Exam sample solution', link: '/materials/os/exam-sample-solution.md' },
           ]
         }
       ],
@@ -203,12 +204,12 @@ const sidebar: DefaultTheme.Sidebar = {
           text: 'Introduction to Probability and Statistics [IPS]',
           collapsed: true,
           items: [
-            { text: '[ISP] General', link: '/materials/probability-statistics/' },
-            { text: '[ISP] Discrete Probability', link: '/materials/probability-statistics/discrete-probability.md' },
-            { text: '[ISP] Types of Distributions', link: '/materials/probability-statistics/types-of-distributions.md' },
-            { text: '[ISP] Continuous Probability', link: '/materials/probability-statistics/continuous-probability.md' },
-            { text: '[ISP] Normal Distribution', link: '/materials/probability-statistics/normal-distribution.md' },
-            { text: '[ISP] Covariance and Correlation Coefficient', link: '/materials/probability-statistics/covariance-and-correlation-coefficient.md' },
+            { text: '[IPS] General', link: '/materials/probability-statistics/' },
+            { text: '[IPS] Discrete Probability', link: '/materials/probability-statistics/discrete-probability.md' },
+            { text: '[IPS] Types of Distributions', link: '/materials/probability-statistics/types-of-distributions.md' },
+            { text: '[IPS] Continuous Probability', link: '/materials/probability-statistics/continuous-probability.md' },
+            { text: '[IPS] Normal Distribution', link: '/materials/probability-statistics/normal-distribution.md' },
+            { text: '[IPS] Covariance and Correlation Coefficient', link: '/materials/probability-statistics/covariance-and-correlation-coefficient.md' },
           ],
         },
         {}

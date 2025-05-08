@@ -20,6 +20,31 @@ By the information given, every exam program flow would be the following:
 So to simplify comprehension and to separate processes, we can do the following:
 
 ```c
+void parent_exclusive() {
+    // init parent
+    // do logic
+    // cleanup
+
+    wait(NULL);
+    wait(NULL);
+}
+
+void child1_exclusive() {
+    // init child
+    // do logic
+    // cleanup
+
+    exit(EXIT_SUCCESS);
+}
+
+void child2_exclusive() {
+    // init child
+    // do logic
+    // cleanup
+
+    exit(EXIT_SUCCESS);
+}
+
 int main(int argc, char *argv[]) {
     int child1, child2;
     srand(time(NULL)); // seed random number generator
@@ -50,27 +75,4 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
-
-void parent_exclusive() {
-    // init parent
-    // do logic
-    // cleanup
-}
-
-void child1_exclusive() {
-    // init child
-    // do logic
-    // cleanup
-
-    exit(EXIT_SUCCESS);
-}
-
-void child2_exclusive() {
-    // init child
-    // do logic
-    // cleanup
-
-    exit(EXIT_SUCCESS);
-}
-
 ```

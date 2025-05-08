@@ -9,3 +9,4 @@ title: '[OS] General'
 - [C Language and POSIX API Reference](/materials/os/reference.md)
 - [Running code on Windows](/materials/os/wsl.md)
 - [Exam program skeleton](/materials/os/exam-program-skeleton.md)
+- [Exam sample solution](/materials/os/exam-sample-solution.md)

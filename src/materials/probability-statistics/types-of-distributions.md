@@ -1,5 +1,5 @@
 ---
-title: '[ISP] Types of distributions'
+title: '[IPS] Types of distributions'
 ---
 
 # Types of distributions
@@ -49,6 +49,7 @@ $$
 Then the expectation of $X$ is $np$, and its variance is $np(1 - p)$.
 
 Key Characteristics:
+
 - Fixed number of trials ((n)).
 - Two possible outcomes per trial (success or failure).
 - Probability of success ((p)) is constant across trials.
@@ -69,6 +70,7 @@ $$
 Then $E(X) = \text{Var}(X) = \lambda$.
 
 Key Characteristics:
+
 - Events occur in a fixed interval of time or space (e.g., hours, area).
 - Events are rare relative to the interval, with no fixed number of trials.
 - Average rate of occurrence ($\lambda$) is constant.

@@ -1,5 +1,5 @@
 ---
-title: '[ISP] Discrete Probability'
+title: '[IPS] Discrete Probability'
 ---
 
 # Discrete Probability
@@ -88,7 +88,6 @@ For $n$ events $A_1, A_2, \ldots, A_n$:
 $$
 P\left(\bigcup_{i=1}^n A_i\right) = \sum_{k=1}^n (-1)^{k+1} \sum_{1 \leq i_1 < i_2 < \ldots < i_k \leq n} P(A_{i_1} \cap A_{i_2} \cap \ldots \cap A_{i_k})
 $$
-
 
 Example for two events $(n = 2)$: Probability that at least A or B occurs:
 
@@ -199,6 +198,7 @@ a) Let $A$ be the event that the test is positive, and $B$ be the event that Pet
 $$
 P(A) = P(A \cap B) + P(A \cap \overline{B}) = P(A|B)P(B) + P(A|\overline{B})P(\overline{B}) =
 $$
+
 $$
 = 0.95 \cdot 0.02 + 0.01 \cdot 0.98 = 0.028.
 $$

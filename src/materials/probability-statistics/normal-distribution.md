@@ -1,5 +1,5 @@
 ---
-title: '[ISP] Normal Distribution'
+title: '[IPS] Normal Distribution'
 ---
 
 # Normal Distribution
@@ -18,11 +18,11 @@ $$ \varphi(x) = \frac{1}{\sqrt{2\pi}} \cdot \exp \left( -\frac{x^2}{2} \right). 
 
 That is, for every $a < b$ we have
 
-$$ P(a \leq X \leq b) = \int_{a}^{b} f(x) \, dx = \int_{a}^{b} \frac{1}{\sqrt{2\pi} \cdot \sigma} \cdot \exp \left( -\frac{(x - m)^2}{2\sigma^2} \right) dx. $$
+$$ P(a \leq X \leq b) = \int*{a}^{b} f(x) \, dx = \int*{a}^{b} \frac{1}{\sqrt{2\pi} \cdot \sigma} \cdot \exp \left( -\frac{(x - m)^2}{2\sigma^2} \right) dx. $$
 
 The cumulative distribution function of the standard normal distribution is denoted by $\Phi$:
 
-$$ \Phi(t) = P(Z \leq t) = \int_{-\infty}^{t} \frac{1}{\sqrt{2\pi}} \cdot \exp \left( -\frac{x^2}{2} \right) dx. $$
+$$ \Phi(t) = P(Z \leq t) = \int\_{-\infty}^{t} \frac{1}{\sqrt{2\pi}} \cdot \exp \left( -\frac{x^2}{2} \right) dx. $$
 
 We can use that $\Phi(-x) = 1 - \Phi(x)$, and $\Phi(0.5) = 0.6915$, $\Phi(1) = 0.8413$, $\Phi(2) = 0.9772$, $\Phi(3) = 0.9987$.
 
@@ -43,7 +43,7 @@ a) for real numbers $c \neq 0$ and $d$, the random variable $cX + d$ has normal 
 
 b) for every real number $t$ we have $(X - m)/\sigma$ has standard normal distribution, and
 
-$$ P(X \leq t) = P \left( \frac{X - m}{\sigma} \leq \frac{t -  m}{\sigma} \right) = \Phi \left( \frac{t - m}{\sigma} \right). $$
+$$ P(X \leq t) = P \left( \frac{X - m}{\sigma} \leq \frac{t - m}{\sigma} \right) = \Phi \left( \frac{t - m}{\sigma} \right). $$
 
 c) $X + Y$ has the normal distribution, and $\mathbb{E}(X + Y) = \mathbb{E}(X) + \mathbb{E}(Y)$, and $\operatorname{Var}(X + Y) = \operatorname{Var}(X) + \operatorname{Var}(Y)$;
 
